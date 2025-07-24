@@ -1,0 +1,49 @@
+<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class="">
+  <div class=row>
+    <div class='col-12'>
+      <div class='form-group'>
+        <label for='code' i18n>code</label>
+        <input class='form-control' type='text' id='code' formControlName='code' i18n-placeholder placeholder='code' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='libelle' i18n>libelle</label>
+        <input class='form-control' type='text' id='libelle' formControlName='libelle' i18n-placeholder placeholder='libelle' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='norme_reference' i18n>norme_reference</label>
+        <input class='form-control' type='text' id='norme_reference' formControlName='norme_reference' i18n-placeholder placeholder='norme_reference' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='frequence_mois' i18n>frequence_mois</label>
+        <input class='form-control' type='number' id='frequence_mois' formControlName='frequence_mois' i18n-placeholder placeholder='frequence_mois' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='gravite_min' i18n>gravite_min</label>
+        <select class='form-select form-control' id='gravite_min' formControlName='gravite_min' [attr.value]="formGroup.value.gravite_min">
+          <option hidden value="" i18n>Choisissez une option</option>
+          <option value='pending'>En cours</option>
+          <option value='validated'>Validé</option>
+          <option value='canceled'>Annulé</option>
+        </select>
+      </div>
+    </div>
+		
+    <div class='col-12 text-right'>
+        <button class="btn btn-primary" type="submit" [disabled]="isLoading" i18n>
+          @if (isLoading) {
+            Chargement...
+          } @else {
+            Enregistrer
+          }
+        </button>
+    </div>
+  </div>
+</form>

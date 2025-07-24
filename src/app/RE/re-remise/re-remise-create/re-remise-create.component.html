@@ -1,0 +1,14 @@
+<div class="">
+  <div class="title">
+    <h3 i18n>Create RERemise</h3>
+  </div>
+  <app-error-messages 
+  [errorMessages]="errorHandler.errorMessages()"
+  ></app-error-messages>
+  <app-re-remise-form 
+  [isLoading]="isLoading()"
+  [handleSubmit]="handleFormSubmit"
+  [reOrdreRecettes]="reOrdreRecettes()"
+	[users]="users()"
+	></app-re-remise-form>
+</div>

@@ -1,0 +1,74 @@
+<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class="">
+  <div class=row>
+    <div class='col-12'>
+      <div class='form-group'>
+        <label for='rc_acteur_id' i18n>rc_acteur_id</label>
+        <select class='select2 form-control' id='rc_acteur_id' formControlName='rc_acteur_id' [attr.value]="formGroup.value.rcActeur_id">
+          <option hidden value="" i18n>Choisissez une option</option>
+          @for (rcActeur of rcActeurs; track $index) {
+            <option [value]="rcActeur.id">
+            {{rcActeur?.nom}}
+            </option>
+          }
+        </select>
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='reference' i18n>reference</label>
+        <input class='form-control' type='text' id='reference' formControlName='reference' i18n-placeholder placeholder='reference' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='montant' i18n>montant</label>
+        <input class='form-control' type='number' id='montant' formControlName='montant' i18n-placeholder placeholder='montant' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='devise' i18n>devise</label>
+        <input class='form-control' type='text' id='devise' formControlName='devise' i18n-placeholder placeholder='devise' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='date_emission' i18n>date_emission</label>
+        <input class='form-control' type='date' id='date_emission' formControlName='date_emission' i18n-placeholder placeholder='date_emission' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='date_echeance' i18n>date_echeance</label>
+        <input class='form-control' type='date' id='date_echeance' formControlName='date_echeance' i18n-placeholder placeholder='date_echeance' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='statut' i18n>statut</label>
+        <select class='form-select form-control' id='statut' formControlName='statut' [attr.value]="formGroup.value.statut">
+          <option hidden value="" i18n>Choisissez une option</option>
+          <option value='pending'>En cours</option>
+          <option value='validated'>Validé</option>
+          <option value='canceled'>Annulé</option>
+        </select>
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='service_concerne' i18n>service_concerne</label>
+        <input class='form-control' type='text' id='service_concerne' formControlName='service_concerne' i18n-placeholder placeholder='service_concerne' />
+      </div>
+    </div>
+
+    <div class='col-12 text-right'>
+        <button class="btn btn-primary" type="submit" [disabled]="isLoading" i18n>
+          @if (isLoading) {
+            Chargement...
+          } @else {
+            Enregistrer
+          }
+        </button>
+    </div>
+  </div>
+</form>

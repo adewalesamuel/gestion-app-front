@@ -3,7 +3,10 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "dgamp-app": {
+    "gestion-app": {
+      "i18n": {
+        "sourceLocale": "fr"
+      },
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -15,7 +18,8 @@
           "options": {
             "browser": "src/main.ts",
             "polyfills": [
-              "zone.js"
+              "zone.js",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
@@ -29,6 +33,9 @@
             ]
           },
           "configurations": {
+            "fr": {
+              "localize": ["fr"]
+            },
             "production": {
               "budgets": [
                 {
@@ -42,10 +49,27 @@
                   "maximumError": "8kB"
                 }
               ],
+              "fileReplacements": [
+                {
+                  "replace": "src/app/environments/environment.ts",
+                  "with": "src/app/environments/environment.prod.ts"
+                }
+              ],
               "outputHashing": "all"
             },
             "development": {
               "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            },
+            "staging": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.staging.ts"
+                }
+              ],
+              "optimization": true,
               "extractLicenses": false,
               "sourceMap": true
             }
@@ -55,11 +79,14 @@
         "serve": {
           "builder": "@angular/build:dev-server",
           "configurations": {
+            "fr": {
+              "buildTarget": "my-ang-app:build:fr"
+            },
             "production": {
-              "buildTarget": "dgamp-app:build:production"
+              "buildTarget": "gestion-app:build:production"
             },
             "development": {
-              "buildTarget": "dgamp-app:build:development"
+              "buildTarget": "gestion-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -72,7 +99,8 @@
           "options": {
             "polyfills": [
               "zone.js",
-              "zone.js/testing"
+              "zone.js/testing",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [

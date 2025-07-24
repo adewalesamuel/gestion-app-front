@@ -1,0 +1,13 @@
+<div class="">
+  <div class="title">
+    <h3 i18n>Edit INChecklist</h3>
+  </div>
+  <app-error-messages 
+  [errorMessages]="errorHandler.errorMessages()"
+  ></app-error-messages>
+  <app-in-checklist-form 
+  [isLoading]="isLoading()"
+  [handleSubmit]="handleFormSubmit"
+  [rcTypeEngins]="rcTypeEngins()"
+	></app-in-checklist-form>
+</div>

@@ -1,0 +1,32 @@
+<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class="">
+  <div class=row>
+    <div class='col-12'>
+      <div class='form-group'>
+        <label for='name' i18n>name</label>
+        <input class='form-control' type='text' id='name' formControlName='name' i18n-placeholder placeholder='name' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='description' i18n>description</label>
+        <input class='form-control' type='text' id='description' formControlName='description' i18n-placeholder placeholder='description' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='permissions' i18n>permissions</label>
+        <input class='form-control' type='text' id='permissions' formControlName='permissions' i18n-placeholder placeholder='permissions' />
+      </div>
+    </div>
+		
+    <div class='col-12 text-right'>
+        <button class="btn btn-primary" type="submit" [disabled]="isLoading" i18n>
+          @if (isLoading) {
+            Chargement...
+          } @else {
+            Enregistrer
+          }
+        </button>
+    </div>
+  </div>
+</form>

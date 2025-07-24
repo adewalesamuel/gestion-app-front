@@ -1,0 +1,102 @@
+<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class="">
+  <div class=row>
+    <div class='col-12'>
+      <div class='form-group'>
+        <label for='gu_type_demande_id' i18n>gu_type_demande_id</label>
+        <select class='select2 form-control' id='gu_type_demande_id' formControlName='gu_type_demande_id' [attr.value]="formGroup.value.guTypeDemande_id">
+          <option hidden value="" i18n>Choisissez une option</option>
+          @for (guTypeDemande of guTypeDemandes; track $index) {
+            <option [value]="guTypeDemande.id">
+            {{guTypeDemande?.code}}
+            </option>
+          }
+        </select>
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='gu_statut_demande_id' i18n>gu_statut_demande_id</label>
+        <select class='select2 form-control' id='gu_statut_demande_id' formControlName='gu_statut_demande_id' [attr.value]="formGroup.value.guStatutDemande_id">
+          <option hidden value="" i18n>Choisissez une option</option>
+          @for (guStatutDemande of guStatutDemandes; track $index) {
+            <option [value]="guStatutDemande.id">
+            {{guStatutDemande?.libelle}}
+            </option>
+          }
+        </select>
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='rc_acteur_id' i18n>rc_acteur_id</label>
+        <select class='select2 form-control' id='rc_acteur_id' formControlName='rc_acteur_id' [attr.value]="formGroup.value.rcActeur_id">
+          <option hidden value="" i18n>Choisissez une option</option>
+          @for (rcActeur of rcActeurs; track $index) {
+            <option [value]="rcActeur.id">
+            {{rcActeur?.nom}}
+            </option>
+          }
+        </select>
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='rc_engin_flottant_id' i18n>rc_engin_flottant_id</label>
+        <select class='select2 form-control' id='rc_engin_flottant_id' formControlName='rc_engin_flottant_id' [attr.value]="formGroup.value.rcEnginFlottant_id">
+          <option hidden value="" i18n>Choisissez une option</option>
+          @for (rcEnginFlottant of rcEnginFlottants; track $index) {
+            <option [value]="rcEnginFlottant.id">
+            {{rcEnginFlottant?.nom}}
+            </option>
+          }
+        </select>
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='reference' i18n>reference</label>
+        <input class='form-control' type='text' id='reference' formControlName='reference' i18n-placeholder placeholder='reference' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='date_depot' i18n>date_depot</label>
+        <input class='form-control' type='date' id='date_depot' formControlName='date_depot' i18n-placeholder placeholder='date_depot' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='heure' i18n>heure</label>
+        <input class='form-control' type='text' id='heure' formControlName='heure' i18n-placeholder placeholder='heure' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='date_traitement' i18n>date_traitement</label>
+        <input class='form-control' type='date' id='date_traitement' formControlName='date_traitement' i18n-placeholder placeholder='date_traitement' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='date_expiration' i18n>date_expiration</label>
+        <input class='form-control' type='date' id='date_expiration' formControlName='date_expiration' i18n-placeholder placeholder='date_expiration' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='fichiers_joints' i18n>fichiers_joints</label>
+        <input class='form-control' type='text' id='fichiers_joints' formControlName='fichiers_joints' i18n-placeholder placeholder='fichiers_joints' />
+      </div>
+    </div>
+
+    <div class='col-12 text-right'>
+        <button class="btn btn-primary" type="submit" [disabled]="isLoading" i18n>
+          @if (isLoading) {
+            Chargement...
+          } @else {
+            Enregistrer
+          }
+        </button>
+    </div>
+  </div>
+</form>

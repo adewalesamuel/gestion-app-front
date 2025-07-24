@@ -1,0 +1,39 @@
+<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class="">
+  <div class=row>
+    <div class='col-12'>
+      <div class='form-group'>
+        <label for='user_id' i18n>user_id</label>
+        <select class='select2 form-control' id='user_id' formControlName='user_id' [attr.value]="formGroup.value.user_id">
+          <option hidden value="" i18n>Choisissez une option</option>
+          @for (user of users; track $index) {
+            <option [value]="user.id">
+            {{user?.nom}}
+            </option>
+          }
+        </select>
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='nom' i18n>nom</label>
+        <input class='form-control' type='text' id='nom' formControlName='nom' i18n-placeholder placeholder='nom' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='membres' i18n>membres</label>
+        <input class='form-control' type='text' id='membres' formControlName='membres' i18n-placeholder placeholder='membres' />
+      </div>
+    </div>
+
+    <div class='col-12 text-right'>
+        <button class="btn btn-primary" type="submit" [disabled]="isLoading" i18n>
+          @if (isLoading) {
+            Chargement...
+          } @else {
+            Enregistrer
+          }
+        </button>
+    </div>
+  </div>
+</form>

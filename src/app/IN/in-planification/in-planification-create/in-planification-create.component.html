@@ -1,0 +1,14 @@
+<div class="">
+  <div class="title">
+    <h3 i18n>Create INPlanification</h3>
+  </div>
+  <app-error-messages 
+  [errorMessages]="errorHandler.errorMessages()"
+  ></app-error-messages>
+  <app-in-planification-form 
+  [isLoading]="isLoading()"
+  [handleSubmit]="handleFormSubmit"
+  [rcEnginFlottants]="rcEnginFlottants()"
+	[inChecklists]="inChecklists()"
+	></app-in-planification-form>
+</div>

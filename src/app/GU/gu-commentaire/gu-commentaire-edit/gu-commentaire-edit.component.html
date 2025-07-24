@@ -1,0 +1,14 @@
+<div class="">
+  <div class="title">
+    <h3 i18n>Edit GUCommentaire</h3>
+  </div>
+  <app-error-messages 
+  [errorMessages]="errorHandler.errorMessages()"
+  ></app-error-messages>
+  <app-gu-commentaire-form 
+  [isLoading]="isLoading()"
+  [handleSubmit]="handleFormSubmit"
+  [users]="users()"
+	[guDemandes]="guDemandes()"
+	></app-gu-commentaire-form>
+</div>

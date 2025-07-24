@@ -1,0 +1,16 @@
+<div class="">
+  <div class="title">
+    <h3 i18n>Create GUDemande</h3>
+  </div>
+  <app-error-messages 
+  [errorMessages]="errorHandler.errorMessages()"
+  ></app-error-messages>
+  <app-gu-demande-form 
+  [isLoading]="isLoading()"
+  [handleSubmit]="handleFormSubmit"
+  [guTypeDemandes]="guTypeDemandes()"
+	[guStatutDemandes]="guStatutDemandes()"
+	[rcActeurs]="rcActeurs()"
+	[rcEnginFlottants]="rcEnginFlottants()"
+	></app-gu-demande-form>
+</div>

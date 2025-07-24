@@ -1,0 +1,45 @@
+<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class="">
+  <div class=row>
+    <div class='col-12'>
+      <div class='form-group'>
+        <label for='rc_type_engin_id' i18n>rc_type_engin_id</label>
+        <select class='select2 form-control' id='rc_type_engin_id' formControlName='rc_type_engin_id' [attr.value]="formGroup.value.rcTypeEngin_id">
+          <option hidden value="" i18n>Choisissez une option</option>
+          @for (rcTypeEngin of rcTypeEngins; track $index) {
+            <option [value]="rcTypeEngin.id">
+            {{rcTypeEngin?.libelle}}
+            </option>
+          }
+        </select>
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='nom' i18n>nom</label>
+        <input class='form-control' type='text' id='nom' formControlName='nom' i18n-placeholder placeholder='nom' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='version' i18n>version</label>
+        <input class='form-control' type='text' id='version' formControlName='version' i18n-placeholder placeholder='version' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='items' i18n>items</label>
+        <input class='form-control' type='text' id='items' formControlName='items' i18n-placeholder placeholder='items' />
+      </div>
+    </div>
+
+    <div class='col-12 text-right'>
+        <button class="btn btn-primary" type="submit" [disabled]="isLoading" i18n>
+          @if (isLoading) {
+            Chargement...
+          } @else {
+            Enregistrer
+          }
+        </button>
+    </div>
+  </div>
+</form>

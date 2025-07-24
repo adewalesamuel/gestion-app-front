@@ -1,0 +1,15 @@
+<div class="">
+  <div class="title">
+    <h3 i18n>Edit REPaiement</h3>
+  </div>
+  <app-error-messages 
+  [errorMessages]="errorHandler.errorMessages()"
+  ></app-error-messages>
+  <app-re-paiement-form 
+  [isLoading]="isLoading()"
+  [handleSubmit]="handleFormSubmit"
+  [reOrdreRecettes]="reOrdreRecettes()"
+	[users]="users()"
+	[reModePaiements]="reModePaiements()"
+	></app-re-paiement-form>
+</div>

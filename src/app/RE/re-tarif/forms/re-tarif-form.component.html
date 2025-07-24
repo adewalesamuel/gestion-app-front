@@ -1,0 +1,49 @@
+<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class="">
+  <div class=row>
+    <div class='col-12'>
+      <div class='form-group'>
+        <label for='service' i18n>service</label>
+        <input class='form-control' type='text' id='service' formControlName='service' i18n-placeholder placeholder='service' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='montant' i18n>montant</label>
+        <input class='form-control' type='number' id='montant' formControlName='montant' i18n-placeholder placeholder='montant' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='devise' i18n>devise</label>
+        <input class='form-control' type='text' id='devise' formControlName='devise' i18n-placeholder placeholder='devise' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='frequence' i18n>frequence</label>
+        <select class='form-select form-control' id='frequence' formControlName='frequence' [attr.value]="formGroup.value.frequence">
+          <option hidden value="" i18n>Choisissez une option</option>
+          <option value='pending'>En cours</option>
+          <option value='validated'>Validé</option>
+          <option value='canceled'>Annulé</option>
+        </select>
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='type_acteur' i18n>type_acteur</label>
+        <input class='form-control' type='text' id='type_acteur' formControlName='type_acteur' i18n-placeholder placeholder='type_acteur' />
+      </div>
+    </div>
+		
+    <div class='col-12 text-right'>
+        <button class="btn btn-primary" type="submit" [disabled]="isLoading" i18n>
+          @if (isLoading) {
+            Chargement...
+          } @else {
+            Enregistrer
+          }
+        </button>
+    </div>
+  </div>
+</form>

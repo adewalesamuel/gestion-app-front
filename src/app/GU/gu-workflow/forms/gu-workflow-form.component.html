@@ -1,0 +1,52 @@
+<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class="">
+  <div class=row>
+    <div class='col-12'>
+      <div class='form-group'>
+        <label for='etape' i18n>etape</label>
+        <input class='form-control' type='text' id='etape' formControlName='etape' i18n-placeholder placeholder='etape' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='ordre' i18n>ordre</label>
+        <input class='form-control' type='number' id='ordre' formControlName='ordre' i18n-placeholder placeholder='ordre' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='role_id' i18n>role_id</label>
+        <select class='select2 form-control' id='role_id' formControlName='role_id' [attr.value]="formGroup.value.role_id">
+          <option hidden value="" i18n>Choisissez une option</option>
+          @for (role of roles; track $index) {
+            <option [value]="role.id">
+            {{role?.name}}
+            </option>
+          }
+        </select>
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='gu_type_demande_id' i18n>gu_type_demande_id</label>
+        <select class='select2 form-control' id='gu_type_demande_id' formControlName='gu_type_demande_id' [attr.value]="formGroup.value.guTypeDemande_id">
+          <option hidden value="" i18n>Choisissez une option</option>
+          @for (guTypeDemande of guTypeDemandes; track $index) {
+            <option [value]="guTypeDemande.id">
+            {{guTypeDemande?.code}}
+            </option>
+          }
+        </select>
+      </div>
+    </div>
+
+    <div class='col-12 text-right'>
+        <button class="btn btn-primary" type="submit" [disabled]="isLoading" i18n>
+          @if (isLoading) {
+            Chargement...
+          } @else {
+            Enregistrer
+          }
+        </button>
+    </div>
+  </div>
+</form>

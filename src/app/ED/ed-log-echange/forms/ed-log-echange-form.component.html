@@ -1,0 +1,81 @@
+<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class="">
+  <div class=row>
+    <div class='col-12'>
+      <div class='form-group'>
+        <label for='ed_api_id' i18n>ed_api_id</label>
+        <select class='select2 form-control' id='ed_api_id' formControlName='ed_api_id' [attr.value]="formGroup.value.edApi_id">
+          <option hidden value="" i18n>Choisissez une option</option>
+          @for (edApi of edApis; track $index) {
+            <option [value]="edApi.id">
+            {{edApi?.nom}}
+            </option>
+          }
+        </select>
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='user_id' i18n>user_id</label>
+        <select class='select2 form-control' id='user_id' formControlName='user_id' [attr.value]="formGroup.value.user_id">
+          <option hidden value="" i18n>Choisissez une option</option>
+          @for (user of users; track $index) {
+            <option [value]="user.id">
+            {{user?.nom}}
+            </option>
+          }
+        </select>
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='date_heure' i18n>date_heure</label>
+        <input class='form-control' type='date' id='date_heure' formControlName='date_heure' i18n-placeholder placeholder='date_heure' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='heure' i18n>heure</label>
+        <input class='form-control' type='text' id='heure' formControlName='heure' i18n-placeholder placeholder='heure' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='type_requete' i18n>type_requete</label>
+        <select class='form-select form-control' id='type_requete' formControlName='type_requete' [attr.value]="formGroup.value.type_requete">
+          <option hidden value="" i18n>Choisissez une option</option>
+          <option value='pending'>En cours</option>
+          <option value='validated'>Validé</option>
+          <option value='canceled'>Annulé</option>
+        </select>
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='endpoint' i18n>endpoint</label>
+        <input class='form-control' type='text' id='endpoint' formControlName='endpoint' i18n-placeholder placeholder='endpoint' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='statut_reponse' i18n>statut_reponse</label>
+        <input class='form-control' type='number' id='statut_reponse' formControlName='statut_reponse' i18n-placeholder placeholder='statut_reponse' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='temps_reponse_ms' i18n>temps_reponse_ms</label>
+        <input class='form-control' type='number' id='temps_reponse_ms' formControlName='temps_reponse_ms' i18n-placeholder placeholder='temps_reponse_ms' />
+      </div>
+    </div>
+
+    <div class='col-12 text-right'>
+        <button class="btn btn-primary" type="submit" [disabled]="isLoading" i18n>
+          @if (isLoading) {
+            Chargement...
+          } @else {
+            Enregistrer
+          }
+        </button>
+    </div>
+  </div>
+</form>

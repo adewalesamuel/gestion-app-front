@@ -1,0 +1,83 @@
+<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class="">
+  <div class=row>
+    <div class='col-12'>
+      <div class='form-group'>
+        <label for='re_ordre_recette_id' i18n>re_ordre_recette_id</label>
+        <select class='select2 form-control' id='re_ordre_recette_id' formControlName='re_ordre_recette_id' [attr.value]="formGroup.value.reOrdreRecette_id">
+          <option hidden value="" i18n>Choisissez une option</option>
+          @for (reOrdreRecette of reOrdreRecettes; track $index) {
+            <option [value]="reOrdreRecette.id">
+            {{reOrdreRecette?.reference}}
+            </option>
+          }
+        </select>
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='user_id' i18n>user_id</label>
+        <select class='select2 form-control' id='user_id' formControlName='user_id' [attr.value]="formGroup.value.user_id">
+          <option hidden value="" i18n>Choisissez une option</option>
+          @for (user of users; track $index) {
+            <option [value]="user.id">
+            {{user?.nom}}
+            </option>
+          }
+        </select>
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='re_mode_paiement_id' i18n>re_mode_paiement_id</label>
+        <select class='select2 form-control' id='re_mode_paiement_id' formControlName='re_mode_paiement_id' [attr.value]="formGroup.value.reModePaiement_id">
+          <option hidden value="" i18n>Choisissez une option</option>
+          @for (reModePaiement of reModePaiements; track $index) {
+            <option [value]="reModePaiement.id">
+            {{reModePaiement?.libelle}}
+            </option>
+          }
+        </select>
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='montant' i18n>montant</label>
+        <input class='form-control' type='number' id='montant' formControlName='montant' i18n-placeholder placeholder='montant' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='devise' i18n>devise</label>
+        <input class='form-control' type='text' id='devise' formControlName='devise' i18n-placeholder placeholder='devise' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='date_paiement' i18n>date_paiement</label>
+        <input class='form-control' type='date' id='date_paiement' formControlName='date_paiement' i18n-placeholder placeholder='date_paiement' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='heure' i18n>heure</label>
+        <input class='form-control' type='text' id='heure' formControlName='heure' i18n-placeholder placeholder='heure' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='reference_transaction' i18n>reference_transaction</label>
+        <input class='form-control' type='text' id='reference_transaction' formControlName='reference_transaction' i18n-placeholder placeholder='reference_transaction' />
+      </div>
+    </div>
+
+    <div class='col-12 text-right'>
+        <button class="btn btn-primary" type="submit" [disabled]="isLoading" i18n>
+          @if (isLoading) {
+            Chargement...
+          } @else {
+            Enregistrer
+          }
+        </button>
+    </div>
+  </div>
+</form>

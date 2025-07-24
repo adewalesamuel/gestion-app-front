@@ -1,0 +1,19 @@
+<div class="">
+  <div class="title">
+    <h3 i18n>List RETarif</h3>
+  </div>
+  <a routerLink="/re-tarifs/create" i18n>+ Add rETarifs</a>
+  <app-error-messages 
+  [errorMessages]="errorHandler.errorMessages()"
+  ></app-error-messages>
+  <app-loader [isLoading]="isLoading()"></app-loader>
+  <app-table
+  *ngIf="!isLoading()"
+  [tableAttributes]="tableAttributes"
+  [tableActions]="tableActions"
+  [tableData]="rETarifs()"
+  [handleReadClick]="handleReadClick"
+  [handleEditClick]="handleEditClick"
+  [handleDeleteClick]="handleDeleteClick"></app-table>
+  <app-pagination [page]="page()" [pageLength]="pageLength()"></app-pagination>
+</div>

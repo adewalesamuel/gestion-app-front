@@ -1,0 +1,7 @@
+<div class="position-relative" style="width: 130px;">
+  <input class="fade top-0 w-100 h-100 left-0 position-absolute cursor-pointer"
+  accept="image/*" type="file" [disabled]="isLoading"
+  (change)="loadFile($event)"/>
+  <img [src]="currentImgUrl() ?? 'assets/img/placeholder.jpg'"
+  class="img-fuild rounded w-100">
+</div>

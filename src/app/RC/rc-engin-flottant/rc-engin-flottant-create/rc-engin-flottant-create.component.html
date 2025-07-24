@@ -1,0 +1,15 @@
+<div class="">
+  <div class="title">
+    <h3 i18n>Create RCEnginFlottant</h3>
+  </div>
+  <app-error-messages 
+  [errorMessages]="errorHandler.errorMessages()"
+  ></app-error-messages>
+  <app-rc-engin-flottant-form 
+  [isLoading]="isLoading()"
+  [handleSubmit]="handleFormSubmit"
+  [rcTypeEngins]="rcTypeEngins()"
+	[rcPayss]="rcPayss()"
+	[rcActeurs]="rcActeurs()"
+	></app-rc-engin-flottant-form>
+</div>

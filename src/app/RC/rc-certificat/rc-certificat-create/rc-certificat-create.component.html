@@ -1,0 +1,13 @@
+<div class="">
+  <div class="title">
+    <h3 i18n>Create RCCertificat</h3>
+  </div>
+  <app-error-messages 
+  [errorMessages]="errorHandler.errorMessages()"
+  ></app-error-messages>
+  <app-rc-certificat-form 
+  [isLoading]="isLoading()"
+  [handleSubmit]="handleFormSubmit"
+  [rcEnginFlottants]="rcEnginFlottants()"
+	></app-rc-certificat-form>
+</div>

@@ -1,0 +1,24 @@
+<div class="pagination-wrapper mt-4">
+  <ul class="pagination pagination-circle justify-content-center">
+    <li class="page-item">
+        <a class="page-link" [routerLink]="['./']"
+        [queryParams]="{page: getPreviousPage()}">
+            <i class="fa fa-angle-left"></i>
+        </a>
+    </li>
+    @for (item of getArrayFromPageLength(); track $index) {
+      <li routerLinkActive="active">
+        <a class="page-link" [routerLink]="['./']"
+        [queryParams]="{page: $index + 1}">
+          {{ $index + 1 }}
+        </a>
+      </li>
+    }
+    <li class="page-item">
+      <a class="page-link" [routerLink]="['./']"
+      [queryParams]="{page: getNextPage()}">
+        <i class="fa fa-angle-right"></i>
+      </a>
+    </li>
+  </ul>
+</div>

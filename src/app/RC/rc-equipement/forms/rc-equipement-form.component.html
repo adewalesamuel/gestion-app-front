@@ -1,0 +1,51 @@
+<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class="">
+  <div class=row>
+    <div class='col-12'>
+      <div class='form-group'>
+        <label for='rc_engin_flottant_id' i18n>rc_engin_flottant_id</label>
+        <select class='select2 form-control' id='rc_engin_flottant_id' formControlName='rc_engin_flottant_id' [attr.value]="formGroup.value.rcEnginFlottant_id">
+          <option hidden value="" i18n>Choisissez une option</option>
+          @for (rcEnginFlottant of rcEnginFlottants; track $index) {
+            <option [value]="rcEnginFlottant.id">
+            {{rcEnginFlottant?.nom}}
+            </option>
+          }
+        </select>
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='nom' i18n>nom</label>
+        <input class='form-control' type='text' id='nom' formControlName='nom' i18n-placeholder placeholder='nom' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='type' i18n>type</label>
+        <input class='form-control' type='text' id='type' formControlName='type' i18n-placeholder placeholder='type' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='numero_serie' i18n>numero_serie</label>
+        <input class='form-control' type='text' id='numero_serie' formControlName='numero_serie' i18n-placeholder placeholder='numero_serie' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='date_installation' i18n>date_installation</label>
+        <input class='form-control' type='date' id='date_installation' formControlName='date_installation' i18n-placeholder placeholder='date_installation' />
+      </div>
+    </div>
+
+    <div class='col-12 text-right'>
+        <button class="btn btn-primary" type="submit" [disabled]="isLoading" i18n>
+          @if (isLoading) {
+            Chargement...
+          } @else {
+            Enregistrer
+          }
+        </button>
+    </div>
+  </div>
+</form>

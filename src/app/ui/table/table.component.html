@@ -1,0 +1,51 @@
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      @for (headEntry of getTableEntries(); track $index) {
+        <th [class]="headEntry[1].thClassName" i18n>
+          {{ headEntry[0] }}
+        </th>
+      }
+      @if (tableActions.length > 1) {
+        <th>Actions</th>
+      }
+    </thead>
+    <tbody>
+      @for (row of tableData; track $index) {
+        <tr>
+          @for (headEntry of getTableEntries(); track $index) {
+            <td [class]="headEntry[1].tdClassName">
+              {{ getNestedValue(headEntry[0], row) }}
+            </td>
+          }
+          @if (tableActions.length > 1) {
+            <td>
+              @for (action of tableActions; track $index) {
+                @switch (action) {
+                  @case ('read') {
+                    <button (click)="onReadClick($event, row) ?? null" i18n>
+                      Voir
+                    </button>
+
+                  }
+                  @case ('edit') {
+                    <button (click)="onEditClick($event, row) ?? null" i18n>
+                      Modifier
+                    </button>
+
+                  }
+                  @case ('delete') {
+                    <button (click)="onDeleteClick($event, row) ?? null" i18n>
+                      Supprimer
+                    </button>
+
+                  }
+                }
+              }
+            </td>
+          }
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>

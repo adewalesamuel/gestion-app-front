@@ -1,0 +1,19 @@
+<div class="">
+  <div class="title">
+    <h3 i18n>List EDAbonnement</h3>
+  </div>
+  <a routerLink="/ed-abonnements/create" i18n>+ Add eDAbonnements</a>
+  <app-error-messages 
+  [errorMessages]="errorHandler.errorMessages()"
+  ></app-error-messages>
+  <app-loader [isLoading]="isLoading()"></app-loader>
+  <app-table
+  *ngIf="!isLoading()"
+  [tableAttributes]="tableAttributes"
+  [tableActions]="tableActions"
+  [tableData]="eDAbonnements()"
+  [handleReadClick]="handleReadClick"
+  [handleEditClick]="handleEditClick"
+  [handleDeleteClick]="handleDeleteClick"></app-table>
+  <app-pagination [page]="page()" [pageLength]="pageLength()"></app-pagination>
+</div>

@@ -1,0 +1,15 @@
+<div class="">
+  <div class="title">
+    <h3 i18n>Create GUTransaction</h3>
+  </div>
+  <app-error-messages 
+  [errorMessages]="errorHandler.errorMessages()"
+  ></app-error-messages>
+  <app-gu-transaction-form 
+  [isLoading]="isLoading()"
+  [handleSubmit]="handleFormSubmit"
+  [reModePaiements]="reModePaiements()"
+	[guDemandes]="guDemandes()"
+	[users]="users()"
+	></app-gu-transaction-form>
+</div>

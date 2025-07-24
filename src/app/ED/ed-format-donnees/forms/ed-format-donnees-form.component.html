@@ -1,0 +1,38 @@
+<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class="">
+  <div class=row>
+    <div class='col-12'>
+      <div class='form-group'>
+        <label for='nom' i18n>nom</label>
+        <input class='form-control' type='text' id='nom' formControlName='nom' i18n-placeholder placeholder='nom' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='mime_type' i18n>mime_type</label>
+        <input class='form-control' type='text' id='mime_type' formControlName='mime_type' i18n-placeholder placeholder='mime_type' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='schema_xsd_url' i18n>schema_xsd_url</label>
+        <input class='form-control' type='text' id='schema_xsd_url' formControlName='schema_xsd_url' i18n-placeholder placeholder='schema_xsd_url' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='exemple_url' i18n>exemple_url</label>
+        <input class='form-control' type='text' id='exemple_url' formControlName='exemple_url' i18n-placeholder placeholder='exemple_url' />
+      </div>
+    </div>
+		
+    <div class='col-12 text-right'>
+        <button class="btn btn-primary" type="submit" [disabled]="isLoading" i18n>
+          @if (isLoading) {
+            Chargement...
+          } @else {
+            Enregistrer
+          }
+        </button>
+    </div>
+  </div>
+</form>

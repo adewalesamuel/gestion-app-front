@@ -1,0 +1,112 @@
+<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class="">
+  <div class=row>
+    <div class='col-12'>
+      <div class='form-group'>
+        <label for='in_type_controle_id' i18n>in_type_controle_id</label>
+        <select class='select2 form-control' id='in_type_controle_id' formControlName='in_type_controle_id' [attr.value]="formGroup.value.inTypeControle_id">
+          <option hidden value="" i18n>Choisissez une option</option>
+          @for (inTypeControle of inTypeControles; track $index) {
+            <option [value]="inTypeControle.id">
+            {{inTypeControle?.libelle}}
+            </option>
+          }
+        </select>
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='in_equipe_inspection_id' i18n>in_equipe_inspection_id</label>
+        <select class='select2 form-control' id='in_equipe_inspection_id' formControlName='in_equipe_inspection_id' [attr.value]="formGroup.value.inEquipeInspection_id">
+          <option hidden value="" i18n>Choisissez une option</option>
+          @for (inEquipeInspection of inEquipeInspections; track $index) {
+            <option [value]="inEquipeInspection.id">
+            {{inEquipeInspection?.nom}}
+            </option>
+          }
+        </select>
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='rc_engin_flottant_id' i18n>rc_engin_flottant_id</label>
+        <select class='select2 form-control' id='rc_engin_flottant_id' formControlName='rc_engin_flottant_id' [attr.value]="formGroup.value.rcEnginFlottant_id">
+          <option hidden value="" i18n>Choisissez une option</option>
+          @for (rcEnginFlottant of rcEnginFlottants; track $index) {
+            <option [value]="rcEnginFlottant.id">
+            {{rcEnginFlottant?.nom}}
+            </option>
+          }
+        </select>
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='user_id' i18n>user_id</label>
+        <select class='select2 form-control' id='user_id' formControlName='user_id' [attr.value]="formGroup.value.user_id">
+          <option hidden value="" i18n>Choisissez une option</option>
+          @for (user of users; track $index) {
+            <option [value]="user.id">
+            {{user?.nom}}
+            </option>
+          }
+        </select>
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='reference' i18n>reference</label>
+        <input class='form-control' type='text' id='reference' formControlName='reference' i18n-placeholder placeholder='reference' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='date_planifiee' i18n>date_planifiee</label>
+        <input class='form-control' type='date' id='date_planifiee' formControlName='date_planifiee' i18n-placeholder placeholder='date_planifiee' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='heure' i18n>heure</label>
+        <input class='form-control' type='text' id='heure' formControlName='heure' i18n-placeholder placeholder='heure' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='date_reelle' i18n>date_reelle</label>
+        <input class='form-control' type='date' id='date_reelle' formControlName='date_reelle' i18n-placeholder placeholder='date_reelle' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='statut' i18n>statut</label>
+        <select class='form-select form-control' id='statut' formControlName='statut' [attr.value]="formGroup.value.statut">
+          <option hidden value="" i18n>Choisissez une option</option>
+          <option value='pending'>En cours</option>
+          <option value='validated'>Validé</option>
+          <option value='canceled'>Annulé</option>
+        </select>
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='resultat' i18n>resultat</label>
+        <select class='form-select form-control' id='resultat' formControlName='resultat' [attr.value]="formGroup.value.resultat">
+          <option hidden value="" i18n>Choisissez une option</option>
+          <option value='pending'>En cours</option>
+          <option value='validated'>Validé</option>
+          <option value='canceled'>Annulé</option>
+        </select>
+      </div>
+    </div>
+
+    <div class='col-12 text-right'>
+        <button class="btn btn-primary" type="submit" [disabled]="isLoading" i18n>
+          @if (isLoading) {
+            Chargement...
+          } @else {
+            Enregistrer
+          }
+        </button>
+    </div>
+  </div>
+</form>

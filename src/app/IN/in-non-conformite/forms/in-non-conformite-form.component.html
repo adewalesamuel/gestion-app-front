@@ -1,0 +1,86 @@
+<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class="">
+  <div class=row>
+    <div class='col-12'>
+      <div class='form-group'>
+        <label for='in_inspection_id' i18n>in_inspection_id</label>
+        <select class='select2 form-control' id='in_inspection_id' formControlName='in_inspection_id' [attr.value]="formGroup.value.inInspection_id">
+          <option hidden value="" i18n>Choisissez une option</option>
+          @for (inInspection of inInspections; track $index) {
+            <option [value]="inInspection.id">
+            {{inInspection?.reference}}
+            </option>
+          }
+        </select>
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='user_id' i18n>user_id</label>
+        <select class='select2 form-control' id='user_id' formControlName='user_id' [attr.value]="formGroup.value.user_id">
+          <option hidden value="" i18n>Choisissez une option</option>
+          @for (user of users; track $index) {
+            <option [value]="user.id">
+            {{user?.nom}}
+            </option>
+          }
+        </select>
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='description' i18n>description</label>
+        <input class='form-control' type='text' id='description' formControlName='description' i18n-placeholder placeholder='description' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='gravite' i18n>gravite</label>
+        <select class='form-select form-control' id='gravite' formControlName='gravite' [attr.value]="formGroup.value.gravite">
+          <option hidden value="" i18n>Choisissez une option</option>
+          <option value='pending'>En cours</option>
+          <option value='validated'>Validé</option>
+          <option value='canceled'>Annulé</option>
+        </select>
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='date_decouverte' i18n>date_decouverte</label>
+        <input class='form-control' type='date' id='date_decouverte' formControlName='date_decouverte' i18n-placeholder placeholder='date_decouverte' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='heure' i18n>heure</label>
+        <input class='form-control' type='text' id='heure' formControlName='heure' i18n-placeholder placeholder='heure' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='date_resolution' i18n>date_resolution</label>
+        <input class='form-control' type='date' id='date_resolution' formControlName='date_resolution' i18n-placeholder placeholder='date_resolution' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='statut' i18n>statut</label>
+        <select class='form-select form-control' id='statut' formControlName='statut' [attr.value]="formGroup.value.statut">
+          <option hidden value="" i18n>Choisissez une option</option>
+          <option value='pending'>En cours</option>
+          <option value='validated'>Validé</option>
+          <option value='canceled'>Annulé</option>
+        </select>
+      </div>
+    </div>
+
+    <div class='col-12 text-right'>
+        <button class="btn btn-primary" type="submit" [disabled]="isLoading" i18n>
+          @if (isLoading) {
+            Chargement...
+          } @else {
+            Enregistrer
+          }
+        </button>
+    </div>
+  </div>
+</form>

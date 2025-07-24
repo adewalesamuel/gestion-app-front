@@ -1,0 +1,19 @@
+<div class="">
+  <div class="title">
+    <h3 i18n>List RCPays</h3>
+  </div>
+  <a routerLink="/rc-payss/create" i18n>+ Add rCPayss</a>
+  <app-error-messages 
+  [errorMessages]="errorHandler.errorMessages()"
+  ></app-error-messages>
+  <app-loader [isLoading]="isLoading()"></app-loader>
+  <app-table
+  *ngIf="!isLoading()"
+  [tableAttributes]="tableAttributes"
+  [tableActions]="tableActions"
+  [tableData]="rCPayss()"
+  [handleReadClick]="handleReadClick"
+  [handleEditClick]="handleEditClick"
+  [handleDeleteClick]="handleDeleteClick"></app-table>
+  <app-pagination [page]="page()" [pageLength]="pageLength()"></app-pagination>
+</div>

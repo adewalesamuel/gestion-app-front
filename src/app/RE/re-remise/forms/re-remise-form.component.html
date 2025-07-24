@@ -1,0 +1,58 @@
+<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class="">
+  <div class=row>
+    <div class='col-12'>
+      <div class='form-group'>
+        <label for='re_ordre_recette_id' i18n>re_ordre_recette_id</label>
+        <select class='select2 form-control' id='re_ordre_recette_id' formControlName='re_ordre_recette_id' [attr.value]="formGroup.value.reOrdreRecette_id">
+          <option hidden value="" i18n>Choisissez une option</option>
+          @for (reOrdreRecette of reOrdreRecettes; track $index) {
+            <option [value]="reOrdreRecette.id">
+            {{reOrdreRecette?.reference}}
+            </option>
+          }
+        </select>
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='user_id' i18n>user_id</label>
+        <select class='select2 form-control' id='user_id' formControlName='user_id' [attr.value]="formGroup.value.user_id">
+          <option hidden value="" i18n>Choisissez une option</option>
+          @for (user of users; track $index) {
+            <option [value]="user.id">
+            {{user?.nom}}
+            </option>
+          }
+        </select>
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='montant' i18n>montant</label>
+        <input class='form-control' type='number' id='montant' formControlName='montant' i18n-placeholder placeholder='montant' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='pourcentage' i18n>pourcentage</label>
+        <input class='form-control' type='number' id='pourcentage' formControlName='pourcentage' i18n-placeholder placeholder='pourcentage' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='raison' i18n>raison</label>
+        <input class='form-control' type='text' id='raison' formControlName='raison' i18n-placeholder placeholder='raison' />
+      </div>
+    </div>
+
+    <div class='col-12 text-right'>
+        <button class="btn btn-primary" type="submit" [disabled]="isLoading" i18n>
+          @if (isLoading) {
+            Chargement...
+          } @else {
+            Enregistrer
+          }
+        </button>
+    </div>
+  </div>
+</form>

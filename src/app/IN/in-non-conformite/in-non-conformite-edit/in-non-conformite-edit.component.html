@@ -1,0 +1,14 @@
+<div class="">
+  <div class="title">
+    <h3 i18n>Edit INNonConformite</h3>
+  </div>
+  <app-error-messages 
+  [errorMessages]="errorHandler.errorMessages()"
+  ></app-error-messages>
+  <app-in-non-conformite-form 
+  [isLoading]="isLoading()"
+  [handleSubmit]="handleFormSubmit"
+  [inInspections]="inInspections()"
+	[users]="users()"
+	></app-in-non-conformite-form>
+</div>

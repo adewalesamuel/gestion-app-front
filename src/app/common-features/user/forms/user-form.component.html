@@ -1,0 +1,76 @@
+<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class="">
+  <div class=row>
+    <div class='col-12'>
+      <div class='form-group'>
+        <label for='role_id' i18n>role_id</label>
+        <select class='select2 form-control' id='role_id' formControlName='role_id' [attr.value]="formGroup.value.role_id">
+          <option hidden value="" i18n>Choisissez une option</option>
+          @for (role of roles; track $index) {
+            <option [value]="role.id">
+            {{role?.name}}
+            </option>
+          }
+        </select>
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='rc_acteur_id' i18n>rc_acteur_id</label>
+        <select class='select2 form-control' id='rc_acteur_id' formControlName='rc_acteur_id' [attr.value]="formGroup.value.rcActeur_id">
+          <option hidden value="" i18n>Choisissez une option</option>
+          @for (rcActeur of rcActeurs; track $index) {
+            <option [value]="rcActeur.id">
+            {{rcActeur?.nom}}
+            </option>
+          }
+        </select>
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='profil_img_url' i18n>profil_img_url</label>
+        <input class='form-control' type='text' id='profil_img_url' formControlName='profil_img_url' i18n-placeholder placeholder='profil_img_url' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='nom' i18n>nom</label>
+        <input class='form-control' type='text' id='nom' formControlName='nom' i18n-placeholder placeholder='nom' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='email' i18n>email</label>
+        <input class='form-control' type='text' id='email' formControlName='email' i18n-placeholder placeholder='email' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='password' i18n>password</label>
+        <input class='form-control' type='text' id='password' formControlName='password' i18n-placeholder placeholder='password' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='last_login_date' i18n>last_login_date</label>
+        <input class='form-control' type='date' id='last_login_date' formControlName='last_login_date' i18n-placeholder placeholder='last_login_date' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='last_login_heure' i18n>last_login_heure</label>
+        <input class='form-control' type='text' id='last_login_heure' formControlName='last_login_heure' i18n-placeholder placeholder='last_login_heure' />
+      </div>
+    </div>
+
+    <div class='col-12 text-right'>
+        <button class="btn btn-primary" type="submit" [disabled]="isLoading" i18n>
+          @if (isLoading) {
+            Chargement...
+          } @else {
+            Enregistrer
+          }
+        </button>
+    </div>
+  </div>
+</form>

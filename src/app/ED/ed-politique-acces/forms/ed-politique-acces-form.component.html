@@ -1,0 +1,52 @@
+<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class="">
+  <div class=row>
+    <div class='col-12'>
+      <div class='form-group'>
+        <label for='ed_api_id' i18n>ed_api_id</label>
+        <select class='select2 form-control' id='ed_api_id' formControlName='ed_api_id' [attr.value]="formGroup.value.edApi_id">
+          <option hidden value="" i18n>Choisissez une option</option>
+          @for (edApi of edApis; track $index) {
+            <option [value]="edApi.id">
+            {{edApi?.nom}}
+            </option>
+          }
+        </select>
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='role_id' i18n>role_id</label>
+        <select class='select2 form-control' id='role_id' formControlName='role_id' [attr.value]="formGroup.value.role_id">
+          <option hidden value="" i18n>Choisissez une option</option>
+          @for (role of roles; track $index) {
+            <option [value]="role.id">
+            {{role?.name}}
+            </option>
+          }
+        </select>
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='nom' i18n>nom</label>
+        <input class='form-control' type='text' id='nom' formControlName='nom' i18n-placeholder placeholder='nom' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='regles' i18n>regles</label>
+        <input class='form-control' type='text' id='regles' formControlName='regles' i18n-placeholder placeholder='regles' />
+      </div>
+    </div>
+
+    <div class='col-12 text-right'>
+        <button class="btn btn-primary" type="submit" [disabled]="isLoading" i18n>
+          @if (isLoading) {
+            Chargement...
+          } @else {
+            Enregistrer
+          }
+        </button>
+    </div>
+  </div>
+</form>

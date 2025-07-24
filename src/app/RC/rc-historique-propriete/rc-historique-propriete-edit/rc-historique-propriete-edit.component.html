@@ -1,0 +1,14 @@
+<div class="">
+  <div class="title">
+    <h3 i18n>Edit RCHistoriquePropriete</h3>
+  </div>
+  <app-error-messages 
+  [errorMessages]="errorHandler.errorMessages()"
+  ></app-error-messages>
+  <app-rc-historique-propriete-form 
+  [isLoading]="isLoading()"
+  [handleSubmit]="handleFormSubmit"
+  [rcActeurs]="rcActeurs()"
+	[rcEnginFlottants]="rcEnginFlottants()"
+	></app-rc-historique-propriete-form>
+</div>

@@ -1,0 +1,79 @@
+<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class="">
+  <div class=row>
+    <div class='col-12'>
+      <div class='form-group'>
+        <label for='type' i18n>type</label>
+        <select class='form-select form-control' id='type' formControlName='type' [attr.value]="formGroup.value.type">
+          <option hidden value="" i18n>Choisissez une option</option>
+          <option value='pending'>En cours</option>
+          <option value='validated'>Validé</option>
+          <option value='canceled'>Annulé</option>
+        </select>
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='nom' i18n>nom</label>
+        <input class='form-control' type='text' id='nom' formControlName='nom' i18n-placeholder placeholder='nom' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='prenom' i18n>prenom</label>
+        <input class='form-control' type='text' id='prenom' formControlName='prenom' i18n-placeholder placeholder='prenom' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='raison_sociale' i18n>raison_sociale</label>
+        <input class='form-control' type='text' id='raison_sociale' formControlName='raison_sociale' i18n-placeholder placeholder='raison_sociale' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='registre_commerce' i18n>registre_commerce</label>
+        <input class='form-control' type='text' id='registre_commerce' formControlName='registre_commerce' i18n-placeholder placeholder='registre_commerce' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='email' i18n>email</label>
+        <input class='form-control' type='text' id='email' formControlName='email' i18n-placeholder placeholder='email' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='adresse' i18n>adresse</label>
+        <input class='form-control' type='text' id='adresse' formControlName='adresse' i18n-placeholder placeholder='adresse' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='telephone' i18n>telephone</label>
+        <input class='form-control' type='text' id='telephone' formControlName='telephone' i18n-placeholder placeholder='telephone' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='secteur_activite' i18n>secteur_activite</label>
+        <input class='form-control' type='text' id='secteur_activite' formControlName='secteur_activite' i18n-placeholder placeholder='secteur_activite' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='pays_origine' i18n>pays_origine</label>
+        <input class='form-control' type='text' id='pays_origine' formControlName='pays_origine' i18n-placeholder placeholder='pays_origine' />
+      </div>
+    </div>
+		
+    <div class='col-12 text-right'>
+        <button class="btn btn-primary" type="submit" [disabled]="isLoading" i18n>
+          @if (isLoading) {
+            Chargement...
+          } @else {
+            Enregistrer
+          }
+        </button>
+    </div>
+  </div>
+</form>

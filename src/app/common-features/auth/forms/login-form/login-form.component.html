@@ -1,0 +1,28 @@
+<form [formGroup]="formGroup" class="col-12 col-mg-6" (submit)="handleSubmit($event)">
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input class="form-control" type="text" formControlName="email" id="email"/>
+      </div>
+    </div>
+    <div class="col-12 col-md-6">
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input class="form-control" type="password" formControlName="password" id="passsword" />
+      </div>
+    </div>
+    <div class="col-12 col-md-6">
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit" [disabled]="isLoading">
+          @if (isLoading) {
+            Chargement...
+          } @else {
+            Enregistrer
+          }
+        </button>
+      </div>
+    </div>
+  </div>
+
+</form>

@@ -1,0 +1,44 @@
+<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class="">
+  <div class=row>
+    <div class='col-12'>
+      <div class='form-group'>
+        <label for='code' i18n>code</label>
+        <input class='form-control' type='text' id='code' formControlName='code' i18n-placeholder placeholder='code' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='libelle' i18n>libelle</label>
+        <input class='form-control' type='text' id='libelle' formControlName='libelle' i18n-placeholder placeholder='libelle' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='couleur_hex' i18n>couleur_hex</label>
+        <input class='form-control' type='text' id='couleur_hex' formControlName='couleur_hex' i18n-placeholder placeholder='couleur_hex' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='ordre' i18n>ordre</label>
+        <input class='form-control' type='number' id='ordre' formControlName='ordre' i18n-placeholder placeholder='ordre' />
+      </div>
+    </div>
+		<div class='col-12'>
+      <div class='form-group'>
+        <label for='notifiable' i18n>notifiable</label>
+        <input class='form-control' type='checkbox' id='notifiable' formControlName='notifiable' i18n-placeholder placeholder='notifiable' />
+      </div>
+    </div>
+		
+    <div class='col-12 text-right'>
+        <button class="btn btn-primary" type="submit" [disabled]="isLoading" i18n>
+          @if (isLoading) {
+            Chargement...
+          } @else {
+            Enregistrer
+          }
+        </button>
+    </div>
+  </div>
+</form>

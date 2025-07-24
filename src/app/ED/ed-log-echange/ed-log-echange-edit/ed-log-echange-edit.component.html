@@ -1,0 +1,14 @@
+<div class="">
+  <div class="title">
+    <h3 i18n>Edit EDLogEchange</h3>
+  </div>
+  <app-error-messages 
+  [errorMessages]="errorHandler.errorMessages()"
+  ></app-error-messages>
+  <app-ed-log-echange-form 
+  [isLoading]="isLoading()"
+  [handleSubmit]="handleFormSubmit"
+  [edApis]="edApis()"
+	[users]="users()"
+	></app-ed-log-echange-form>
+</div>

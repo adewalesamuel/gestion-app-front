@@ -1,0 +1,13 @@
+<div class="">
+  <div class="title">
+    <h3 i18n>Edit RCPort</h3>
+  </div>
+  <app-error-messages 
+  [errorMessages]="errorHandler.errorMessages()"
+  ></app-error-messages>
+  <app-rc-port-form 
+  [isLoading]="isLoading()"
+  [handleSubmit]="handleFormSubmit"
+  [rcPayss]="rcPayss()"
+	></app-rc-port-form>
+</div>

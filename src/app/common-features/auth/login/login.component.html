@@ -1,0 +1,10 @@
+<div>
+  <h2>Login</h2>
+  <app-error-messages
+  [errorMessages]="errorHandler.errorMessages()"
+  ></app-error-messages>
+  <app-login-form
+  [isLoading]="isLoading()"
+  [handleSubmit]="login">
+</app-login-form>
+</div>

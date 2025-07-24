@@ -1,0 +1,19 @@
+<div class="">
+  <div class="title">
+    <h3 i18n>List GUHistorique</h3>
+  </div>
+  <a routerLink="/gu-historiques/create" i18n>+ Add gUHistoriques</a>
+  <app-error-messages 
+  [errorMessages]="errorHandler.errorMessages()"
+  ></app-error-messages>
+  <app-loader [isLoading]="isLoading()"></app-loader>
+  <app-table
+  *ngIf="!isLoading()"
+  [tableAttributes]="tableAttributes"
+  [tableActions]="tableActions"
+  [tableData]="gUHistoriques()"
+  [handleReadClick]="handleReadClick"
+  [handleEditClick]="handleEditClick"
+  [handleDeleteClick]="handleDeleteClick"></app-table>
+  <app-pagination [page]="page()" [pageLength]="pageLength()"></app-pagination>
+</div>

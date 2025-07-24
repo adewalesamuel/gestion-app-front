@@ -1,0 +1,12 @@
+<div class="">
+  <div class="title">
+    <h3 i18n>Edit ConfigSysteme</h3>
+  </div>
+  <app-error-messages 
+  [errorMessages]="errorHandler.errorMessages()"
+  ></app-error-messages>
+  <app-config-systeme-form 
+  [isLoading]="isLoading()"
+  [handleSubmit]="handleFormSubmit"
+  ></app-config-systeme-form>
+</div>

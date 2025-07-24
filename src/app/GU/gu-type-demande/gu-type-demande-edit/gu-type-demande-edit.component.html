@@ -1,0 +1,12 @@
+<div class="">
+  <div class="title">
+    <h3 i18n>Edit GUTypeDemande</h3>
+  </div>
+  <app-error-messages 
+  [errorMessages]="errorHandler.errorMessages()"
+  ></app-error-messages>
+  <app-gu-type-demande-form 
+  [isLoading]="isLoading()"
+  [handleSubmit]="handleFormSubmit"
+  ></app-gu-type-demande-form>
+</div>
