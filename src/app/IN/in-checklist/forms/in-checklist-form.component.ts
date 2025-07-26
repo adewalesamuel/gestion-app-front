@@ -20,9 +20,9 @@ export class INChecklistFormComponent {
   formGroup: FormGroup = new FormGroup(
     {
       rc_type_engin_id: new FormControl('', []),
-			nom: new FormControl('', []),
-			version: new FormControl('', []),
-			items: new FormControl('', []),
+			nom: new FormControl(undefined, []),
+			version: new FormControl(undefined, []),
+			items: new FormControl(undefined, []),
 
     }
   );

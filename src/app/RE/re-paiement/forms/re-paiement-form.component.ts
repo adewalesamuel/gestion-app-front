@@ -24,11 +24,11 @@ export class REPaiementFormComponent {
       re_ordre_recette_id: new FormControl('', []),
 			user_id: new FormControl('', []),
 			re_mode_paiement_id: new FormControl('', []),
-			montant: new FormControl('', []),
-			devise: new FormControl('', []),
-			date_paiement: new FormControl('', []),
-			heure: new FormControl('', []),
-			reference_transaction: new FormControl('', []),
+			montant: new FormControl(undefined, []),
+			devise: new FormControl(undefined, []),
+			date_paiement: new FormControl(undefined, []),
+			heure: new FormControl(undefined, []),
+			reference_transaction: new FormControl(undefined, []),
 
     }
   );

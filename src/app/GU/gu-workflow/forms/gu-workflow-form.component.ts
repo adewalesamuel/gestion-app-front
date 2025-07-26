@@ -20,8 +20,8 @@ import { GUTypeDemandeEntity } from '../../../GU/gu-type-demande/gu-type-demande
 export class GUWorkflowFormComponent {
   formGroup: FormGroup = new FormGroup(
     {
-      etape: new FormControl('', []),
-			ordre: new FormControl('', []),
+      etape: new FormControl(undefined, []),
+			ordre: new FormControl(undefined, []),
 			role_id: new FormControl('', []),
 			gu_type_demande_id: new FormControl('', []),
 

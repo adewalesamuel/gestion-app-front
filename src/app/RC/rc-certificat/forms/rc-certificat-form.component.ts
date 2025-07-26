@@ -21,11 +21,11 @@ export class RCCertificatFormComponent {
   formGroup: FormGroup = new FormGroup(
     {
       rc_engin_flottant_id: new FormControl('', []),
-			type: new FormControl('', []),
-			numero: new FormControl('', []),
-			date_emission: new FormControl('', []),
-			date_expiration: new FormControl('', []),
-			organisme_emetteur: new FormControl('', []),
+			type: new FormControl(undefined, []),
+			numero: new FormControl(undefined, []),
+			date_emission: new FormControl(undefined, []),
+			date_expiration: new FormControl(undefined, []),
+			organisme_emetteur: new FormControl(undefined, []),
 
     }
   );

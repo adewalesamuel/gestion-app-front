@@ -18,12 +18,12 @@ import { REModePaiementEntity } from '../re-mode-paiement.entity';
 export class REModePaiementFormComponent {
   formGroup: FormGroup = new FormGroup(
     {
-      code: new FormControl('', []),
-			libelle: new FormControl('', []),
-			frais_pourcentage: new FormControl('', []),
-			delai_jours: new FormControl('', []),
-			actif: new FormControl('', []),
-			
+      code: new FormControl(undefined, []),
+			libelle: new FormControl(undefined, []),
+			frais_pourcentage: new FormControl(undefined, []),
+			delai_jours: new FormControl(undefined, []),
+			actif: new FormControl(undefined, []),
+
     }
   );
 
@@ -47,7 +47,7 @@ export class REModePaiementFormComponent {
 			frais_pourcentage: this.formGroup.value.frais_pourcentage,
 			delai_jours: this.formGroup.value.delai_jours,
 			actif: this.formGroup.value.actif,
-			
+
     }
 
     return this.rEModePaiementService.create(JSON.stringify(payload))
@@ -60,7 +60,7 @@ export class REModePaiementFormComponent {
 			frais_pourcentage: this.formGroup.value.frais_pourcentage,
 			delai_jours: this.formGroup.value.delai_jours,
 			actif: this.formGroup.value.actif,
-			
+
     }
 
     return this.rEModePaiementService.update(id, JSON.stringify(payload)
@@ -74,7 +74,7 @@ export class REModePaiementFormComponent {
 			frais_pourcentage: rEModePaiement.frais_pourcentage,
 			delai_jours: rEModePaiement.delai_jours,
 			actif: rEModePaiement.actif,
-			
+
     })
   }
 
@@ -85,7 +85,7 @@ export class REModePaiementFormComponent {
 			frais_pourcentage: '',
 			delai_jours: '',
 			actif: '',
-			
+
     })
   }
 }

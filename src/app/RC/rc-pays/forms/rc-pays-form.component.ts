@@ -18,11 +18,11 @@ import { RCPaysEntity } from '../rc-pays.entity';
 export class RCPaysFormComponent {
   formGroup: FormGroup = new FormGroup(
     {
-      nom: new FormControl('', []),
-			code_iso: new FormControl('', []),
-			indicatif: new FormControl('', []),
-			pavillon_url: new FormControl('', []),
-			
+      nom: new FormControl(undefined, []),
+			code_iso: new FormControl(undefined, []),
+			indicatif: new FormControl(undefined, []),
+			pavillon_url: new FormControl(undefined, []),
+
     }
   );
 
@@ -45,7 +45,7 @@ export class RCPaysFormComponent {
 			code_iso: this.formGroup.value.code_iso,
 			indicatif: this.formGroup.value.indicatif,
 			pavillon_url: this.formGroup.value.pavillon_url,
-			
+
     }
 
     return this.rCPaysService.create(JSON.stringify(payload))
@@ -57,7 +57,7 @@ export class RCPaysFormComponent {
 			code_iso: this.formGroup.value.code_iso,
 			indicatif: this.formGroup.value.indicatif,
 			pavillon_url: this.formGroup.value.pavillon_url,
-			
+
     }
 
     return this.rCPaysService.update(id, JSON.stringify(payload)
@@ -70,7 +70,7 @@ export class RCPaysFormComponent {
 			code_iso: rCPays.code_iso,
 			indicatif: rCPays.indicatif,
 			pavillon_url: rCPays.pavillon_url,
-			
+
     })
   }
 
@@ -80,7 +80,7 @@ export class RCPaysFormComponent {
 			code_iso: '',
 			indicatif: '',
 			pavillon_url: '',
-			
+
     })
   }
 }

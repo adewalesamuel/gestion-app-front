@@ -22,8 +22,8 @@ export class EDPolitiqueAccesFormComponent {
     {
       ed_api_id: new FormControl('', []),
 			role_id: new FormControl('', []),
-			nom: new FormControl('', []),
-			regles: new FormControl('', []),
+			nom: new FormControl(undefined, []),
+			regles: new FormControl(undefined, []),
 
     }
   );

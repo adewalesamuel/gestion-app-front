@@ -21,12 +21,12 @@ export class AuditLogFormComponent {
   formGroup: FormGroup = new FormGroup(
     {
       user_id: new FormControl('', []),
-			action: new FormControl('', []),
-			entite: new FormControl('', []),
+			action: new FormControl(undefined, []),
+			entite: new FormControl(undefined, []),
 			entite_id: new FormControl('', []),
-			ancienne_valeur: new FormControl('', []),
-			nouvelle_valeur: new FormControl('', []),
-			ip_address: new FormControl('', []),
+			ancienne_valeur: new FormControl(undefined, []),
+			nouvelle_valeur: new FormControl(undefined, []),
+			ip_address: new FormControl(undefined, []),
 
     }
   );

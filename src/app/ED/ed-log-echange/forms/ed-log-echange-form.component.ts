@@ -23,12 +23,12 @@ export class EDLogEchangeFormComponent {
     {
       ed_api_id: new FormControl('', []),
 			user_id: new FormControl('', []),
-			date_heure: new FormControl('', []),
-			heure: new FormControl('', []),
-			type_requete: new FormControl('', []),
-			endpoint: new FormControl('', []),
-			statut_reponse: new FormControl('', []),
-			temps_reponse_ms: new FormControl('', []),
+			date_heure: new FormControl(undefined, []),
+			heure: new FormControl(undefined, []),
+			type_requete: new FormControl(undefined, []),
+			endpoint: new FormControl(undefined, []),
+			statut_reponse: new FormControl(undefined, []),
+			temps_reponse_ms: new FormControl(undefined, []),
 
     }
   );

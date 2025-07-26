@@ -22,11 +22,11 @@ export class NotificationFormComponent {
   formGroup: FormGroup = new FormGroup(
     {
       user_id: new FormControl('', []),
-			titre: new FormControl('', []),
-			message: new FormControl('', []),
-			lu: new FormControl('', []),
-			type: new FormControl('', []),
-			entite_type: new FormControl('', []),
+			titre: new FormControl(undefined, []),
+			message: new FormControl(undefined, []),
+			lu: new FormControl(undefined, []),
+			type: new FormControl(undefined, []),
+			entite_type: new FormControl(undefined, []),
 			entite_id: new FormControl('', []),
 
     }

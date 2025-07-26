@@ -24,13 +24,13 @@ export class RCEnginFlottantFormComponent {
       rc_type_engin_id: new FormControl('', []),
 			rc_pays_id: new FormControl('', []),
 			rc_acteur_id: new FormControl('', []),
-			nom: new FormControl('', []),
-			immatriculation: new FormControl('', []),
-			tonnage_brut: new FormControl('', []),
-			longueur: new FormControl('', []),
-			annee_construction: new FormControl('', []),
-			capacite_passagers: new FormControl('', []),
-			capacite_fret: new FormControl('', []),
+			nom: new FormControl(undefined, []),
+			immatriculation: new FormControl(undefined, []),
+			tonnage_brut: new FormControl(undefined, []),
+			longueur: new FormControl(undefined, []),
+			annee_construction: new FormControl(undefined, []),
+			capacite_passagers: new FormControl(undefined, []),
+			capacite_fret: new FormControl(undefined, []),
 
     }
   );

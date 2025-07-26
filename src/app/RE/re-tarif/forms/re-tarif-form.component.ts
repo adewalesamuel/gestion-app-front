@@ -19,11 +19,11 @@ import { CONSTS } from '../../../constants';
 export class RETarifFormComponent {
   formGroup: FormGroup = new FormGroup(
     {
-      service: new FormControl('', []),
-			montant: new FormControl('', []),
-			devise: new FormControl('', []),
-			frequence: new FormControl('', []),
-			type_acteur: new FormControl('', []),
+      service: new FormControl(undefined, []),
+			montant: new FormControl(undefined, []),
+			devise: new FormControl(undefined, []),
+			frequence: new FormControl(undefined, []),
+			type_acteur: new FormControl(undefined, []),
 
     }
   );

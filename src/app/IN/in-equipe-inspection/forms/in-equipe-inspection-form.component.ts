@@ -20,8 +20,8 @@ export class INEquipeInspectionFormComponent {
   formGroup: FormGroup = new FormGroup(
     {
       user_id: new FormControl('', []),
-			nom: new FormControl('', []),
-			membres: new FormControl('', []),
+			nom: new FormControl(undefined, []),
+			membres: new FormControl(undefined, []),
 
     }
   );

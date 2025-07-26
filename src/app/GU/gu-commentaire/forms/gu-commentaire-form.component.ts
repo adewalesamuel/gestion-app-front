@@ -20,9 +20,9 @@ import { GUDemandeEntity } from '../../../GU/gu-demande/gu-demande.entity';
 export class GUCommentaireFormComponent {
   formGroup: FormGroup = new FormGroup(
     {
-      contenu: new FormControl('', []),
-			date: new FormControl('', []),
-			heure: new FormControl('', []),
+      contenu: new FormControl(undefined, []),
+			date: new FormControl(undefined, []),
+			heure: new FormControl(undefined, []),
 			user_id: new FormControl('', []),
 			gu_demande_id: new FormControl('', []),
 

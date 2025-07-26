@@ -22,12 +22,12 @@ export class UserFormComponent {
     {
       role_id: new FormControl('', []),
 			rc_acteur_id: new FormControl('', []),
-			profil_img_url: new FormControl('', []),
-			nom: new FormControl('', []),
-			email: new FormControl('', []),
-			password: new FormControl('', []),
-			last_login_date: new FormControl('', []),
-			last_login_heure: new FormControl('', []),
+			profil_img_url: new FormControl(undefined, []),
+			nom: new FormControl(undefined, []),
+			email: new FormControl(undefined, []),
+			password: new FormControl(undefined, []),
+			last_login_date: new FormControl(undefined, []),
+			last_login_heure: new FormControl(undefined, []),
 
     }
   );

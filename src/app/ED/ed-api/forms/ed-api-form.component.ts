@@ -19,11 +19,11 @@ import { CONSTS } from '../../../constants';
 export class EDApiFormComponent {
   formGroup: FormGroup = new FormGroup(
     {
-      nom: new FormControl('', []),
-			description: new FormControl('', []),
-			url_base: new FormControl('', []),
-			statut: new FormControl('', []),
-			documentation_url: new FormControl('', []),
+      nom: new FormControl(undefined, []),
+			description: new FormControl(undefined, []),
+			url_base: new FormControl(undefined, []),
+			statut: new FormControl(undefined, []),
+			documentation_url: new FormControl(undefined, []),
 
     }
   );

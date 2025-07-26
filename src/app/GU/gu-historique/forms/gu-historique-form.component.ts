@@ -23,10 +23,10 @@ export class GUHistoriqueFormComponent {
     {
       user_id: new FormControl('', []),
 			gu_demande_id: new FormControl('', []),
-			action: new FormControl('', []),
-			details: new FormControl('', []),
-			date: new FormControl('', []),
-			heure: new FormControl('', []),
+			action: new FormControl(undefined, []),
+			details: new FormControl(undefined, []),
+			date: new FormControl(undefined, []),
+			heure: new FormControl(undefined, []),
 
     }
   );

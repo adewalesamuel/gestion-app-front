@@ -18,12 +18,12 @@ import { GUStatutDemandeEntity } from '../gu-statut-demande.entity';
 export class GUStatutDemandeFormComponent {
   formGroup: FormGroup = new FormGroup(
     {
-      code: new FormControl('', []),
-			libelle: new FormControl('', []),
-			couleur_hex: new FormControl('', []),
-			ordre: new FormControl('', []),
-			notifiable: new FormControl('', []),
-			
+      code: new FormControl(undefined, []),
+			libelle: new FormControl(undefined, []),
+			couleur_hex: new FormControl(undefined, []),
+			ordre: new FormControl(undefined, []),
+			notifiable: new FormControl(undefined, []),
+
     }
   );
 
@@ -47,7 +47,7 @@ export class GUStatutDemandeFormComponent {
 			couleur_hex: this.formGroup.value.couleur_hex,
 			ordre: this.formGroup.value.ordre,
 			notifiable: this.formGroup.value.notifiable,
-			
+
     }
 
     return this.gUStatutDemandeService.create(JSON.stringify(payload))
@@ -60,7 +60,7 @@ export class GUStatutDemandeFormComponent {
 			couleur_hex: this.formGroup.value.couleur_hex,
 			ordre: this.formGroup.value.ordre,
 			notifiable: this.formGroup.value.notifiable,
-			
+
     }
 
     return this.gUStatutDemandeService.update(id, JSON.stringify(payload)
@@ -74,7 +74,7 @@ export class GUStatutDemandeFormComponent {
 			couleur_hex: gUStatutDemande.couleur_hex,
 			ordre: gUStatutDemande.ordre,
 			notifiable: gUStatutDemande.notifiable,
-			
+
     })
   }
 
@@ -85,7 +85,7 @@ export class GUStatutDemandeFormComponent {
 			couleur_hex: '',
 			ordre: '',
 			notifiable: '',
-			
+
     })
   }
 }

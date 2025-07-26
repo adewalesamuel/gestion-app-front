@@ -18,11 +18,11 @@ import { EDFormatDonneesEntity } from '../ed-format-donnees.entity';
 export class EDFormatDonneesFormComponent {
   formGroup: FormGroup = new FormGroup(
     {
-      nom: new FormControl('', []),
-			mime_type: new FormControl('', []),
-			schema_xsd_url: new FormControl('', []),
-			exemple_url: new FormControl('', []),
-			
+      nom: new FormControl(undefined, []),
+			mime_type: new FormControl(undefined, []),
+			schema_xsd_url: new FormControl(undefined, []),
+			exemple_url: new FormControl(undefined, []),
+
     }
   );
 
@@ -45,7 +45,7 @@ export class EDFormatDonneesFormComponent {
 			mime_type: this.formGroup.value.mime_type,
 			schema_xsd_url: this.formGroup.value.schema_xsd_url,
 			exemple_url: this.formGroup.value.exemple_url,
-			
+
     }
 
     return this.eDFormatDonneesService.create(JSON.stringify(payload))
@@ -57,7 +57,7 @@ export class EDFormatDonneesFormComponent {
 			mime_type: this.formGroup.value.mime_type,
 			schema_xsd_url: this.formGroup.value.schema_xsd_url,
 			exemple_url: this.formGroup.value.exemple_url,
-			
+
     }
 
     return this.eDFormatDonneesService.update(id, JSON.stringify(payload)
@@ -70,7 +70,7 @@ export class EDFormatDonneesFormComponent {
 			mime_type: eDFormatDonnees.mime_type,
 			schema_xsd_url: eDFormatDonnees.schema_xsd_url,
 			exemple_url: eDFormatDonnees.exemple_url,
-			
+
     })
   }
 
@@ -80,7 +80,7 @@ export class EDFormatDonneesFormComponent {
 			mime_type: '',
 			schema_xsd_url: '',
 			exemple_url: '',
-			
+
     })
   }
 }

@@ -18,10 +18,10 @@ import { RoleEntity } from '../role.entity';
 export class RoleFormComponent {
   formGroup: FormGroup = new FormGroup(
     {
-      name: new FormControl('', []),
-			description: new FormControl('', []),
-			permissions: new FormControl('', []),
-			
+      name: new FormControl(undefined, []),
+			description: new FormControl(undefined, []),
+			permissions: new FormControl(undefined, []),
+
     }
   );
 
@@ -43,7 +43,7 @@ export class RoleFormComponent {
       name: this.formGroup.value.name,
 			description: this.formGroup.value.description,
 			permissions: this.formGroup.value.permissions,
-			
+
     }
 
     return this.roleService.create(JSON.stringify(payload))
@@ -54,7 +54,7 @@ export class RoleFormComponent {
       name: this.formGroup.value.name,
 			description: this.formGroup.value.description,
 			permissions: this.formGroup.value.permissions,
-			
+
     }
 
     return this.roleService.update(id, JSON.stringify(payload)
@@ -66,7 +66,7 @@ export class RoleFormComponent {
       name: role.name,
 			description: role.description,
 			permissions: role.permissions,
-			
+
     })
   }
 
@@ -75,7 +75,7 @@ export class RoleFormComponent {
       name: '',
 			description: '',
 			permissions: '',
-			
+
     })
   }
 }

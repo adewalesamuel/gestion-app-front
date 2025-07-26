@@ -23,10 +23,10 @@ export class REHistoriqueRelanceFormComponent {
     {
       re_relance_id: new FormControl('', []),
 			user_id: new FormControl('', []),
-			date: new FormControl('', []),
-			heure: new FormControl('', []),
-			mode: new FormControl('', []),
-			contenu: new FormControl('', []),
+			date: new FormControl(undefined, []),
+			heure: new FormControl(undefined, []),
+			mode: new FormControl(undefined, []),
+			contenu: new FormControl(undefined, []),
 
     }
   );

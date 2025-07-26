@@ -19,10 +19,10 @@ import { CONSTS } from '../../../constants';
 export class EDSchemaDonneesFormComponent {
   formGroup: FormGroup = new FormGroup(
     {
-      nom: new FormControl('', []),
-			version: new FormControl('', []),
-			schema_json: new FormControl('', []),
-			statut: new FormControl('', []),
+      nom: new FormControl(undefined, []),
+			version: new FormControl(undefined, []),
+			schema_json: new FormControl(undefined, []),
+			statut: new FormControl(undefined, []),
 
     }
   );

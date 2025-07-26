@@ -26,12 +26,12 @@ export class GUDemandeFormComponent {
 			gu_statut_demande_id: new FormControl('', []),
 			rc_acteur_id: new FormControl('', []),
 			rc_engin_flottant_id: new FormControl('', []),
-			reference: new FormControl('', []),
-			date_depot: new FormControl('', []),
-			heure: new FormControl('', []),
-			date_traitement: new FormControl('', []),
-			date_expiration: new FormControl('', []),
-			fichiers_joints: new FormControl('', []),
+			reference: new FormControl(undefined, []),
+			date_depot: new FormControl(undefined, []),
+			heure: new FormControl(undefined, []),
+			date_traitement: new FormControl(undefined, []),
+			date_expiration: new FormControl(undefined, []),
+			fichiers_joints: new FormControl(undefined, []),
 
     }
   );

@@ -22,9 +22,9 @@ export class RERemiseFormComponent {
     {
       re_ordre_recette_id: new FormControl('', []),
 			user_id: new FormControl('', []),
-			montant: new FormControl('', []),
-			pourcentage: new FormControl('', []),
-			raison: new FormControl('', []),
+			montant: new FormControl(undefined, []),
+			pourcentage: new FormControl(undefined, []),
+			raison: new FormControl(undefined, []),
 
     }
   );

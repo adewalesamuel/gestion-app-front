@@ -23,9 +23,9 @@ export class RCHistoriqueProprieteFormComponent {
     {
       rc_acteur_id: new FormControl('', []),
 			rc_engin_flottant_id: new FormControl('', []),
-			date_debut: new FormControl('', []),
-			date_fin: new FormControl('', []),
-			type_transaction: new FormControl('', []),
+			date_debut: new FormControl(undefined, []),
+			date_fin: new FormControl(undefined, []),
+			type_transaction: new FormControl(undefined, []),
 
     }
   );

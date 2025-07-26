@@ -20,10 +20,10 @@ export class RCPortFormComponent {
   formGroup: FormGroup = new FormGroup(
     {
       rc_pays_id: new FormControl('', []),
-			nom: new FormControl('', []),
-			code: new FormControl('', []),
-			capacite_accueil: new FormControl('', []),
-			profondeur_max: new FormControl('', []),
+			nom: new FormControl(undefined, []),
+			code: new FormControl(undefined, []),
+			capacite_accueil: new FormControl(undefined, []),
+			profondeur_max: new FormControl(undefined, []),
 
     }
   );

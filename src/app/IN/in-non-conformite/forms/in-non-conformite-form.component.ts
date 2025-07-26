@@ -23,12 +23,12 @@ export class INNonConformiteFormComponent {
     {
       in_inspection_id: new FormControl('', []),
 			user_id: new FormControl('', []),
-			description: new FormControl('', []),
-			gravite: new FormControl('', []),
-			date_decouverte: new FormControl('', []),
-			heure: new FormControl('', []),
-			date_resolution: new FormControl('', []),
-			statut: new FormControl('', []),
+			description: new FormControl(undefined, []),
+			gravite: new FormControl(undefined, []),
+			date_decouverte: new FormControl(undefined, []),
+			heure: new FormControl(undefined, []),
+			date_resolution: new FormControl(undefined, []),
+			statut: new FormControl(undefined, []),
 
     }
   );

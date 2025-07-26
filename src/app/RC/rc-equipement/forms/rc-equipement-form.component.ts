@@ -20,10 +20,10 @@ export class RCEquipementFormComponent {
   formGroup: FormGroup = new FormGroup(
     {
       rc_engin_flottant_id: new FormControl('', []),
-			nom: new FormControl('', []),
-			type: new FormControl('', []),
-			numero_serie: new FormControl('', []),
-			date_installation: new FormControl('', []),
+			nom: new FormControl(undefined, []),
+			type: new FormControl(undefined, []),
+			numero_serie: new FormControl(undefined, []),
+			date_installation: new FormControl(undefined, []),
 
     }
   );

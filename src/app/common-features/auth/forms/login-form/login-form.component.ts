@@ -11,8 +11,8 @@ import { UserEntity } from '../../../../common-features/user/user.entity';
 export class LoginFormComponent {
   formGroup: FormGroup = new FormGroup(
     {
-      email: new FormControl('', []),
-      password: new FormControl('', [])
+      email: new FormControl(undefined, []),
+      password: new FormControl(undefined, [])
     }
   )
 

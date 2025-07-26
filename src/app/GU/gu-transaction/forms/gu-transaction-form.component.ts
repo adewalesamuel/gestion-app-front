@@ -25,12 +25,12 @@ export class GUTransactionFormComponent {
       re_mode_paiement_id: new FormControl('', []),
 			gu_demande_id: new FormControl('', []),
 			user_id: new FormControl('', []),
-			reference: new FormControl('', []),
-			montant: new FormControl('', []),
-			devise: new FormControl('', []),
-			date_transaction: new FormControl('', []),
-			heure: new FormControl('', []),
-			statut: new FormControl('', []),
+			reference: new FormControl(undefined, []),
+			montant: new FormControl(undefined, []),
+			devise: new FormControl(undefined, []),
+			date_transaction: new FormControl(undefined, []),
+			heure: new FormControl(undefined, []),
+			statut: new FormControl(undefined, []),
 
     }
   );
@@ -111,8 +111,8 @@ export class GUTransactionFormComponent {
 			reference: '',
 			montant: '',
 			devise: '',
-			date_transaction: '',
-			heure: '',
+			date_transaction: undefined,
+			heure: undefined,
 			statut: '',
 
     })

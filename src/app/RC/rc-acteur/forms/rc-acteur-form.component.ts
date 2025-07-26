@@ -19,16 +19,16 @@ import { CONSTS } from '../../../constants';
 export class RCActeurFormComponent {
   formGroup: FormGroup = new FormGroup(
     {
-      type: new FormControl('', []),
-			nom: new FormControl('', []),
-			prenom: new FormControl('', []),
-			raison_sociale: new FormControl('', []),
-			registre_commerce: new FormControl('', []),
-			email: new FormControl('', []),
-			adresse: new FormControl('', []),
-			telephone: new FormControl('', []),
-			secteur_activite: new FormControl('', []),
-			pays_origine: new FormControl('', []),
+      type: new FormControl(undefined, []),
+			nom: new FormControl(undefined, []),
+			prenom: new FormControl(undefined, []),
+			raison_sociale: new FormControl(undefined, []),
+			registre_commerce: new FormControl(undefined, []),
+			email: new FormControl(undefined, []),
+			adresse: new FormControl(undefined, []),
+			telephone: new FormControl(undefined, []),
+			secteur_activite: new FormControl(undefined, []),
+			pays_origine: new FormControl(undefined, []),
 
     }
   );

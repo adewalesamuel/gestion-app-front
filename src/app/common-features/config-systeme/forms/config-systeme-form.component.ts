@@ -18,11 +18,11 @@ import { ConfigSystemeEntity } from '../config-systeme.entity';
 export class ConfigSystemeFormComponent {
   formGroup: FormGroup = new FormGroup(
     {
-      parametre: new FormControl('', []),
-			valeur: new FormControl('', []),
-			module: new FormControl('', []),
-			editable: new FormControl('', []),
-			
+      parametre: new FormControl(undefined, []),
+			valeur: new FormControl(undefined, []),
+			module: new FormControl(undefined, []),
+			editable: new FormControl(undefined, []),
+
     }
   );
 
@@ -45,7 +45,7 @@ export class ConfigSystemeFormComponent {
 			valeur: this.formGroup.value.valeur,
 			module: this.formGroup.value.module,
 			editable: this.formGroup.value.editable,
-			
+
     }
 
     return this.configSystemeService.create(JSON.stringify(payload))
@@ -57,7 +57,7 @@ export class ConfigSystemeFormComponent {
 			valeur: this.formGroup.value.valeur,
 			module: this.formGroup.value.module,
 			editable: this.formGroup.value.editable,
-			
+
     }
 
     return this.configSystemeService.update(id, JSON.stringify(payload)
@@ -70,7 +70,7 @@ export class ConfigSystemeFormComponent {
 			valeur: configSysteme.valeur,
 			module: configSysteme.module,
 			editable: configSysteme.editable,
-			
+
     })
   }
 
@@ -80,7 +80,7 @@ export class ConfigSystemeFormComponent {
 			valeur: '',
 			module: '',
 			editable: '',
-			
+
     })
   }
 }

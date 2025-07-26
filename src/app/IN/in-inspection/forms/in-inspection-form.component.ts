@@ -27,12 +27,12 @@ export class INInspectionFormComponent {
 			in_equipe_inspection_id: new FormControl('', []),
 			rc_engin_flottant_id: new FormControl('', []),
 			user_id: new FormControl('', []),
-			reference: new FormControl('', []),
-			date_planifiee: new FormControl('', []),
-			heure: new FormControl('', []),
-			date_reelle: new FormControl('', []),
-			statut: new FormControl('', []),
-			resultat: new FormControl('', []),
+			reference: new FormControl(undefined, []),
+			date_planifiee: new FormControl(undefined, []),
+			heure: new FormControl(undefined, []),
+			date_reelle: new FormControl(undefined, []),
+			statut: new FormControl(undefined, []),
+			resultat: new FormControl(undefined, []),
 
     }
   );
@@ -46,7 +46,7 @@ export class INInspectionFormComponent {
 
   readonly INSPECTION_STATUTS = Object.values(CONSTS.FEATURES.INSPECTION_STATUT);
   readonly INSPECTION_RESULTATS = Object.values(CONSTS.FEATURES.INSPECTION_RESULTAT);
-  
+
   constructor(protected iNInspectionService: INInspectionService) {}
 
   ngOnChanges() {

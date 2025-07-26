@@ -19,11 +19,11 @@ import { CONSTS } from '../../../constants';
 export class RCTypeEnginFormComponent {
   formGroup: FormGroup = new FormGroup(
     {
-      code: new FormControl('', []),
-			libelle: new FormControl('', []),
-			categorie: new FormControl('', []),
-			tonnage_min: new FormControl('', []),
-			tonnage_max: new FormControl('', []),
+      code: new FormControl(undefined, []),
+			libelle: new FormControl(undefined, []),
+			categorie: new FormControl(undefined, []),
+			tonnage_min: new FormControl(undefined, []),
+			tonnage_max: new FormControl(undefined, []),
 
     }
   );

@@ -23,10 +23,10 @@ export class RERelanceFormComponent {
     {
       re_ordre_recette_id: new FormControl('', []),
 			user_id: new FormControl('', []),
-			date: new FormControl('', []),
-			heure: new FormControl('', []),
-			mode: new FormControl('', []),
-			statut: new FormControl('', []),
+			date: new FormControl(undefined, []),
+			heure: new FormControl(undefined, []),
+			mode: new FormControl(undefined, []),
+			statut: new FormControl(undefined, []),
 
     }
   );
@@ -38,7 +38,7 @@ export class RERelanceFormComponent {
 
   readonly RELANCE_MODES = Object.values(CONSTS.FEATURES.RELANCE_MODE);
   readonly RELANCE_STATUTS = Object.values(CONSTS.FEATURES.RELANCE_STATUT);
-  
+
   constructor(protected rERelanceService: RERelanceService) {}
 
   ngOnChanges() {

@@ -19,11 +19,11 @@ import { CONSTS } from '../../../constants';
 export class INTypeControleFormComponent {
   formGroup: FormGroup = new FormGroup(
     {
-      code: new FormControl('', []),
-			libelle: new FormControl('', []),
-			norme_reference: new FormControl('', []),
-			frequence_mois: new FormControl('', []),
-			gravite_min: new FormControl('', []),
+      code: new FormControl(undefined, []),
+			libelle: new FormControl(undefined, []),
+			norme_reference: new FormControl(undefined, []),
+			frequence_mois: new FormControl(undefined, []),
+			gravite_min: new FormControl(undefined, []),
 
     }
   );

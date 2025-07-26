@@ -21,13 +21,13 @@ export class REOrdreRecetteFormComponent {
   formGroup: FormGroup = new FormGroup(
     {
       rc_acteur_id: new FormControl('', []),
-			reference: new FormControl('', []),
-			montant: new FormControl('', []),
-			devise: new FormControl('', []),
-			date_emission: new FormControl('', []),
-			date_echeance: new FormControl('', []),
-			statut: new FormControl('', []),
-			service_concerne: new FormControl('', []),
+			reference: new FormControl(undefined, []),
+			montant: new FormControl(undefined, []),
+			devise: new FormControl(undefined, []),
+			date_emission: new FormControl(undefined, []),
+			date_echeance: new FormControl(undefined, []),
+			statut: new FormControl(undefined, []),
+			service_concerne: new FormControl(undefined, []),
 
     }
   );

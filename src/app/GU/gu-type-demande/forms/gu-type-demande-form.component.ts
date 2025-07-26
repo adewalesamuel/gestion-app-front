@@ -18,12 +18,12 @@ import { GUTypeDemandeEntity } from '../gu-type-demande.entity';
 export class GUTypeDemandeFormComponent {
   formGroup: FormGroup = new FormGroup(
     {
-      code: new FormControl('', []),
-			libelle: new FormControl('', []),
-			delai_traitement_jours: new FormControl('', []),
-			cout: new FormControl('', []),
-			validite_mois: new FormControl('', []),
-			
+      code: new FormControl(undefined, []),
+			libelle: new FormControl(undefined, []),
+			delai_traitement_jours: new FormControl(undefined, []),
+			cout: new FormControl(undefined, []),
+			validite_mois: new FormControl(undefined, []),
+
     }
   );
 
@@ -47,7 +47,7 @@ export class GUTypeDemandeFormComponent {
 			delai_traitement_jours: this.formGroup.value.delai_traitement_jours,
 			cout: this.formGroup.value.cout,
 			validite_mois: this.formGroup.value.validite_mois,
-			
+
     }
 
     return this.gUTypeDemandeService.create(JSON.stringify(payload))
@@ -60,7 +60,7 @@ export class GUTypeDemandeFormComponent {
 			delai_traitement_jours: this.formGroup.value.delai_traitement_jours,
 			cout: this.formGroup.value.cout,
 			validite_mois: this.formGroup.value.validite_mois,
-			
+
     }
 
     return this.gUTypeDemandeService.update(id, JSON.stringify(payload)
@@ -74,7 +74,7 @@ export class GUTypeDemandeFormComponent {
 			delai_traitement_jours: gUTypeDemande.delai_traitement_jours,
 			cout: gUTypeDemande.cout,
 			validite_mois: gUTypeDemande.validite_mois,
-			
+
     })
   }
 
@@ -85,7 +85,7 @@ export class GUTypeDemandeFormComponent {
 			delai_traitement_jours: '',
 			cout: '',
 			validite_mois: '',
-			
+
     })
   }
 }

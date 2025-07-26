@@ -22,8 +22,8 @@ export class INPlanificationFormComponent {
     {
       rc_engin_flottant_id: new FormControl('', []),
 			in_checklist_id: new FormControl('', []),
-			periodicite_jours: new FormControl('', []),
-			prochaine_date: new FormControl('', []),
+			periodicite_jours: new FormControl(undefined, []),
+			prochaine_date: new FormControl(undefined, []),
 
     }
   );

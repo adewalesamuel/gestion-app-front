@@ -20,10 +20,10 @@ export class INResultatItemFormComponent {
   formGroup: FormGroup = new FormGroup(
     {
       in_inspection_id: new FormControl('', []),
-			conforme: new FormControl('', []),
-			observations: new FormControl('', []),
-			checklist_item_code: new FormControl('', []),
-			photo_url: new FormControl('', []),
+			conforme: new FormControl(undefined, []),
+			observations: new FormControl(undefined, []),
+			checklist_item_code: new FormControl(undefined, []),
+			photo_url: new FormControl(undefined, []),
 
     }
   );
