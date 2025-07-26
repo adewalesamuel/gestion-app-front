@@ -5,6 +5,7 @@ import { GUHistoriqueService } from '../services/gu-historique.service';
 import { GUHistoriqueEntity } from '../gu-historique.entity';
 import { UserEntity } from '../../../common-features/user/user.entity';
 import { GUDemandeEntity } from '../../../GU/gu-demande/gu-demande.entity';
+import { CONSTS } from '../../../constants';
 
 
 @Component({
@@ -34,6 +35,8 @@ export class GUHistoriqueFormComponent {
 	@Input() guDemandes!: GUDemandeEntity[];
 	@Input() handleSubmit!: (e: Event) => Promise<void>;
   @Input() isLoading!: boolean;
+
+  readonly HISTORIQUE_ACTIONS = Object.values(CONSTS.FEATURES.HISTORIQUE_ACTION);
 
   constructor(protected gUHistoriqueService: GUHistoriqueService) {}
 

@@ -7,6 +7,7 @@ import { INTypeControleEntity } from '../../../IN/in-type-controle/in-type-contr
 import { INEquipeInspectionEntity } from '../../../IN/in-equipe-inspection/in-equipe-inspection.entity';
 import { RCEnginFlottantEntity } from '../../../RC/rc-engin-flottant/rc-engin-flottant.entity';
 import { UserEntity } from '../../../common-features/user/user.entity';
+import { CONSTS } from '../../../constants';
 
 
 @Component({
@@ -43,6 +44,9 @@ export class INInspectionFormComponent {
 	@Input() handleSubmit!: (e: Event) => Promise<void>;
   @Input() isLoading!: boolean;
 
+  readonly INSPECTION_STATUTS = Object.values(CONSTS.FEATURES.INSPECTION_STATUT);
+  readonly INSPECTION_RESULTATS = Object.values(CONSTS.FEATURES.INSPECTION_RESULTAT);
+  
   constructor(protected iNInspectionService: INInspectionService) {}
 
   ngOnChanges() {

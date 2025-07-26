@@ -3,6 +3,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { CommonModule } from '@angular/common';
 import { INTypeControleService } from '../services/in-type-controle.service';
 import { INTypeControleEntity } from '../in-type-controle.entity';
+import { CONSTS } from '../../../constants';
 
 
 @Component({
@@ -23,12 +24,14 @@ export class INTypeControleFormComponent {
 			norme_reference: new FormControl('', []),
 			frequence_mois: new FormControl('', []),
 			gravite_min: new FormControl('', []),
-			
+
     }
   );
 
   @Input() handleSubmit!: (e: Event) => Promise<void>;
   @Input() isLoading!: boolean;
+
+  readonly TYPE_CONTROLE_GRAVITE_MINS = Object.values(CONSTS.FEATURES.TYPE_CONTROLE_GRAVITE_MIN);
 
   constructor(protected iNTypeControleService: INTypeControleService) {}
 
@@ -47,7 +50,7 @@ export class INTypeControleFormComponent {
 			norme_reference: this.formGroup.value.norme_reference,
 			frequence_mois: this.formGroup.value.frequence_mois,
 			gravite_min: this.formGroup.value.gravite_min,
-			
+
     }
 
     return this.iNTypeControleService.create(JSON.stringify(payload))
@@ -60,7 +63,7 @@ export class INTypeControleFormComponent {
 			norme_reference: this.formGroup.value.norme_reference,
 			frequence_mois: this.formGroup.value.frequence_mois,
 			gravite_min: this.formGroup.value.gravite_min,
-			
+
     }
 
     return this.iNTypeControleService.update(id, JSON.stringify(payload)
@@ -74,7 +77,7 @@ export class INTypeControleFormComponent {
 			norme_reference: iNTypeControle.norme_reference,
 			frequence_mois: iNTypeControle.frequence_mois,
 			gravite_min: iNTypeControle.gravite_min,
-			
+
     })
   }
 
@@ -85,7 +88,7 @@ export class INTypeControleFormComponent {
 			norme_reference: '',
 			frequence_mois: '',
 			gravite_min: '',
-			
+
     })
   }
 }

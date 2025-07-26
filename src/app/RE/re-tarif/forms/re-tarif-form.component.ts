@@ -3,6 +3,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { CommonModule } from '@angular/common';
 import { RETarifService } from '../services/re-tarif.service';
 import { RETarifEntity } from '../re-tarif.entity';
+import { CONSTS } from '../../../constants';
 
 
 @Component({
@@ -23,14 +24,16 @@ export class RETarifFormComponent {
 			devise: new FormControl('', []),
 			frequence: new FormControl('', []),
 			type_acteur: new FormControl('', []),
-			
+
     }
   );
 
   @Input() handleSubmit!: (e: Event) => Promise<void>;
   @Input() isLoading!: boolean;
 
-  constructor(protected rETarifService: RETarifService) {}
+  readonly TARIF_FREQUENCES = Object.values(CONSTS.FEATURES.TARIF_FREQUENCE);
+
+  constructor(protected RETarifService: RETarifService) {}
 
   ngOnChanges() {
     if (this.isLoading) {
@@ -47,10 +50,10 @@ export class RETarifFormComponent {
 			devise: this.formGroup.value.devise,
 			frequence: this.formGroup.value.frequence,
 			type_acteur: this.formGroup.value.type_acteur,
-			
+
     }
 
-    return this.rETarifService.create(JSON.stringify(payload))
+    return this.RETarifService.create(JSON.stringify(payload))
   }
 
   update(id: number) {
@@ -60,10 +63,10 @@ export class RETarifFormComponent {
 			devise: this.formGroup.value.devise,
 			frequence: this.formGroup.value.frequence,
 			type_acteur: this.formGroup.value.type_acteur,
-			
+
     }
 
-    return this.rETarifService.update(id, JSON.stringify(payload)
+    return this.RETarifService.update(id, JSON.stringify(payload)
     )
   }
 
@@ -74,7 +77,7 @@ export class RETarifFormComponent {
 			devise: rETarif.devise,
 			frequence: rETarif.frequence,
 			type_acteur: rETarif.type_acteur,
-			
+
     })
   }
 
@@ -85,7 +88,7 @@ export class RETarifFormComponent {
 			devise: '',
 			frequence: '',
 			type_acteur: '',
-			
+
     })
   }
 }

@@ -34,15 +34,15 @@ export class UserListComponent {
   isLoading = signal<boolean>(true);
 
   tableAttributes = {
-    'role_id': {},
-		'rc_acteur_id': {},
+    // 'rc_acteur_id': {},
 		'profil_img_url': {},
 		'nom': {},
 		'email': {},
 		'password': {},
+    // 'role_id': {},
 		'last_login_date': {},
 		'last_login_heure': {},
-		
+
   }
   tableActions = ['edit', 'delete'];
 

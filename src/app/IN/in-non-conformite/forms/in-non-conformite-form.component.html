@@ -37,9 +37,9 @@
         <label for='gravite' i18n>gravite</label>
         <select class='form-select form-control' id='gravite' formControlName='gravite' [attr.value]="formGroup.value.gravite">
           <option hidden value="" i18n>Choisissez une option</option>
-          <option value='pending'>En cours</option>
-          <option value='validated'>Validé</option>
-          <option value='canceled'>Annulé</option>
+          @for (NON_CONFORMITE_GRAVITE of NON_CONFORMITE_GRAVITES; track $index) {
+            <option [value]="NON_CONFORMITE_GRAVITE">{{NON_CONFORMITE_GRAVITE}}</option>
+          }
         </select>
       </div>
     </div>
@@ -66,9 +66,9 @@
         <label for='statut' i18n>statut</label>
         <select class='form-select form-control' id='statut' formControlName='statut' [attr.value]="formGroup.value.statut">
           <option hidden value="" i18n>Choisissez une option</option>
-          <option value='pending'>En cours</option>
-          <option value='validated'>Validé</option>
-          <option value='canceled'>Annulé</option>
+          @for (NON_CONFORMITE_STATUT of NON_CONFORMITE_STATUTS; track $index) {
+            <option [value]="NON_CONFORMITE_STATUT">{{NON_CONFORMITE_STATUT}}</option>
+          }
         </select>
       </div>
     </div>

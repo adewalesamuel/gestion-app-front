@@ -36,9 +36,9 @@
         <label for='type' i18n>type</label>
         <select class='form-select form-control' id='type' formControlName='type' [attr.value]="formGroup.value.type">
           <option hidden value="" i18n>Choisissez une option</option>
-          <option value='pending'>En cours</option>
-          <option value='validated'>Validé</option>
-          <option value='canceled'>Annulé</option>
+          @for (NOTIFICATION_TYPE of NOTIFICATION_TYPES; track $index) {
+            <option [value]="NOTIFICATION_TYPE">{{NOTIFICATION_TYPE}}</option>
+          }
         </select>
       </div>
     </div>

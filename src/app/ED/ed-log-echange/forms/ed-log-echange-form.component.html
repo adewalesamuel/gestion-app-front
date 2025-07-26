@@ -43,9 +43,9 @@
         <label for='type_requete' i18n>type_requete</label>
         <select class='form-select form-control' id='type_requete' formControlName='type_requete' [attr.value]="formGroup.value.type_requete">
           <option hidden value="" i18n>Choisissez une option</option>
-          <option value='pending'>En cours</option>
-          <option value='validated'>Validé</option>
-          <option value='canceled'>Annulé</option>
+          @for (LOG_ECHANGE_TYPE_REQUETE of LOG_ECHANGE_TYPE_REQUETES; track $index) {
+            <option [value]="LOG_ECHANGE_TYPE_REQUETE">{{LOG_ECHANGE_TYPE_REQUETE}}</option>
+          }
         </select>
       </div>
     </div>

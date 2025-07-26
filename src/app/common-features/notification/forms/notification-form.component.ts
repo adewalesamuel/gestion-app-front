@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { NotificationService } from '../services/notification.service';
 import { NotificationEntity } from '../notification.entity';
 import { UserEntity } from '../../../common-features/user/user.entity';
+import { CONSTS } from '../../../constants';
 
 
 
@@ -35,6 +36,8 @@ export class NotificationFormComponent {
 
 	@Input() handleSubmit!: (e: Event) => Promise<void>;
   @Input() isLoading!: boolean;
+
+  readonly NOTIFICATION_TYPES = Object.values(CONSTS.FEATURES.NOTIFICATION_TYPE)
 
   constructor(protected notificationService: NotificationService) {}
 

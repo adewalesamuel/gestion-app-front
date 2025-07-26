@@ -5,6 +5,7 @@ import { EDLogEchangeService } from '../services/ed-log-echange.service';
 import { EDLogEchangeEntity } from '../ed-log-echange.entity';
 import { EDApiEntity } from '../../../ED/ed-api/ed-api.entity';
 import { UserEntity } from '../../../common-features/user/user.entity';
+import { CONSTS } from '../../../constants';
 
 
 @Component({
@@ -36,6 +37,8 @@ export class EDLogEchangeFormComponent {
 	@Input() users!: UserEntity[];
 	@Input() handleSubmit!: (e: Event) => Promise<void>;
   @Input() isLoading!: boolean;
+
+  readonly LOG_ECHANGE_TYPE_REQUETES = Object.values(CONSTS.FEATURES.LOG_ECHANGE_TYPE_REQUETE);
 
   constructor(protected eDLogEchangeService: EDLogEchangeService) {}
 

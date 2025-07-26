@@ -81,9 +81,9 @@
         <label for='statut' i18n>statut</label>
         <select class='form-select form-control' id='statut' formControlName='statut' [attr.value]="formGroup.value.statut">
           <option hidden value="" i18n>Choisissez une option</option>
-          <option value='pending'>En cours</option>
-          <option value='validated'>Validé</option>
-          <option value='canceled'>Annulé</option>
+          @for (INSPECTION_STATUT of INSPECTION_STATUTS; track $index) {
+            <option [value]="INSPECTION_STATUT">{{INSPECTION_STATUT}}</option>
+          }
         </select>
       </div>
     </div>
@@ -92,9 +92,9 @@
         <label for='resultat' i18n>resultat</label>
         <select class='form-select form-control' id='resultat' formControlName='resultat' [attr.value]="formGroup.value.resultat">
           <option hidden value="" i18n>Choisissez une option</option>
-          <option value='pending'>En cours</option>
-          <option value='validated'>Validé</option>
-          <option value='canceled'>Annulé</option>
+          @for (INSPECTION_RESULTAT of INSPECTION_RESULTATS; track $index) {
+            <option [value]="INSPECTION_RESULTAT">{{INSPECTION_RESULTAT}}</option>
+          }
         </select>
       </div>
     </div>

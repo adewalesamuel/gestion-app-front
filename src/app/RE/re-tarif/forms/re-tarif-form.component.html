@@ -23,9 +23,9 @@
         <label for='frequence' i18n>frequence</label>
         <select class='form-select form-control' id='frequence' formControlName='frequence' [attr.value]="formGroup.value.frequence">
           <option hidden value="" i18n>Choisissez une option</option>
-          <option value='pending'>En cours</option>
-          <option value='validated'>Validé</option>
-          <option value='canceled'>Annulé</option>
+          @for (TARIF_FREQUENCE of TARIF_FREQUENCES; track $index) {
+            <option [value]="TARIF_FREQUENCE">{{TARIF_FREQUENCE}}</option>
+          }
         </select>
       </div>
     </div>
@@ -35,7 +35,7 @@
         <input class='form-control' type='text' id='type_acteur' formControlName='type_acteur' i18n-placeholder placeholder='type_acteur' />
       </div>
     </div>
-		
+
     <div class='col-12 text-right'>
         <button class="btn btn-primary" type="submit" [disabled]="isLoading" i18n>
           @if (isLoading) {

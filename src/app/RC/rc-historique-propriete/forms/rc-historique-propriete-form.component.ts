@@ -5,6 +5,7 @@ import { RCHistoriqueProprieteService } from '../services/rc-historique-propriet
 import { RCHistoriqueProprieteEntity } from '../rc-historique-propriete.entity';
 import { RCActeurEntity } from '../../../RC/rc-acteur/rc-acteur.entity';
 import { RCEnginFlottantEntity } from '../../../RC/rc-engin-flottant/rc-engin-flottant.entity';
+import { CONSTS } from '../../../constants';
 
 
 @Component({
@@ -33,6 +34,8 @@ export class RCHistoriqueProprieteFormComponent {
 	@Input() rcEnginFlottants!: RCEnginFlottantEntity[];
 	@Input() handleSubmit!: (e: Event) => Promise<void>;
   @Input() isLoading!: boolean;
+
+  readonly HISTORIQUE_PROPRIETE_TYPE_TRANSACTIONS = Object.values(CONSTS.FEATURES.HISTORIQUE_PROPRIETE_TYPE_TRANSACTION)
 
   constructor(protected rCHistoriqueProprieteService: RCHistoriqueProprieteService) {}
 

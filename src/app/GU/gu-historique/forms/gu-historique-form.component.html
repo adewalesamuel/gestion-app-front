@@ -31,9 +31,9 @@
         <label for='action' i18n>action</label>
         <select class='form-select form-control' id='action' formControlName='action' [attr.value]="formGroup.value.action">
           <option hidden value="" i18n>Choisissez une option</option>
-          <option value='pending'>En cours</option>
-          <option value='validated'>Validé</option>
-          <option value='canceled'>Annulé</option>
+          @for (HISTORIQUE_ACTION of HISTORIQUE_ACTIONS; track $index) {
+            <option [value]="HISTORIQUE_ACTION">{{HISTORIQUE_ACTION}}</option>
+          }
         </select>
       </div>
     </div>

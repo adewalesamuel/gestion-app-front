@@ -5,6 +5,7 @@ import { RERelanceService } from '../services/re-relance.service';
 import { RERelanceEntity } from '../re-relance.entity';
 import { REOrdreRecetteEntity } from '../../../RE/re-ordre-recette/re-ordre-recette.entity';
 import { UserEntity } from '../../../common-features/user/user.entity';
+import { CONSTS } from '../../../constants';
 
 
 @Component({
@@ -35,6 +36,9 @@ export class RERelanceFormComponent {
 	@Input() handleSubmit!: (e: Event) => Promise<void>;
   @Input() isLoading!: boolean;
 
+  readonly RELANCE_MODES = Object.values(CONSTS.FEATURES.RELANCE_MODE);
+  readonly RELANCE_STATUTS = Object.values(CONSTS.FEATURES.RELANCE_STATUT);
+  
   constructor(protected rERelanceService: RERelanceService) {}
 
   ngOnChanges() {

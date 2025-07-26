@@ -5,6 +5,7 @@ import { REHistoriqueRelanceService } from '../services/re-historique-relance.se
 import { REHistoriqueRelanceEntity } from '../re-historique-relance.entity';
 import { RERelanceEntity } from '../../../RE/re-relance/re-relance.entity';
 import { UserEntity } from '../../../common-features/user/user.entity';
+import { CONSTS } from '../../../constants';
 
 
 @Component({
@@ -34,6 +35,8 @@ export class REHistoriqueRelanceFormComponent {
 	@Input() users!: UserEntity[];
 	@Input() handleSubmit!: (e: Event) => Promise<void>;
   @Input() isLoading!: boolean;
+
+  readonly HISTORIQUE_RELANCE_MODES = Object.values(CONSTS.FEATURES.HISTORIQUE_RELANCE_MODE);
 
   constructor(protected rEHistoriqueRelanceService: REHistoriqueRelanceService) {}
 

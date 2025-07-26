@@ -3,6 +3,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { CommonModule } from '@angular/common';
 import { EDApiService } from '../services/ed-api.service';
 import { EDApiEntity } from '../ed-api.entity';
+import { CONSTS } from '../../../constants';
 
 
 @Component({
@@ -23,12 +24,14 @@ export class EDApiFormComponent {
 			url_base: new FormControl('', []),
 			statut: new FormControl('', []),
 			documentation_url: new FormControl('', []),
-			
+
     }
   );
 
   @Input() handleSubmit!: (e: Event) => Promise<void>;
   @Input() isLoading!: boolean;
+
+  readonly API_STATUTS = Object.values(CONSTS.FEATURES.API_STATUT);
 
   constructor(protected eDApiService: EDApiService) {}
 
@@ -47,7 +50,7 @@ export class EDApiFormComponent {
 			url_base: this.formGroup.value.url_base,
 			statut: this.formGroup.value.statut,
 			documentation_url: this.formGroup.value.documentation_url,
-			
+
     }
 
     return this.eDApiService.create(JSON.stringify(payload))
@@ -60,7 +63,7 @@ export class EDApiFormComponent {
 			url_base: this.formGroup.value.url_base,
 			statut: this.formGroup.value.statut,
 			documentation_url: this.formGroup.value.documentation_url,
-			
+
     }
 
     return this.eDApiService.update(id, JSON.stringify(payload)
@@ -74,7 +77,7 @@ export class EDApiFormComponent {
 			url_base: eDApi.url_base,
 			statut: eDApi.statut,
 			documentation_url: eDApi.documentation_url,
-			
+
     })
   }
 
@@ -85,7 +88,7 @@ export class EDApiFormComponent {
 			url_base: '',
 			statut: '',
 			documentation_url: '',
-			
+
     })
   }
 }

@@ -17,9 +17,9 @@
         <label for='categorie' i18n>categorie</label>
         <select class='form-select form-control' id='categorie' formControlName='categorie' [attr.value]="formGroup.value.categorie">
           <option hidden value="" i18n>Choisissez une option</option>
-          <option value='pending'>En cours</option>
-          <option value='validated'>Validé</option>
-          <option value='canceled'>Annulé</option>
+          @for (TYPE_ENGIN_CATEGORIE of TYPE_ENGIN_CATEGORIES; track $index) {
+            <option [value]="TYPE_ENGIN_CATEGORIE">{{TYPE_ENGIN_CATEGORIE}}</option>
+          }
         </select>
       </div>
     </div>
@@ -35,7 +35,7 @@
         <input class='form-control' type='number' id='tonnage_max' formControlName='tonnage_max' i18n-placeholder placeholder='tonnage_max' />
       </div>
     </div>
-		
+
     <div class='col-12 text-right'>
         <button class="btn btn-primary" type="submit" [disabled]="isLoading" i18n>
           @if (isLoading) {

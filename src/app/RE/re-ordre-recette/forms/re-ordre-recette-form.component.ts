@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { REOrdreRecetteService } from '../services/re-ordre-recette.service';
 import { REOrdreRecetteEntity } from '../re-ordre-recette.entity';
 import { RCActeurEntity } from '../../../RC/rc-acteur/rc-acteur.entity';
+import { CONSTS } from '../../../constants';
 
 
 @Component({
@@ -34,6 +35,8 @@ export class REOrdreRecetteFormComponent {
   @Input() rcActeurs!: RCActeurEntity[];
 	@Input() handleSubmit!: (e: Event) => Promise<void>;
   @Input() isLoading!: boolean;
+
+  readonly ORDRE_RECETTE_STATUTS = Object.values(CONSTS.FEATURES.ORDRE_RECETTE_STATUT);
 
   constructor(protected rEOrdreRecetteService: REOrdreRecetteService) {}
 

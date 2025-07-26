@@ -43,9 +43,9 @@
         <label for='mode' i18n>mode</label>
         <select class='form-select form-control' id='mode' formControlName='mode' [attr.value]="formGroup.value.mode">
           <option hidden value="" i18n>Choisissez une option</option>
-          <option value='pending'>En cours</option>
-          <option value='validated'>Validé</option>
-          <option value='canceled'>Annulé</option>
+          @for (HISTORIQUE_RELANCE_MODE of HISTORIQUE_RELANCE_MODES; track $index) {
+            <option [value]="HISTORIQUE_RELANCE_MODE">{{HISTORIQUE_RELANCE_MODE}}</option>
+          }
         </select>
       </div>
     </div>

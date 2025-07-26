@@ -5,6 +5,7 @@ import { INNonConformiteService } from '../services/in-non-conformite.service';
 import { INNonConformiteEntity } from '../in-non-conformite.entity';
 import { INInspectionEntity } from '../../../IN/in-inspection/in-inspection.entity';
 import { UserEntity } from '../../../common-features/user/user.entity';
+import { CONSTS } from '../../../constants';
 
 
 @Component({
@@ -36,6 +37,9 @@ export class INNonConformiteFormComponent {
 	@Input() users!: UserEntity[];
 	@Input() handleSubmit!: (e: Event) => Promise<void>;
   @Input() isLoading!: boolean;
+
+  readonly NON_CONFORMITE_GRAVITES = Object.values(CONSTS.FEATURES.NON_CONFORMITE_GRAVITE);
+  readonly NON_CONFORMITE_STATUTS = Object.values(CONSTS.FEATURES.NON_CONFORMITE_STATUT);
 
   constructor(protected iNNonConformiteService: INNonConformiteService) {}
 

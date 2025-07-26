@@ -23,13 +23,13 @@
         <label for='statut' i18n>statut</label>
         <select class='form-select form-control' id='statut' formControlName='statut' [attr.value]="formGroup.value.statut">
           <option hidden value="" i18n>Choisissez une option</option>
-          <option value='pending'>En cours</option>
-          <option value='validated'>Validé</option>
-          <option value='canceled'>Annulé</option>
+          @for (SCHEMA_DONNEES_STATUT of SCHEMA_DONNEES_STATUTS; track $index) {
+            <option [value]="SCHEMA_DONNEES_STATUT">{{SCHEMA_DONNEES_STATUT}}</option>
+          }
         </select>
       </div>
     </div>
-		
+
     <div class='col-12 text-right'>
         <button class="btn btn-primary" type="submit" [disabled]="isLoading" i18n>
           @if (isLoading) {

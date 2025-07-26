@@ -43,9 +43,9 @@
         <label for='type_transaction' i18n>type_transaction</label>
         <select class='form-select form-control' id='type_transaction' formControlName='type_transaction' [attr.value]="formGroup.value.type_transaction">
           <option hidden value="" i18n>Choisissez une option</option>
-          <option value='pending'>En cours</option>
-          <option value='validated'>Validé</option>
-          <option value='canceled'>Annulé</option>
+          @for (HISTORIQUE_PROPRIETE_TYPE_TRANSACTION of HISTORIQUE_PROPRIETE_TYPE_TRANSACTIONS; track $index) {
+            <option [value]="HISTORIQUE_PROPRIETE_TYPE_TRANSACTION">{{HISTORIQUE_PROPRIETE_TYPE_TRANSACTION}}</option>
+          }
         </select>
       </div>
     </div>

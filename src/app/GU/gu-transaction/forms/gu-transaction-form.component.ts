@@ -6,6 +6,7 @@ import { GUTransactionEntity } from '../gu-transaction.entity';
 import { REModePaiementEntity } from '../../../RE/re-mode-paiement/re-mode-paiement.entity';
 import { GUDemandeEntity } from '../../../GU/gu-demande/gu-demande.entity';
 import { UserEntity } from '../../../common-features/user/user.entity';
+import { CONSTS } from '../../../constants';
 
 
 @Component({
@@ -39,6 +40,8 @@ export class GUTransactionFormComponent {
 	@Input() users!: UserEntity[];
 	@Input() handleSubmit!: (e: Event) => Promise<void>;
   @Input() isLoading!: boolean;
+
+  readonly TRANSACTION_STATUTS = Object.values(CONSTS.FEATURES.TRANSACTION_STATUT)
 
   constructor(protected gUTransactionService: GUTransactionService) {}
 

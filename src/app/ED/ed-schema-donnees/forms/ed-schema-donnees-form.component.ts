@@ -3,6 +3,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { CommonModule } from '@angular/common';
 import { EDSchemaDonneesService } from '../services/ed-schema-donnees.service';
 import { EDSchemaDonneesEntity } from '../ed-schema-donnees.entity';
+import { CONSTS } from '../../../constants';
 
 
 @Component({
@@ -22,12 +23,14 @@ export class EDSchemaDonneesFormComponent {
 			version: new FormControl('', []),
 			schema_json: new FormControl('', []),
 			statut: new FormControl('', []),
-			
+
     }
   );
 
   @Input() handleSubmit!: (e: Event) => Promise<void>;
   @Input() isLoading!: boolean;
+
+  readonly SCHEMA_DONNEES_STATUTS = Object.values(CONSTS.FEATURES.SCHEMA_DONNEES_STATUT);
 
   constructor(protected eDSchemaDonneesService: EDSchemaDonneesService) {}
 
@@ -45,7 +48,7 @@ export class EDSchemaDonneesFormComponent {
 			version: this.formGroup.value.version,
 			schema_json: this.formGroup.value.schema_json,
 			statut: this.formGroup.value.statut,
-			
+
     }
 
     return this.eDSchemaDonneesService.create(JSON.stringify(payload))
@@ -57,7 +60,7 @@ export class EDSchemaDonneesFormComponent {
 			version: this.formGroup.value.version,
 			schema_json: this.formGroup.value.schema_json,
 			statut: this.formGroup.value.statut,
-			
+
     }
 
     return this.eDSchemaDonneesService.update(id, JSON.stringify(payload)
@@ -70,7 +73,7 @@ export class EDSchemaDonneesFormComponent {
 			version: eDSchemaDonnees.version,
 			schema_json: eDSchemaDonnees.schema_json,
 			statut: eDSchemaDonnees.statut,
-			
+
     })
   }
 
@@ -80,7 +83,7 @@ export class EDSchemaDonneesFormComponent {
 			version: '',
 			schema_json: '',
 			statut: '',
-			
+
     })
   }
 }

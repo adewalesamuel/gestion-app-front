@@ -3,6 +3,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { CommonModule } from '@angular/common';
 import { RCTypeEnginService } from '../services/rc-type-engin.service';
 import { RCTypeEnginEntity } from '../rc-type-engin.entity';
+import { CONSTS } from '../../../constants';
 
 
 @Component({
@@ -23,12 +24,14 @@ export class RCTypeEnginFormComponent {
 			categorie: new FormControl('', []),
 			tonnage_min: new FormControl('', []),
 			tonnage_max: new FormControl('', []),
-			
+
     }
   );
 
   @Input() handleSubmit!: (e: Event) => Promise<void>;
   @Input() isLoading!: boolean;
+
+  readonly TYPE_ENGIN_CATEGORIES = Object.values(CONSTS.FEATURES.TYPE_ENGIN_CATEGORIE);
 
   constructor(protected rCTypeEnginService: RCTypeEnginService) {}
 
@@ -47,7 +50,7 @@ export class RCTypeEnginFormComponent {
 			categorie: this.formGroup.value.categorie,
 			tonnage_min: this.formGroup.value.tonnage_min,
 			tonnage_max: this.formGroup.value.tonnage_max,
-			
+
     }
 
     return this.rCTypeEnginService.create(JSON.stringify(payload))
@@ -60,7 +63,7 @@ export class RCTypeEnginFormComponent {
 			categorie: this.formGroup.value.categorie,
 			tonnage_min: this.formGroup.value.tonnage_min,
 			tonnage_max: this.formGroup.value.tonnage_max,
-			
+
     }
 
     return this.rCTypeEnginService.update(id, JSON.stringify(payload)
@@ -74,7 +77,7 @@ export class RCTypeEnginFormComponent {
 			categorie: rCTypeEngin.categorie,
 			tonnage_min: rCTypeEngin.tonnage_min,
 			tonnage_max: rCTypeEngin.tonnage_max,
-			
+
     })
   }
 
@@ -85,7 +88,7 @@ export class RCTypeEnginFormComponent {
 			categorie: '',
 			tonnage_min: '',
 			tonnage_max: '',
-			
+
     })
   }
 }

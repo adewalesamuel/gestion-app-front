@@ -3,6 +3,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { CommonModule } from '@angular/common';
 import { RCActeurService } from '../services/rc-acteur.service';
 import { RCActeurEntity } from '../rc-acteur.entity';
+import { CONSTS } from '../../../constants';
 
 
 @Component({
@@ -28,12 +29,13 @@ export class RCActeurFormComponent {
 			telephone: new FormControl('', []),
 			secteur_activite: new FormControl('', []),
 			pays_origine: new FormControl('', []),
-			
+
     }
   );
 
   @Input() handleSubmit!: (e: Event) => Promise<void>;
   @Input() isLoading!: boolean;
+  readonly ACTEUR_TYPES = Object.values(CONSTS.FEATURES.ACTEUR_TYPE)
 
   constructor(protected rCActeurService: RCActeurService) {}
 
@@ -57,7 +59,7 @@ export class RCActeurFormComponent {
 			telephone: this.formGroup.value.telephone,
 			secteur_activite: this.formGroup.value.secteur_activite,
 			pays_origine: this.formGroup.value.pays_origine,
-			
+
     }
 
     return this.rCActeurService.create(JSON.stringify(payload))
@@ -75,7 +77,7 @@ export class RCActeurFormComponent {
 			telephone: this.formGroup.value.telephone,
 			secteur_activite: this.formGroup.value.secteur_activite,
 			pays_origine: this.formGroup.value.pays_origine,
-			
+
     }
 
     return this.rCActeurService.update(id, JSON.stringify(payload)
@@ -94,7 +96,7 @@ export class RCActeurFormComponent {
 			telephone: rCActeur.telephone,
 			secteur_activite: rCActeur.secteur_activite,
 			pays_origine: rCActeur.pays_origine,
-			
+
     })
   }
 
@@ -110,7 +112,7 @@ export class RCActeurFormComponent {
 			telephone: '',
 			secteur_activite: '',
 			pays_origine: '',
-			
+
     })
   }
 }

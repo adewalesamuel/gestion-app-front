@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { RCCertificatService } from '../services/rc-certificat.service';
 import { RCCertificatEntity } from '../rc-certificat.entity';
 import { RCEnginFlottantEntity } from '../../../RC/rc-engin-flottant/rc-engin-flottant.entity';
+import { CONSTS } from '../../../constants';
 
 
 @Component({
@@ -32,6 +33,8 @@ export class RCCertificatFormComponent {
   @Input() rcEnginFlottants!: RCEnginFlottantEntity[];
 	@Input() handleSubmit!: (e: Event) => Promise<void>;
   @Input() isLoading!: boolean;
+
+  readonly CERTIFICAT_TYPES = Object.values(CONSTS.FEATURES.CERTIFICAT_TYPE);
 
   constructor(protected rCCertificatService: RCCertificatService) {}
 
