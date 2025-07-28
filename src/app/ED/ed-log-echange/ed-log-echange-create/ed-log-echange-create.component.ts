@@ -73,7 +73,7 @@ export class EDLogEchangeCreateComponent {
 
     try {
       await this.eDLogEchangeForm.create();
-      this.router.navigate([`/ed-log-echanges`]);
+      this.router.navigate([`/ed/ed-log-echanges`]);
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {

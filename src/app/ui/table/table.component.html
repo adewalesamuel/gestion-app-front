@@ -1,51 +1,55 @@
-<div class="table-responsive">
-  <table class="table">
-    <thead>
-      @for (headEntry of getTableEntries(); track $index) {
-        <th [class]="headEntry[1].thClassName" i18n>
-          {{ headEntry[0] }}
-        </th>
-      }
-      @if (tableActions.length > 1) {
-        <th>Actions</th>
-      }
-    </thead>
-    <tbody>
-      @for (row of tableData; track $index) {
-        <tr>
+<div class="card card-bordered card-preview">
+  <div class="card-inner px-0">
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
           @for (headEntry of getTableEntries(); track $index) {
-            <td [class]="headEntry[1].tdClassName">
-              {{ getNestedValue(headEntry[0], row) }}
-            </td>
+            <th [class]="headEntry[1].thClassName + ' pb-3'" i18n>
+              {{ headEntry[0] }}
+            </th>
           }
           @if (tableActions.length > 1) {
-            <td>
-              @for (action of tableActions; track $index) {
-                @switch (action) {
-                  @case ('read') {
-                    <button (click)="onReadClick($event, row) ?? null" i18n>
-                      Voir
-                    </button>
-
-                  }
-                  @case ('edit') {
-                    <button (click)="onEditClick($event, row) ?? null" i18n>
-                      Modifier
-                    </button>
-
-                  }
-                  @case ('delete') {
-                    <button (click)="onDeleteClick($event, row) ?? null" i18n>
-                      Supprimer
-                    </button>
-
-                  }
-                }
-              }
-            </td>
+            <th class="pb-3">Actions</th>
           }
-        </tr>
-      }
-    </tbody>
-  </table>
+        </thead>
+        <tbody>
+          @for (row of tableData; track $index) {
+            <tr>
+              @for (headEntry of getTableEntries(); track $index) {
+                <td [class]="headEntry[1].tdClassName + ' py-2'">
+                  {{ getNestedValue(headEntry[0], row) }}
+                </td>
+              }
+              @if (tableActions.length > 1) {
+                <td class="py-2">
+                    @for (action of tableActions; track $index) {
+                      @switch (action) {
+                        @case ('read') {
+                          <button class="btn btn-sm btn-info rounded mx-1" (click)="onReadClick($event, row) ?? null" i18n>
+                            <em class="icon ni ni-eye"></em>
+                          </button>
+
+                        }
+                        @case ('edit') {
+                          <button class="btn btn-sm btn-warning rounded mx-1" (click)="onEditClick($event, row) ?? null" i18n>
+                            <em class="icon ni ni-edit"></em>
+                          </button>
+
+                        }
+                        @case ('delete') {
+                          <button class="btn btn-sm btn-danger rounded" (click)="onDeleteClick($event, row) ?? null" i18n>
+                            <em class="icon ni ni-trash"></em>
+                          </button>
+
+                        }
+                      }
+                    }
+                </td>
+              }
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>

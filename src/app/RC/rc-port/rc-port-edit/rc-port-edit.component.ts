@@ -3,8 +3,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { RCPortFormComponent } from '../forms/rc-port-form.component';
 import { RCPortService } from '../services/rc-port.service';
 import { RCPortEntity } from '../rc-port.entity';
-import { RCPaysService } from '../../../RC/rc-pays/services/rc-pays.service';
-import { RCPaysEntity } from '../../../RC/rc-pays/rc-pays.entity';
+import { RCPaysService } from '../../rc-pays/services/rc-pays.service';
+import { RCPaysEntity } from '../../rc-pays/rc-pays.entity';
 
 import { Response } from '../../../types';
 import { ErrorHandlerService } from '../../../services/error-handler/error-handler.service';

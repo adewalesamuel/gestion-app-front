@@ -1,31 +1,31 @@
-<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class="">
+<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class='col-12 col-md-7'>
   <div class=row>
-    <div class='col-12'>
+    <div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='parametre' i18n>parametre</label>
         <input class='form-control' type='text' id='parametre' formControlName='parametre' i18n-placeholder placeholder='parametre' />
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='valeur' i18n>valeur</label>
         <input class='form-control' type='text' id='valeur' formControlName='valeur' i18n-placeholder placeholder='valeur' />
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='module' i18n>module</label>
         <input class='form-control' type='text' id='module' formControlName='module' i18n-placeholder placeholder='module' />
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='editable' i18n>editable</label>
-        <input class='form-control' type='checkbox' id='editable' formControlName='editable' i18n-placeholder placeholder='editable' />
+        <input class='form-check-input d-block' type='checkbox' id='editable' formControlName='editable' i18n-placeholder placeholder='editable' />
       </div>
     </div>
-		
-    <div class='col-12 text-right'>
+
+    <div class='col-12 text-right mt-3'>
         <button class="btn btn-primary" type="submit" [disabled]="isLoading" i18n>
           @if (isLoading) {
             Chargement...

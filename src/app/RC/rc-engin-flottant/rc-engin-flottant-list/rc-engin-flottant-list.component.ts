@@ -44,7 +44,7 @@ export class RCEnginFlottantListComponent {
 		'annee_construction': {},
 		'capacite_passagers': {},
 		'capacite_fret': {},
-		
+
   }
   tableActions = ['edit', 'delete'];
 
@@ -80,12 +80,12 @@ export class RCEnginFlottantListComponent {
 
   handleReadClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/rc-engin-flottants/${data?.id}`]);
+    this.router.navigate([`/rc/rc-engin-flottants/${data?.id}`]);
   }
 
   handleEditClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/rc-engin-flottants/${data?.id}/edit`]);
+    this.router.navigate([`/rc/rc-engin-flottants/${data?.id}/edit`]);
   }
 
   handleDeleteClick = async (e: Event, rCEnginFlottant: RCEnginFlottantEntity ) => {

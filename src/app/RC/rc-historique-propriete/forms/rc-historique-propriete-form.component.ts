@@ -3,8 +3,8 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { CommonModule } from '@angular/common';
 import { RCHistoriqueProprieteService } from '../services/rc-historique-propriete.service';
 import { RCHistoriqueProprieteEntity } from '../rc-historique-propriete.entity';
-import { RCActeurEntity } from '../../../RC/rc-acteur/rc-acteur.entity';
-import { RCEnginFlottantEntity } from '../../../RC/rc-engin-flottant/rc-engin-flottant.entity';
+import { RCActeurEntity } from '../../rc-acteur/rc-acteur.entity';
+import { RCEnginFlottantEntity } from '../../rc-engin-flottant/rc-engin-flottant.entity';
 import { CONSTS } from '../../../constants';
 
 

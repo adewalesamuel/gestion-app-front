@@ -73,7 +73,7 @@ export class REHistoriqueRelanceCreateComponent {
 
     try {
       await this.rEHistoriqueRelanceForm.create();
-      this.router.navigate([`/re-historique-relances`]);
+      this.router.navigate([`/re/re-historique-relances`]);
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {

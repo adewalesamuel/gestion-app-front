@@ -38,7 +38,7 @@ export class ConfigSystemeListComponent {
 		'valeur': {},
 		'module': {},
 		'editable': {},
-		
+
   }
   tableActions = ['edit', 'delete'];
 
@@ -74,12 +74,12 @@ export class ConfigSystemeListComponent {
 
   handleReadClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/config-systemes/${data?.id}`]);
+    this.router.navigate([`/settings/config-systemes/${data?.id}`]);
   }
 
   handleEditClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/config-systemes/${data?.id}/edit`]);
+    this.router.navigate([`/settings/config-systemes/${data?.id}/edit`]);
   }
 
   handleDeleteClick = async (e: Event, configSysteme: ConfigSystemeEntity ) => {

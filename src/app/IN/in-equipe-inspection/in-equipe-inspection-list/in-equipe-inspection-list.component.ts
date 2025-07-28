@@ -37,7 +37,7 @@ export class INEquipeInspectionListComponent {
     'user_id': {},
 		'nom': {},
 		'membres': {},
-		
+
   }
   tableActions = ['edit', 'delete'];
 
@@ -73,12 +73,12 @@ export class INEquipeInspectionListComponent {
 
   handleReadClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/in-equipe-inspections/${data?.id}`]);
+    this.router.navigate([`/in/in-equipe-inspections/${data?.id}`]);
   }
 
   handleEditClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/in-equipe-inspections/${data?.id}/edit`]);
+    this.router.navigate([`/in/in-equipe-inspections/${data?.id}/edit`]);
   }
 
   handleDeleteClick = async (e: Event, iNEquipeInspection: INEquipeInspectionEntity ) => {

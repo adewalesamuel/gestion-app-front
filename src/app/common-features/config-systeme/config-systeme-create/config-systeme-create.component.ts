@@ -22,7 +22,7 @@ export class ConfigSystemeCreateComponent {
 
   @ViewChild(ConfigSystemeFormComponent) configSystemeForm!: ConfigSystemeFormComponent;
 
-  
+
   isLoading = signal<boolean>(true);
 
   constructor(
@@ -30,7 +30,7 @@ export class ConfigSystemeCreateComponent {
     protected route: ActivatedRoute,
     protected errorHandler: ErrorHandlerService,
     protected configSystemeService: ConfigSystemeService,
-    
+
   ) {
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.init();
@@ -40,7 +40,7 @@ export class ConfigSystemeCreateComponent {
     this.isLoading.set(true);
 
     try {
-      
+
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {
@@ -57,7 +57,7 @@ export class ConfigSystemeCreateComponent {
 
     try {
       await this.configSystemeForm.create();
-      this.router.navigate([`/config-systemes`]);
+      this.router.navigate([`/settings/config-systemes`]);
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {

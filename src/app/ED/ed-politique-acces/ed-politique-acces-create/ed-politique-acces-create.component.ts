@@ -73,7 +73,7 @@ export class EDPolitiqueAccesCreateComponent {
 
     try {
       await this.eDPolitiqueAccesForm.create();
-      this.router.navigate([`/ed-politique-access`]);
+      this.router.navigate([`/ed/ed-politique-access`]);
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {

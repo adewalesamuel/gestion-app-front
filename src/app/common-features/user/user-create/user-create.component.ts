@@ -73,7 +73,7 @@ export class UserCreateComponent {
 
     try {
       await this.userForm.create();
-      this.router.navigate([`/users`]);
+      this.router.navigate([`/settings/users`]);
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {

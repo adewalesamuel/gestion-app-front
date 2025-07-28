@@ -43,7 +43,7 @@ export class GUTransactionListComponent {
 		'date_transaction': {},
 		'heure': {},
 		'statut': {},
-		
+
   }
   tableActions = ['edit', 'delete'];
 
@@ -79,12 +79,12 @@ export class GUTransactionListComponent {
 
   handleReadClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/gu-transactions/${data?.id}`]);
+    this.router.navigate([`/gu/gu-transactions/${data?.id}`]);
   }
 
   handleEditClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/gu-transactions/${data?.id}/edit`]);
+    this.router.navigate([`/gu/gu-transactions/${data?.id}/edit`]);
   }
 
   handleDeleteClick = async (e: Event, gUTransaction: GUTransactionEntity ) => {

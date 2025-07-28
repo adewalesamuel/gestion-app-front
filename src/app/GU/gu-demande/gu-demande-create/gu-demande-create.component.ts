@@ -89,7 +89,7 @@ export class GUDemandeCreateComponent {
 
     try {
       await this.gUDemandeForm.create();
-      this.router.navigate([`/gu-demandes`]);
+      this.router.navigate([`/gu/gu-demandes`]);
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {

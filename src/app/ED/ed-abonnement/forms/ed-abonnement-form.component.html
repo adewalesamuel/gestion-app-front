@@ -1,6 +1,6 @@
-<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class="">
+<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class='col-12 col-md-7'>
   <div class=row>
-    <div class='col-12'>
+    <div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='ed_api_id' i18n>ed_api_id</label>
         <select class='select2 form-control' id='ed_api_id' formControlName='ed_api_id' [attr.value]="formGroup.value.edApi_id">
@@ -13,7 +13,7 @@
         </select>
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='rc_acteur_id' i18n>rc_acteur_id</label>
         <select class='select2 form-control' id='rc_acteur_id' formControlName='rc_acteur_id' [attr.value]="formGroup.value.rcActeur_id">
@@ -26,32 +26,32 @@
         </select>
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='nom_client' i18n>nom_client</label>
         <input class='form-control' type='text' id='nom_client' formControlName='nom_client' i18n-placeholder placeholder='nom_client' />
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='token' i18n>token</label>
         <input class='form-control' type='text' id='token' formControlName='token' i18n-placeholder placeholder='token' />
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='date_expiration' i18n>date_expiration</label>
         <input class='form-control' type='date' id='date_expiration' formControlName='date_expiration' i18n-placeholder placeholder='date_expiration' />
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='limite_requetes_jour' i18n>limite_requetes_jour</label>
         <input class='form-control' type='number' id='limite_requetes_jour' formControlName='limite_requetes_jour' i18n-placeholder placeholder='limite_requetes_jour' />
       </div>
     </div>
 
-    <div class='col-12 text-right'>
+    <div class='col-12 text-right mt-3'>
         <button class="btn btn-primary" type="submit" [disabled]="isLoading" i18n>
           @if (isLoading) {
             Chargement...

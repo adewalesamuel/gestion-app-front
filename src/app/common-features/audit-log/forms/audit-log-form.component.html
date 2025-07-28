@@ -1,6 +1,6 @@
-<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class="">
+<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class='col-12 col-md-7'>
   <div class=row>
-    <div class='col-12'>
+    <div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='user_id' i18n>user_id</label>
         <select class='select2 form-control' id='user_id' formControlName='user_id' [attr.value]="formGroup.value.user_id">
@@ -13,44 +13,44 @@
         </select>
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='action' i18n>action</label>
         <input class='form-control' type='text' id='action' formControlName='action' i18n-placeholder placeholder='action' />
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='entite' i18n>entite</label>
         <input class='form-control' type='text' id='entite' formControlName='entite' i18n-placeholder placeholder='entite' />
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='entite_id' i18n>entite_id</label>
         <input class='form-control' type='number' id='entite_id' formControlName='entite_id' i18n-placeholder placeholder='entite_id' />
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='ancienne_valeur' i18n>ancienne_valeur</label>
         <input class='form-control' type='text' id='ancienne_valeur' formControlName='ancienne_valeur' i18n-placeholder placeholder='ancienne_valeur' />
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='nouvelle_valeur' i18n>nouvelle_valeur</label>
         <input class='form-control' type='text' id='nouvelle_valeur' formControlName='nouvelle_valeur' i18n-placeholder placeholder='nouvelle_valeur' />
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='ip_address' i18n>ip_address</label>
         <input class='form-control' type='text' id='ip_address' formControlName='ip_address' i18n-placeholder placeholder='ip_address' />
       </div>
     </div>
 
-    <div class='col-12 text-right'>
+    <div class='col-12 text-right mt-3'>
         <button class="btn btn-primary" type="submit" [disabled]="isLoading" i18n>
           @if (isLoading) {
             Chargement...

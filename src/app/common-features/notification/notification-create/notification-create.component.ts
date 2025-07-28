@@ -70,7 +70,7 @@ export class NotificationCreateComponent {
 
     try {
       await this.notificationForm.create();
-      this.router.navigate([`/notifications`]);
+      this.router.navigate([`/settings/notifications`]);
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {

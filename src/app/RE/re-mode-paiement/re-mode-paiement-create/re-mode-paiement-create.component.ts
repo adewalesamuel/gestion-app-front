@@ -22,7 +22,7 @@ export class REModePaiementCreateComponent {
 
   @ViewChild(REModePaiementFormComponent) rEModePaiementForm!: REModePaiementFormComponent;
 
-  
+
   isLoading = signal<boolean>(true);
 
   constructor(
@@ -30,7 +30,7 @@ export class REModePaiementCreateComponent {
     protected route: ActivatedRoute,
     protected errorHandler: ErrorHandlerService,
     protected rEModePaiementService: REModePaiementService,
-    
+
   ) {
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.init();
@@ -40,7 +40,7 @@ export class REModePaiementCreateComponent {
     this.isLoading.set(true);
 
     try {
-      
+
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {
@@ -57,7 +57,7 @@ export class REModePaiementCreateComponent {
 
     try {
       await this.rEModePaiementForm.create();
-      this.router.navigate([`/re-mode-paiements`]);
+      this.router.navigate([`/re/re-mode-paiements`]);
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {

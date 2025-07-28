@@ -1,37 +1,37 @@
-<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class="">
+<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class='col-12 col-md-7'>
   <div class=row>
-    <div class='col-12'>
+    <div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='code' i18n>code</label>
         <input class='form-control' type='text' id='code' formControlName='code' i18n-placeholder placeholder='code' />
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='libelle' i18n>libelle</label>
         <input class='form-control' type='text' id='libelle' formControlName='libelle' i18n-placeholder placeholder='libelle' />
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='delai_traitement_jours' i18n>delai_traitement_jours</label>
         <input class='form-control' type='number' id='delai_traitement_jours' formControlName='delai_traitement_jours' i18n-placeholder placeholder='delai_traitement_jours' />
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='cout' i18n>cout</label>
         <input class='form-control' type='number' id='cout' formControlName='cout' i18n-placeholder placeholder='cout' />
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='validite_mois' i18n>validite_mois</label>
         <input class='form-control' type='number' id='validite_mois' formControlName='validite_mois' i18n-placeholder placeholder='validite_mois' />
       </div>
     </div>
-		
-    <div class='col-12 text-right'>
+
+    <div class='col-12 text-right mt-3'>
         <button class="btn btn-primary" type="submit" [disabled]="isLoading" i18n>
           @if (isLoading) {
             Chargement...

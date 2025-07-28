@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('../public/assets/css/dashlite.css?ver=3.1.0');
+@import url('../public/assets/css/theme.css?ver=3.1.0');
+
+@media (min-width: 992px) {
+.nk-apps-sidebar + .nk-main > .nk-wrap .nk-header-fixed {
+    left: 80px;
+  }
+}

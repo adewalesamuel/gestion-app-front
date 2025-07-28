@@ -24,7 +24,7 @@ export class RCTypeEnginEditComponent {
 
   id = signal<number>(1);
   rCTypeEngin = signal<RCTypeEnginEntity|null>(null)
-  
+
   isLoading = signal<boolean>(true);
 
   constructor(
@@ -32,7 +32,7 @@ export class RCTypeEnginEditComponent {
     protected route: ActivatedRoute,
     protected errorHandler: ErrorHandlerService,
     protected rCTypeEnginService: RCTypeEnginService,
-    
+
   ) {
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
 
@@ -52,7 +52,7 @@ export class RCTypeEnginEditComponent {
       this.rCTypeEngin.set(rCTypeEnginData);
       this.rCTypeEnginForm.fill(rCTypeEnginData);
 
-      
+
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {

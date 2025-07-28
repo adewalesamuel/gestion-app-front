@@ -22,7 +22,7 @@ export class RoleCreateComponent {
 
   @ViewChild(RoleFormComponent) roleForm!: RoleFormComponent;
 
-  
+
   isLoading = signal<boolean>(true);
 
   constructor(
@@ -30,7 +30,7 @@ export class RoleCreateComponent {
     protected route: ActivatedRoute,
     protected errorHandler: ErrorHandlerService,
     protected roleService: RoleService,
-    
+
   ) {
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.init();
@@ -40,7 +40,7 @@ export class RoleCreateComponent {
     this.isLoading.set(true);
 
     try {
-      
+
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {
@@ -57,7 +57,7 @@ export class RoleCreateComponent {
 
     try {
       await this.roleForm.create();
-      this.router.navigate([`/roles`]);
+      this.router.navigate([`/settings/roles`]);
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {

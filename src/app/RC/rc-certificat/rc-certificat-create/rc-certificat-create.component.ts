@@ -2,8 +2,8 @@ import { Component, signal, ViewChild } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { RCCertificatFormComponent } from '../forms/rc-certificat-form.component';
 import { RCCertificatService } from '../services/rc-certificat.service';
-import { RCEnginFlottantService } from '../../../RC/rc-engin-flottant/services/rc-engin-flottant.service';
-import { RCEnginFlottantEntity } from '../../../RC/rc-engin-flottant/rc-engin-flottant.entity';
+import { RCEnginFlottantService } from '../../rc-engin-flottant/services/rc-engin-flottant.service';
+import { RCEnginFlottantEntity } from '../../rc-engin-flottant/rc-engin-flottant.entity';
 
 import { Response } from '../../../types';
 import { ErrorHandlerService } from '../../../services/error-handler/error-handler.service';
@@ -65,7 +65,7 @@ export class RCCertificatCreateComponent {
 
     try {
       await this.rCCertificatForm.create();
-      this.router.navigate([`/rc-certificats`]);
+      this.router.navigate([`/rc/rc-certificats`]);
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {

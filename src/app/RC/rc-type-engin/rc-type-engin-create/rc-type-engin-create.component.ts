@@ -22,7 +22,7 @@ export class RCTypeEnginCreateComponent {
 
   @ViewChild(RCTypeEnginFormComponent) rCTypeEnginForm!: RCTypeEnginFormComponent;
 
-  
+
   isLoading = signal<boolean>(true);
 
   constructor(
@@ -30,7 +30,7 @@ export class RCTypeEnginCreateComponent {
     protected route: ActivatedRoute,
     protected errorHandler: ErrorHandlerService,
     protected rCTypeEnginService: RCTypeEnginService,
-    
+
   ) {
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.init();
@@ -40,7 +40,7 @@ export class RCTypeEnginCreateComponent {
     this.isLoading.set(true);
 
     try {
-      
+
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {
@@ -57,7 +57,7 @@ export class RCTypeEnginCreateComponent {
 
     try {
       await this.rCTypeEnginForm.create();
-      this.router.navigate([`/rc-type-engins`]);
+      this.router.navigate([`/rc/rc-type-engins`]);
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {

@@ -38,7 +38,7 @@ export class EDPolitiqueAccesListComponent {
 		'role_id': {},
 		'nom': {},
 		'regles': {},
-		
+
   }
   tableActions = ['edit', 'delete'];
 
@@ -74,12 +74,12 @@ export class EDPolitiqueAccesListComponent {
 
   handleReadClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/ed-politique-access/${data?.id}`]);
+    this.router.navigate([`/ed/ed-politique-access/${data?.id}`]);
   }
 
   handleEditClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/ed-politique-access/${data?.id}/edit`]);
+    this.router.navigate([`/ed/ed-politique-access/${data?.id}/edit`]);
   }
 
   handleDeleteClick = async (e: Event, eDPolitiqueAcces: EDPolitiqueAccesEntity ) => {

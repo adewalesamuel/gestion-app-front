@@ -39,7 +39,7 @@ export class RETarifListComponent {
 		'devise': {},
 		'frequence': {},
 		'type_acteur': {},
-		
+
   }
   tableActions = ['edit', 'delete'];
 
@@ -75,12 +75,12 @@ export class RETarifListComponent {
 
   handleReadClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/re-tarifs/${data?.id}`]);
+    this.router.navigate([`/re/re-tarifs/${data?.id}`]);
   }
 
   handleEditClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/re-tarifs/${data?.id}/edit`]);
+    this.router.navigate([`/re/re-tarifs/${data?.id}/edit`]);
   }
 
   handleDeleteClick = async (e: Event, rETarif: RETarifEntity ) => {

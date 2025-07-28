@@ -2,8 +2,8 @@ import { Component, signal, ViewChild } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { RCPortFormComponent } from '../forms/rc-port-form.component';
 import { RCPortService } from '../services/rc-port.service';
-import { RCPaysService } from '../../../RC/rc-pays/services/rc-pays.service';
-import { RCPaysEntity } from '../../../RC/rc-pays/rc-pays.entity';
+import { RCPaysService } from '../../rc-pays/services/rc-pays.service';
+import { RCPaysEntity } from '../../rc-pays/rc-pays.entity';
 
 import { Response } from '../../../types';
 import { ErrorHandlerService } from '../../../services/error-handler/error-handler.service';
@@ -65,7 +65,7 @@ export class RCPortCreateComponent {
 
     try {
       await this.rCPortForm.create();
-      this.router.navigate([`/rc-ports`]);
+      this.router.navigate([`/rc/rc-ports`]);
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {

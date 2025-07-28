@@ -22,7 +22,7 @@ export class RCActeurCreateComponent {
 
   @ViewChild(RCActeurFormComponent) rCActeurForm!: RCActeurFormComponent;
 
-  
+
   isLoading = signal<boolean>(true);
 
   constructor(
@@ -30,7 +30,7 @@ export class RCActeurCreateComponent {
     protected route: ActivatedRoute,
     protected errorHandler: ErrorHandlerService,
     protected rCActeurService: RCActeurService,
-    
+
   ) {
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.init();
@@ -40,7 +40,7 @@ export class RCActeurCreateComponent {
     this.isLoading.set(true);
 
     try {
-      
+
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {
@@ -57,7 +57,7 @@ export class RCActeurCreateComponent {
 
     try {
       await this.rCActeurForm.create();
-      this.router.navigate([`/rc-acteurs`]);
+      this.router.navigate([`/rc/rc-acteurs`]);
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {

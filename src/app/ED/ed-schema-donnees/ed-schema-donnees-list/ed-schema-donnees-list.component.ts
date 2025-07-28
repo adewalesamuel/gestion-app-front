@@ -38,7 +38,7 @@ export class EDSchemaDonneesListComponent {
 		'version': {},
 		'schema_json': {},
 		'statut': {},
-		
+
   }
   tableActions = ['edit', 'delete'];
 
@@ -74,12 +74,12 @@ export class EDSchemaDonneesListComponent {
 
   handleReadClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/ed-schema-donneess/${data?.id}`]);
+    this.router.navigate([`/ed/ed-schema-donneess/${data?.id}`]);
   }
 
   handleEditClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/ed-schema-donneess/${data?.id}/edit`]);
+    this.router.navigate([`/ed/ed-schema-donneess/${data?.id}/edit`]);
   }
 
   handleDeleteClick = async (e: Event, eDSchemaDonnees: EDSchemaDonneesEntity ) => {

@@ -1,9 +1,11 @@
 <div class="">
   <div class="title">
-    <h3 i18n>List RCHistoriquePropriete</h3>
+    <h5 i18n>List RCHistoriquePropriete</h5>
   </div>
-  <a routerLink="/rc-historique-proprietes/create" i18n>+ Add rCHistoriqueProprietes</a>
-  <app-error-messages 
+  <div class="d-flex align-items-center justify-content-end mb-3">
+    <a routerLink="/rc/rc-historique-proprietes/create" class='btn btn-primary btn-sm' i18n>+ Add rCHistoriqueProprietes</a>
+  </div>
+  <app-error-messages
   [errorMessages]="errorHandler.errorMessages()"
   ></app-error-messages>
   <app-loader [isLoading]="isLoading()"></app-loader>

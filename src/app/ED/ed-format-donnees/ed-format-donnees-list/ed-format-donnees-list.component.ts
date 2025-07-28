@@ -38,7 +38,7 @@ export class EDFormatDonneesListComponent {
 		'mime_type': {},
 		'schema_xsd_url': {},
 		'exemple_url': {},
-		
+
   }
   tableActions = ['edit', 'delete'];
 
@@ -74,12 +74,12 @@ export class EDFormatDonneesListComponent {
 
   handleReadClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/ed-format-donneess/${data?.id}`]);
+    this.router.navigate([`/ed/ed-format-donneess/${data?.id}`]);
   }
 
   handleEditClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/ed-format-donneess/${data?.id}/edit`]);
+    this.router.navigate([`/ed/ed-format-donneess/${data?.id}/edit`]);
   }
 
   handleDeleteClick = async (e: Event, eDFormatDonnees: EDFormatDonneesEntity ) => {

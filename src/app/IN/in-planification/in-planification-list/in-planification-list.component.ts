@@ -38,7 +38,7 @@ export class INPlanificationListComponent {
 		'in_checklist_id': {},
 		'periodicite_jours': {},
 		'prochaine_date': {},
-		
+
   }
   tableActions = ['edit', 'delete'];
 
@@ -74,12 +74,12 @@ export class INPlanificationListComponent {
 
   handleReadClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/in-planifications/${data?.id}`]);
+    this.router.navigate([`/in/in-planifications/${data?.id}`]);
   }
 
   handleEditClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/in-planifications/${data?.id}/edit`]);
+    this.router.navigate([`/in/in-planifications/${data?.id}/edit`]);
   }
 
   handleDeleteClick = async (e: Event, iNPlanification: INPlanificationEntity ) => {

@@ -73,7 +73,7 @@ export class RERelanceCreateComponent {
 
     try {
       await this.rERelanceForm.create();
-      this.router.navigate([`/re-relances`]);
+      this.router.navigate([`/re/re-relances`]);
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {

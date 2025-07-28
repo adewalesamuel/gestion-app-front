@@ -44,7 +44,7 @@ export class INInspectionListComponent {
 		'date_reelle': {},
 		'statut': {},
 		'resultat': {},
-		
+
   }
   tableActions = ['edit', 'delete'];
 
@@ -80,12 +80,12 @@ export class INInspectionListComponent {
 
   handleReadClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/in-inspections/${data?.id}`]);
+    this.router.navigate([`/in/in-inspections/${data?.id}`]);
   }
 
   handleEditClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/in-inspections/${data?.id}/edit`]);
+    this.router.navigate([`/in/in-inspections/${data?.id}/edit`]);
   }
 
   handleDeleteClick = async (e: Event, iNInspection: INInspectionEntity ) => {

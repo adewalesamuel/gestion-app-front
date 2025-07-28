@@ -73,7 +73,7 @@ export class INNonConformiteCreateComponent {
 
     try {
       await this.iNNonConformiteForm.create();
-      this.router.navigate([`/in-non-conformites`]);
+      this.router.navigate([`/in/in-non-conformites`]);
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {

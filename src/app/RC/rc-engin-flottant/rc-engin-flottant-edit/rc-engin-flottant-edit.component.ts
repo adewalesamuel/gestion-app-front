@@ -3,12 +3,12 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { RCEnginFlottantFormComponent } from '../forms/rc-engin-flottant-form.component';
 import { RCEnginFlottantService } from '../services/rc-engin-flottant.service';
 import { RCEnginFlottantEntity } from '../rc-engin-flottant.entity';
-import { RCTypeEnginService } from '../../../RC/rc-type-engin/services/rc-type-engin.service';
-import { RCTypeEnginEntity } from '../../../RC/rc-type-engin/rc-type-engin.entity';
-import { RCPaysService } from '../../../RC/rc-pays/services/rc-pays.service';
-import { RCPaysEntity } from '../../../RC/rc-pays/rc-pays.entity';
-import { RCActeurService } from '../../../RC/rc-acteur/services/rc-acteur.service';
-import { RCActeurEntity } from '../../../RC/rc-acteur/rc-acteur.entity';
+import { RCTypeEnginService } from '../../rc-type-engin/services/rc-type-engin.service';
+import { RCTypeEnginEntity } from '../../rc-type-engin/rc-type-engin.entity';
+import { RCPaysService } from '../../rc-pays/services/rc-pays.service';
+import { RCPaysEntity } from '../../rc-pays/rc-pays.entity';
+import { RCActeurService } from '../../rc-acteur/services/rc-acteur.service';
+import { RCActeurEntity } from '../../rc-acteur/rc-acteur.entity';
 
 import { Response } from '../../../types';
 import { ErrorHandlerService } from '../../../services/error-handler/error-handler.service';

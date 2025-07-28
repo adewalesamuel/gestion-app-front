@@ -22,7 +22,7 @@ export class RCPaysCreateComponent {
 
   @ViewChild(RCPaysFormComponent) rCPaysForm!: RCPaysFormComponent;
 
-  
+
   isLoading = signal<boolean>(true);
 
   constructor(
@@ -30,7 +30,7 @@ export class RCPaysCreateComponent {
     protected route: ActivatedRoute,
     protected errorHandler: ErrorHandlerService,
     protected rCPaysService: RCPaysService,
-    
+
   ) {
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.init();
@@ -40,7 +40,7 @@ export class RCPaysCreateComponent {
     this.isLoading.set(true);
 
     try {
-      
+
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {
@@ -57,7 +57,7 @@ export class RCPaysCreateComponent {
 
     try {
       await this.rCPaysForm.create();
-      this.router.navigate([`/rc-payss`]);
+      this.router.navigate([`/rc/rc-payss`]);
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {

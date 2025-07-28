@@ -40,7 +40,7 @@ export class GUHistoriqueListComponent {
 		'details': {},
 		'date': {},
 		'heure': {},
-		
+
   }
   tableActions = ['edit', 'delete'];
 
@@ -76,12 +76,12 @@ export class GUHistoriqueListComponent {
 
   handleReadClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/gu-historiques/${data?.id}`]);
+    this.router.navigate([`/gu/gu-historiques/${data?.id}`]);
   }
 
   handleEditClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/gu-historiques/${data?.id}/edit`]);
+    this.router.navigate([`/gu/gu-historiques/${data?.id}/edit`]);
   }
 
   handleDeleteClick = async (e: Event, gUHistorique: GUHistoriqueEntity ) => {

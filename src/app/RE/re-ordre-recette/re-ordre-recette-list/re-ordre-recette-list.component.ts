@@ -42,7 +42,7 @@ export class REOrdreRecetteListComponent {
 		'date_echeance': {},
 		'statut': {},
 		'service_concerne': {},
-		
+
   }
   tableActions = ['edit', 'delete'];
 
@@ -78,12 +78,12 @@ export class REOrdreRecetteListComponent {
 
   handleReadClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/re-ordre-recettes/${data?.id}`]);
+    this.router.navigate([`/re/re-ordre-recettes/${data?.id}`]);
   }
 
   handleEditClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/re-ordre-recettes/${data?.id}/edit`]);
+    this.router.navigate([`/re/re-ordre-recettes/${data?.id}/edit`]);
   }
 
   handleDeleteClick = async (e: Event, rEOrdreRecette: REOrdreRecetteEntity ) => {

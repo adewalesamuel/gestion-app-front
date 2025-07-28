@@ -37,7 +37,7 @@ export class RoleListComponent {
     'name': {},
 		'description': {},
 		'permissions': {},
-		
+
   }
   tableActions = ['edit', 'delete'];
 
@@ -73,12 +73,12 @@ export class RoleListComponent {
 
   handleReadClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/roles/${data?.id}`]);
+    this.router.navigate([`/settings/roles/${data?.id}`]);
   }
 
   handleEditClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/roles/${data?.id}/edit`]);
+    this.router.navigate([`/settings/roles/${data?.id}/edit`]);
   }
 
   handleDeleteClick = async (e: Event, role: RoleEntity ) => {

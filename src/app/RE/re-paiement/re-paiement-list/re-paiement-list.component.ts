@@ -42,7 +42,7 @@ export class REPaiementListComponent {
 		'date_paiement': {},
 		'heure': {},
 		'reference_transaction': {},
-		
+
   }
   tableActions = ['edit', 'delete'];
 
@@ -78,12 +78,12 @@ export class REPaiementListComponent {
 
   handleReadClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/re-paiements/${data?.id}`]);
+    this.router.navigate([`/re/re-paiements/${data?.id}`]);
   }
 
   handleEditClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/re-paiements/${data?.id}/edit`]);
+    this.router.navigate([`/re/re-paiements/${data?.id}/edit`]);
   }
 
   handleDeleteClick = async (e: Event, rEPaiement: REPaiementEntity ) => {

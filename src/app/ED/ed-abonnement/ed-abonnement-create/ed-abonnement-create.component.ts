@@ -73,7 +73,7 @@ export class EDAbonnementCreateComponent {
 
     try {
       await this.eDAbonnementForm.create();
-      this.router.navigate([`/ed-abonnements`]);
+      this.router.navigate([`/ed/ed-abonnements`]);
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {

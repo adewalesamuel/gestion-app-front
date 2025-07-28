@@ -81,7 +81,7 @@ export class REPaiementCreateComponent {
 
     try {
       await this.rEPaiementForm.create();
-      this.router.navigate([`/re-paiements`]);
+      this.router.navigate([`/re/re-paiements`]);
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {

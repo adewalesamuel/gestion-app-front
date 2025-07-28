@@ -3,10 +3,10 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { RCHistoriqueProprieteFormComponent } from '../forms/rc-historique-propriete-form.component';
 import { RCHistoriqueProprieteService } from '../services/rc-historique-propriete.service';
 import { RCHistoriqueProprieteEntity } from '../rc-historique-propriete.entity';
-import { RCActeurService } from '../../../RC/rc-acteur/services/rc-acteur.service';
-import { RCActeurEntity } from '../../../RC/rc-acteur/rc-acteur.entity';
-import { RCEnginFlottantService } from '../../../RC/rc-engin-flottant/services/rc-engin-flottant.service';
-import { RCEnginFlottantEntity } from '../../../RC/rc-engin-flottant/rc-engin-flottant.entity';
+import { RCActeurService } from '../../rc-acteur/services/rc-acteur.service';
+import { RCActeurEntity } from '../../rc-acteur/rc-acteur.entity';
+import { RCEnginFlottantService } from '../../rc-engin-flottant/services/rc-engin-flottant.service';
+import { RCEnginFlottantEntity } from '../../rc-engin-flottant/rc-engin-flottant.entity';
 
 import { Response } from '../../../types';
 import { ErrorHandlerService } from '../../../services/error-handler/error-handler.service';

@@ -70,7 +70,7 @@ export class AuditLogCreateComponent {
 
     try {
       await this.auditLogForm.create();
-      this.router.navigate([`/audit-logs`]);
+      this.router.navigate([`/settings/audit-logs`]);
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {

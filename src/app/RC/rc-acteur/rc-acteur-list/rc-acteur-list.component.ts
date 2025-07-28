@@ -44,7 +44,7 @@ export class RCActeurListComponent {
 		'telephone': {},
 		'secteur_activite': {},
 		'pays_origine': {},
-		
+
   }
   tableActions = ['edit', 'delete'];
 
@@ -80,12 +80,12 @@ export class RCActeurListComponent {
 
   handleReadClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/rc-acteurs/${data?.id}`]);
+    this.router.navigate([`/rc/rc-acteurs/${data?.id}`]);
   }
 
   handleEditClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/rc-acteurs/${data?.id}/edit`]);
+    this.router.navigate([`/rc/rc-acteurs/${data?.id}/edit`]);
   }
 
   handleDeleteClick = async (e: Event, rCActeur: RCActeurEntity ) => {

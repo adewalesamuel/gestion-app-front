@@ -65,7 +65,7 @@ export class INEquipeInspectionCreateComponent {
 
     try {
       await this.iNEquipeInspectionForm.create();
-      this.router.navigate([`/in-equipe-inspections`]);
+      this.router.navigate([`/in/in-equipe-inspections`]);
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {

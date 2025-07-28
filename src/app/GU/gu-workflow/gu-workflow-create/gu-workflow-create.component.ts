@@ -73,7 +73,7 @@ export class GUWorkflowCreateComponent {
 
     try {
       await this.gUWorkflowForm.create();
-      this.router.navigate([`/gu-workflows`]);
+      this.router.navigate([`/gu/gu-workflows`]);
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {

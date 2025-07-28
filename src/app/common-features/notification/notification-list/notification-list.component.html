@@ -1,9 +1,11 @@
 <div class="">
   <div class="title">
-    <h3 i18n>List Notification</h3>
+    <h5 i18n>List Notification</h5>
   </div>
-  <a routerLink="/notifications/create" i18n>+ Add notifications</a>
-  <app-error-messages 
+  <div class="d-flex align-items-center justify-content-end mb-3">
+    <a routerLink="/settings/notifications/create" class='btn btn-primary btn-sm' i18n>+ Add notifications</a>
+  </div>
+  <app-error-messages
   [errorMessages]="errorHandler.errorMessages()"
   ></app-error-messages>
   <app-loader [isLoading]="isLoading()"></app-loader>

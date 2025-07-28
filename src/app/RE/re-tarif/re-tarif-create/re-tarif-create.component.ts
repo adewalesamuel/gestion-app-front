@@ -22,7 +22,7 @@ export class RETarifCreateComponent {
 
   @ViewChild(RETarifFormComponent) rETarifForm!: RETarifFormComponent;
 
-  
+
   isLoading = signal<boolean>(true);
 
   constructor(
@@ -30,7 +30,7 @@ export class RETarifCreateComponent {
     protected route: ActivatedRoute,
     protected errorHandler: ErrorHandlerService,
     protected rETarifService: RETarifService,
-    
+
   ) {
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.init();
@@ -40,7 +40,7 @@ export class RETarifCreateComponent {
     this.isLoading.set(true);
 
     try {
-      
+
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {
@@ -57,7 +57,7 @@ export class RETarifCreateComponent {
 
     try {
       await this.rETarifForm.create();
-      this.router.navigate([`/re-tarifs`]);
+      this.router.navigate([`/re/re-tarifs`]);
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {

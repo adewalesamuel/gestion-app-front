@@ -81,7 +81,7 @@ export class GUTransactionCreateComponent {
 
     try {
       await this.gUTransactionForm.create();
-      this.router.navigate([`/gu-transactions`]);
+      this.router.navigate([`/gu/gu-transactions`]);
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {

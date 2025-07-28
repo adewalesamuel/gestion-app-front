@@ -38,7 +38,7 @@ export class GUWorkflowListComponent {
 		'ordre': {},
 		'role_id': {},
 		'gu_type_demande_id': {},
-		
+
   }
   tableActions = ['edit', 'delete'];
 
@@ -74,12 +74,12 @@ export class GUWorkflowListComponent {
 
   handleReadClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/gu-workflows/${data?.id}`]);
+    this.router.navigate([`/gu/gu-workflows/${data?.id}`]);
   }
 
   handleEditClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/gu-workflows/${data?.id}/edit`]);
+    this.router.navigate([`/gu/gu-workflows/${data?.id}/edit`]);
   }
 
   handleDeleteClick = async (e: Event, gUWorkflow: GUWorkflowEntity ) => {

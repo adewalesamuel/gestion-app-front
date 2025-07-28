@@ -22,7 +22,7 @@ export class GUStatutDemandeCreateComponent {
 
   @ViewChild(GUStatutDemandeFormComponent) gUStatutDemandeForm!: GUStatutDemandeFormComponent;
 
-  
+
   isLoading = signal<boolean>(true);
 
   constructor(
@@ -30,7 +30,7 @@ export class GUStatutDemandeCreateComponent {
     protected route: ActivatedRoute,
     protected errorHandler: ErrorHandlerService,
     protected gUStatutDemandeService: GUStatutDemandeService,
-    
+
   ) {
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.init();
@@ -40,7 +40,7 @@ export class GUStatutDemandeCreateComponent {
     this.isLoading.set(true);
 
     try {
-      
+
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {
@@ -57,7 +57,7 @@ export class GUStatutDemandeCreateComponent {
 
     try {
       await this.gUStatutDemandeForm.create();
-      this.router.navigate([`/gu-statut-demandes`]);
+      this.router.navigate([`/gu/gu-statut-demandes`]);
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {

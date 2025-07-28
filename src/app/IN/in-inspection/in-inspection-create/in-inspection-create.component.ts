@@ -89,7 +89,7 @@ export class INInspectionCreateComponent {
 
     try {
       await this.iNInspectionForm.create();
-      this.router.navigate([`/in-inspections`]);
+      this.router.navigate([`/in/in-inspections`]);
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {

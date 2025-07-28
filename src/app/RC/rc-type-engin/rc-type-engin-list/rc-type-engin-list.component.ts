@@ -39,7 +39,7 @@ export class RCTypeEnginListComponent {
 		'categorie': {},
 		'tonnage_min': {},
 		'tonnage_max': {},
-		
+
   }
   tableActions = ['edit', 'delete'];
 
@@ -75,12 +75,12 @@ export class RCTypeEnginListComponent {
 
   handleReadClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/rc-type-engins/${data?.id}`]);
+    this.router.navigate([`/rc/rc-type-engins/${data?.id}`]);
   }
 
   handleEditClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/rc-type-engins/${data?.id}/edit`]);
+    this.router.navigate([`/rc/rc-type-engins/${data?.id}/edit`]);
   }
 
   handleDeleteClick = async (e: Event, rCTypeEngin: RCTypeEnginEntity ) => {

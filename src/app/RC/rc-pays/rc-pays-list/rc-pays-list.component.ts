@@ -38,7 +38,7 @@ export class RCPaysListComponent {
 		'code_iso': {},
 		'indicatif': {},
 		'pavillon_url': {},
-		
+
   }
   tableActions = ['edit', 'delete'];
 
@@ -74,12 +74,12 @@ export class RCPaysListComponent {
 
   handleReadClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/rc-payss/${data?.id}`]);
+    this.router.navigate([`/rc/rc-payss/${data?.id}`]);
   }
 
   handleEditClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/rc-payss/${data?.id}/edit`]);
+    this.router.navigate([`/rc/rc-payss/${data?.id}/edit`]);
   }
 
   handleDeleteClick = async (e: Event, rCPays: RCPaysEntity ) => {

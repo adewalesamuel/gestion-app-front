@@ -22,7 +22,7 @@ export class EDApiCreateComponent {
 
   @ViewChild(EDApiFormComponent) eDApiForm!: EDApiFormComponent;
 
-  
+
   isLoading = signal<boolean>(true);
 
   constructor(
@@ -30,7 +30,7 @@ export class EDApiCreateComponent {
     protected route: ActivatedRoute,
     protected errorHandler: ErrorHandlerService,
     protected eDApiService: EDApiService,
-    
+
   ) {
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.init();
@@ -40,7 +40,7 @@ export class EDApiCreateComponent {
     this.isLoading.set(true);
 
     try {
-      
+
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {
@@ -57,7 +57,7 @@ export class EDApiCreateComponent {
 
     try {
       await this.eDApiForm.create();
-      this.router.navigate([`/ed-apis`]);
+      this.router.navigate([`/ed/ed-apis`]);
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {

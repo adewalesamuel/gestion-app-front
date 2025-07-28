@@ -65,7 +65,7 @@ export class REOrdreRecetteCreateComponent {
 
     try {
       await this.rEOrdreRecetteForm.create();
-      this.router.navigate([`/re-ordre-recettes`]);
+      this.router.navigate([`/re/re-ordre-recettes`]);
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {

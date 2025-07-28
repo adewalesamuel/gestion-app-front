@@ -3,7 +3,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { CommonModule } from '@angular/common';
 import { RCEquipementService } from '../services/rc-equipement.service';
 import { RCEquipementEntity } from '../rc-equipement.entity';
-import { RCEnginFlottantEntity } from '../../../RC/rc-engin-flottant/rc-engin-flottant.entity';
+import { RCEnginFlottantEntity } from '../../rc-engin-flottant/rc-engin-flottant.entity';
 
 
 @Component({

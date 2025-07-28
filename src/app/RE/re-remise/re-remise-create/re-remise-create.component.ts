@@ -73,7 +73,7 @@ export class RERemiseCreateComponent {
 
     try {
       await this.rERemiseForm.create();
-      this.router.navigate([`/re-remises`]);
+      this.router.navigate([`/re/re-remises`]);
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {

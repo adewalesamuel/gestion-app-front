@@ -1,6 +1,6 @@
-<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class="">
+<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class='col-12 col-md-7'>
   <div class=row>
-    <div class='col-12'>
+    <div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='rc_type_engin_id' i18n>rc_type_engin_id</label>
         <select class='select2 form-control' id='rc_type_engin_id' formControlName='rc_type_engin_id' [attr.value]="formGroup.value.rcTypeEngin_id">
@@ -13,7 +13,7 @@
         </select>
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='rc_pays_id' i18n>rc_pays_id</label>
         <select class='select2 form-control' id='rc_pays_id' formControlName='rc_pays_id' [attr.value]="formGroup.value.rcPays_id">
@@ -26,7 +26,7 @@
         </select>
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='rc_acteur_id' i18n>rc_acteur_id</label>
         <select class='select2 form-control' id='rc_acteur_id' formControlName='rc_acteur_id' [attr.value]="formGroup.value.rcActeur_id">
@@ -39,50 +39,50 @@
         </select>
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='nom' i18n>nom</label>
         <input class='form-control' type='text' id='nom' formControlName='nom' i18n-placeholder placeholder='nom' />
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='immatriculation' i18n>immatriculation</label>
         <input class='form-control' type='text' id='immatriculation' formControlName='immatriculation' i18n-placeholder placeholder='immatriculation' />
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='tonnage_brut' i18n>tonnage_brut</label>
         <input class='form-control' type='number' id='tonnage_brut' formControlName='tonnage_brut' i18n-placeholder placeholder='tonnage_brut' />
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='longueur' i18n>longueur</label>
         <input class='form-control' type='number' id='longueur' formControlName='longueur' i18n-placeholder placeholder='longueur' />
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='annee_construction' i18n>annee_construction</label>
         <input class='form-control' type='date' id='annee_construction' formControlName='annee_construction' i18n-placeholder placeholder='annee_construction' />
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='capacite_passagers' i18n>capacite_passagers</label>
         <input class='form-control' type='number' id='capacite_passagers' formControlName='capacite_passagers' i18n-placeholder placeholder='capacite_passagers' />
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='capacite_fret' i18n>capacite_fret</label>
         <input class='form-control' type='number' id='capacite_fret' formControlName='capacite_fret' i18n-placeholder placeholder='capacite_fret' />
       </div>
     </div>
 
-    <div class='col-12 text-right'>
+    <div class='col-12 text-right mt-3'>
         <button class="btn btn-primary" type="submit" [disabled]="isLoading" i18n>
           @if (isLoading) {
             Chargement...

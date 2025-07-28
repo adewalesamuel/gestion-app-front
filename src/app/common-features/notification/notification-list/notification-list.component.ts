@@ -41,7 +41,7 @@ export class NotificationListComponent {
 		'type': {},
 		'entite_type': {},
 		'entite_id': {},
-		
+
   }
   tableActions = ['edit', 'delete'];
 
@@ -77,12 +77,12 @@ export class NotificationListComponent {
 
   handleReadClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/notifications/${data?.id}`]);
+    this.router.navigate([`/settings/notifications/${data?.id}`]);
   }
 
   handleEditClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/notifications/${data?.id}/edit`]);
+    this.router.navigate([`/settings/notifications/${data?.id}/edit`]);
   }
 
   handleDeleteClick = async (e: Event, notification: NotificationEntity ) => {

@@ -1,124 +1,82 @@
-<div>
-  <ul>
-    <li>
-      <a routerLink="roles">roles</a>
-    </li>
-    <li>
-      <a routerLink="users">users</a>
-    </li>
-    <li>
-      <a routerLink="notifications">notifications</a>
-    </li>
-    <li>
-      <a routerLink="audit-logs">audit-logs</a>
-    </li>
-    <li>
-      <a routerLink="config-systemes">config-systemes</a>
-    </li>
-    <li>
-      <a routerLink="rc-payss">rc-payss</a>
-    </li>
-    <li>
-      <a routerLink="rc-type-engins">rc-type-engins</a>
-    </li>
-    <li>
-      <a routerLink="rc-acteurs">rc-acteurs</a>
-    </li>
-    <li>
-      <a routerLink="rc-equipements">rc-equipements</a>
-    </li>
-    <li>
-      <a routerLink="rc-ports">rc-ports</a>
-    </li>
-    <li>
-      <a routerLink="rc-certificats">rc-certificats</a>
-    </li>
-    <li>
-      <a routerLink="rc-historique-proprietes">rc-historique-proprietes</a>
-    </li>
-    <li>
-      <a routerLink="rc-engin-flottants">rc-engin-flottants</a>
-    </li>
-    <li>
-      <a routerLink="gu-statut-demandes">gu-statut-demandes</a>
-    </li>
-    <li>
-      <a routerLink="gu-type-demandes">gu-type-demandes</a>
-    </li>
-    <li>
-      <a routerLink="gu-transactions">gu-transactions</a>
-    </li>
-    <li>
-      <a routerLink="gu-workflows">gu-workflows</a>
-    </li>
-    <li>
-      <a routerLink="gu-commentaires">gu-commentaires</a>
-    </li>
-    <li>
-      <a routerLink="gu-historiques">gu-historiques</a>
-    </li>
-    <li>
-      <a routerLink="gu-demandes">gu-demandes</a>
-    </li>
-    <li>
-      <a routerLink="in-type-controles">in-type-controles</a>
-    </li>
-    <li>
-      <a routerLink="in-resultat-items">in-resultat-items</a>
-    </li>
-    <li>
-      <a routerLink="in-checklists">in-checklists</a>
-    </li>
-    <li>
-      <a routerLink="in-non-conformites">in-non-conformites</a>
-    </li>
-    <li>
-      <a routerLink="in-planifications">in-planifications</a>
-    </li>
-    <li>
-      <a routerLink="in-equipe-inspections">in-equipe-inspections</a>
-    </li>
-    <li>
-      <a routerLink="in-inspections">in-inspections</a>
-    </li>
-    <li>
-      <a routerLink="re-tarifs">re-tarifs</a>
-    </li>
-    <li>
-      <a routerLink="re-mode-paiements">re-mode-paiements</a>
-    </li>
-    <li>
-      <a routerLink="re-ordre-recettes">re-ordre-recettes</a>
-    </li>
-    <li>
-      <a routerLink="re-relances">re-relances</a>
-    </li>
-    <li>
-      <a routerLink="re-remises">re-remises</a>
-    </li>
-    <li>
-      <a routerLink="re-historique-relances">re-historique-relances</a>
-    </li>
-    <li>
-      <a routerLink="re-paiements">re-paiements</a>
-    </li>
-    <li>
-      <a routerLink="ed-format-donneess">ed-format-donneess</a>
-    </li>
-    <li>
-      <a routerLink="ed-schema-donneess">ed-schema-donneess</a>
-    </li>
-    <li>
-      <a routerLink="ed-apis">ed-apis</a>
-    </li>
-    <li>
-      <a routerLink="ed-log-echanges">ed-log-echanges</a>
-    </li>
-    <li>
-      <a routerLink="ed-abonnements">ed-abonnements</a>
-    </li>
-    <li>
-      <a routerLink="ed-politique-access">ed-politique-access</a>
-    </li>
-  </ul>
+<div class="nk-sidebar-element">
+  <div class="nk-sidebar-body">
+    <div class="nk-sidebar-content" data-simplebar>
+      <div class="nk-sidebar-menu">
+        <ul class="nk-menu apps-menu">
+          <li class="nk-menu-item" routerLinkActive="active">
+            <a routerLink="/re" class="nk-menu-link"
+            title="Référentiel commun des données de base du secteur maritime">
+              <span class="nk-menu-icon"><em class="icon ni ni-template"></em></span>
+            </a>
+          </li><!-- .nk-menu-item -->
+          <li class="nk-menu-item" routerLinkActive="active">
+            <a routerLink="/gu" class="nk-menu-link"
+            title="Guichet unique numérique pour les acteurs du secteur">
+              <span class="nk-menu-icon"><em class="icon ni ni-template"></em></span>
+            </a>
+          </li><!-- .nk-menu-item -->
+          <li class="nk-menu-item" routerLinkActive="active">
+            <a routerLink="/in" class="nk-menu-link"
+            title="Plateforme intégrée de gestion des inspections et contrôles des navires">
+              <span class="nk-menu-icon"><em class="icon ni ni-template"></em></span>
+            </a>
+          </li><!-- .nk-menu-item -->
+          <li class="nk-menu-item" routerLinkActive="active">
+            <a routerLink="/rc" class="nk-menu-link"
+            title="Plateforme unifiée de gestion des ordres de recette, d'enregistrement des règlements et de">
+              <span class="nk-menu-icon"><em class="icon ni ni-template"></em></span>
+            </a>
+          </li><!-- .nk-menu-item -->
+          <li class="nk-menu-item" routerLinkActive="active">
+            <a routerLink="/ed" class="nk-menu-link"
+            title="Plateforme numérique d'échanges de données">
+              <span class="nk-menu-icon"><em class="icon ni ni-template"></em></span>
+            </a>
+          </li><!-- .nk-menu-item -->
+          <li class="nk-menu-hr"></li>
+        </ul>
+      </div>
+      <div class="nk-sidebar-footer">
+        <ul class="nk-menu nk-menu-md">
+          <li class="nk-menu-item" routerLinkActive="active">
+            <a routerLink="" class="nk-menu-link" title="Settings">
+              <span class="nk-menu-icon"><em class="icon ni ni-setting"></em></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="nk-sidebar-profile nk-sidebar-profile-fixed dropdown">
+      <a routerLink="/settings" class="toggle" data-target="profileDD">
+        <div class="user-avatar">
+          <span>AB</span>
+        </div>
+      </a>
+      <div class="dropdown-menu dropdown-menu-md m-1 nk-sidebar-profile-dropdown" data-content="profileDD">
+        <div class="dropdown-inner user-card-wrap d-none d-md-block">
+          <div class="user-card">
+            <div class="user-avatar">
+              <span>AB</span>
+            </div>
+            <div class="user-info">
+              <span class="lead-text">User name</span>
+              <span class="sub-text text-soft">infooftnio.com</span>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown-inner">
+          <ul class="link-list">
+            <li><a routerLink=""><em class="icon ni ni-user-alt"></em><span>View Profile</span></a></li>
+            <li><a routerLink=""><em class="icon ni ni-setting-alt"></em><span>Account Setting</span></a></li>
+            <li><a routerLink=""><em class="icon ni ni-activity-alt"></em><span>Login Activity</span></a></li>
+          </ul>
+        </div>
+        <div class="dropdown-inner">
+          <ul class="link-list">
+            <li><a routerLink=""><em class="icon ni ni-signout"></em><span>Sign out</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

@@ -24,7 +24,7 @@ export class RCActeurEditComponent {
 
   id = signal<number>(1);
   rCActeur = signal<RCActeurEntity|null>(null)
-  
+
   isLoading = signal<boolean>(true);
 
   constructor(
@@ -32,7 +32,7 @@ export class RCActeurEditComponent {
     protected route: ActivatedRoute,
     protected errorHandler: ErrorHandlerService,
     protected rCActeurService: RCActeurService,
-    
+
   ) {
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
 
@@ -52,7 +52,7 @@ export class RCActeurEditComponent {
       this.rCActeur.set(rCActeurData);
       this.rCActeurForm.fill(rCActeurData);
 
-      
+
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {

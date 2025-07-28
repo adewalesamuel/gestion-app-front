@@ -1,6 +1,6 @@
-<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class="">
+<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class='col-12 col-md-7'>
   <div class=row>
-    <div class='col-12'>
+    <div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='rc_engin_flottant_id' i18n>rc_engin_flottant_id</label>
         <select class='select2 form-control' id='rc_engin_flottant_id' formControlName='rc_engin_flottant_id' [attr.value]="formGroup.value.rcEnginFlottant_id">
@@ -13,7 +13,7 @@
         </select>
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='type' i18n>type</label>
         <select class='form-select form-control' id='type' formControlName='type' [attr.value]="formGroup.value.type">
@@ -24,32 +24,32 @@
         </select>
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='numero' i18n>numero</label>
         <input class='form-control' type='text' id='numero' formControlName='numero' i18n-placeholder placeholder='numero' />
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='date_emission' i18n>date_emission</label>
         <input class='form-control' type='date' id='date_emission' formControlName='date_emission' i18n-placeholder placeholder='date_emission' />
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='date_expiration' i18n>date_expiration</label>
         <input class='form-control' type='date' id='date_expiration' formControlName='date_expiration' i18n-placeholder placeholder='date_expiration' />
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='organisme_emetteur' i18n>organisme_emetteur</label>
         <input class='form-control' type='text' id='organisme_emetteur' formControlName='organisme_emetteur' i18n-placeholder placeholder='organisme_emetteur' />
       </div>
     </div>
 
-    <div class='col-12 text-right'>
+    <div class='col-12 text-right mt-3'>
         <button class="btn btn-primary" type="submit" [disabled]="isLoading" i18n>
           @if (isLoading) {
             Chargement...

@@ -39,7 +39,7 @@ export class EDApiListComponent {
 		'url_base': {},
 		'statut': {},
 		'documentation_url': {},
-		
+
   }
   tableActions = ['edit', 'delete'];
 
@@ -75,12 +75,12 @@ export class EDApiListComponent {
 
   handleReadClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/ed-apis/${data?.id}`]);
+    this.router.navigate([`/ed/ed-apis/${data?.id}`]);
   }
 
   handleEditClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/ed-apis/${data?.id}/edit`]);
+    this.router.navigate([`/ed/ed-apis/${data?.id}/edit`]);
   }
 
   handleDeleteClick = async (e: Event, eDApi: EDApiEntity ) => {

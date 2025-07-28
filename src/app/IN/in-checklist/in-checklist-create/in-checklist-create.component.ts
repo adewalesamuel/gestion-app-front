@@ -65,7 +65,7 @@ export class INChecklistCreateComponent {
 
     try {
       await this.iNChecklistForm.create();
-      this.router.navigate([`/in-checklists`]);
+      this.router.navigate([`/in/in-checklists`]);
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {

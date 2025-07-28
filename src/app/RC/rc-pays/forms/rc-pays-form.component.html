@@ -1,31 +1,31 @@
-<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class="">
+<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class='col-12 col-md-7'>
   <div class=row>
-    <div class='col-12'>
+    <div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='nom' i18n>nom</label>
         <input class='form-control' type='text' id='nom' formControlName='nom' i18n-placeholder placeholder='nom' />
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='code_iso' i18n>code_iso</label>
         <input class='form-control' type='text' id='code_iso' formControlName='code_iso' i18n-placeholder placeholder='code_iso' />
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='indicatif' i18n>indicatif</label>
         <input class='form-control' type='text' id='indicatif' formControlName='indicatif' i18n-placeholder placeholder='indicatif' />
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='pavillon_url' i18n>pavillon_url</label>
         <input class='form-control' type='text' id='pavillon_url' formControlName='pavillon_url' i18n-placeholder placeholder='pavillon_url' />
       </div>
     </div>
-		
-    <div class='col-12 text-right'>
+
+    <div class='col-12 text-right mt-3'>
         <button class="btn btn-primary" type="submit" [disabled]="isLoading" i18n>
           @if (isLoading) {
             Chargement...

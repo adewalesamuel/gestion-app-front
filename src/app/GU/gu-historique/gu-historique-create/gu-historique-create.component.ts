@@ -73,7 +73,7 @@ export class GUHistoriqueCreateComponent {
 
     try {
       await this.gUHistoriqueForm.create();
-      this.router.navigate([`/gu-historiques`]);
+      this.router.navigate([`/gu/gu-historiques`]);
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {

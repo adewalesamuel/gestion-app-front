@@ -78,12 +78,12 @@ export class UserListComponent {
 
   handleReadClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/users/${data?.id}`]);
+    this.router.navigate([`/settings/users/${data?.id}`]);
   }
 
   handleEditClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/users/${data?.id}/edit`]);
+    this.router.navigate([`/settings/users/${data?.id}/edit`]);
   }
 
   handleDeleteClick = async (e: Event, user: UserEntity ) => {

@@ -39,7 +39,7 @@ export class RERemiseListComponent {
 		'montant': {},
 		'pourcentage': {},
 		'raison': {},
-		
+
   }
   tableActions = ['edit', 'delete'];
 
@@ -75,12 +75,12 @@ export class RERemiseListComponent {
 
   handleReadClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/re-remises/${data?.id}`]);
+    this.router.navigate([`/re/re-remises/${data?.id}`]);
   }
 
   handleEditClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/re-remises/${data?.id}/edit`]);
+    this.router.navigate([`/re/re-remises/${data?.id}/edit`]);
   }
 
   handleDeleteClick = async (e: Event, rERemise: RERemiseEntity ) => {

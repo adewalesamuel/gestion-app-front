@@ -22,7 +22,7 @@ export class INTypeControleCreateComponent {
 
   @ViewChild(INTypeControleFormComponent) iNTypeControleForm!: INTypeControleFormComponent;
 
-  
+
   isLoading = signal<boolean>(true);
 
   constructor(
@@ -30,7 +30,7 @@ export class INTypeControleCreateComponent {
     protected route: ActivatedRoute,
     protected errorHandler: ErrorHandlerService,
     protected iNTypeControleService: INTypeControleService,
-    
+
   ) {
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.init();
@@ -40,7 +40,7 @@ export class INTypeControleCreateComponent {
     this.isLoading.set(true);
 
     try {
-      
+
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {
@@ -57,7 +57,7 @@ export class INTypeControleCreateComponent {
 
     try {
       await this.iNTypeControleForm.create();
-      this.router.navigate([`/in-type-controles`]);
+      this.router.navigate([`/in/in-type-controles`]);
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {

@@ -1,6 +1,23 @@
-<main>
-  <app-header></app-header>
-  <app-sidebar></app-sidebar>
-  <router-outlet />
-  <app-footer></app-footer>
-</main>
+<body class="nk-body npc-default has-apps-sidebar has-sidebar">
+  <main class="nk-app-root">
+    <div class="nk-apps-sidebar is-dark">
+        <div class="nk-apps-brand">
+            <a routerLink="/" class="logo-link">
+              <img class="logo-light logo-img"
+              src="images/logo-small.png"
+              srcset="images/logo-small2x.png 2x" alt="logo">
+              <img class="logo-dark logo-img"
+              src="images/logo-dark-small.png"
+              srcset="images/logo-dark-small2x.png 2x" alt="logo-dark">
+            </a>
+        </div>
+        <app-sidebar />
+    </div>
+    <div class="nk-main">
+        <div class="nk-wrap">
+          <app-header />
+          <router-outlet />
+        </div>
+    </div>
+  </main>
+</body>

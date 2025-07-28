@@ -22,7 +22,7 @@ export class EDSchemaDonneesCreateComponent {
 
   @ViewChild(EDSchemaDonneesFormComponent) eDSchemaDonneesForm!: EDSchemaDonneesFormComponent;
 
-  
+
   isLoading = signal<boolean>(true);
 
   constructor(
@@ -30,7 +30,7 @@ export class EDSchemaDonneesCreateComponent {
     protected route: ActivatedRoute,
     protected errorHandler: ErrorHandlerService,
     protected eDSchemaDonneesService: EDSchemaDonneesService,
-    
+
   ) {
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.init();
@@ -40,7 +40,7 @@ export class EDSchemaDonneesCreateComponent {
     this.isLoading.set(true);
 
     try {
-      
+
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {
@@ -57,7 +57,7 @@ export class EDSchemaDonneesCreateComponent {
 
     try {
       await this.eDSchemaDonneesForm.create();
-      this.router.navigate([`/ed-schema-donneess`]);
+      this.router.navigate([`/ed/ed-schema-donneess`]);
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {

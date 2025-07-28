@@ -73,7 +73,7 @@ export class INPlanificationCreateComponent {
 
     try {
       await this.iNPlanificationForm.create();
-      this.router.navigate([`/in-planifications`]);
+      this.router.navigate([`/in/in-planifications`]);
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {

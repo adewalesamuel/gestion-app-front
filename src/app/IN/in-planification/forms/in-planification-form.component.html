@@ -1,6 +1,6 @@
-<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class="">
+<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class='col-12 col-md-7'>
   <div class=row>
-    <div class='col-12'>
+    <div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='rc_engin_flottant_id' i18n>rc_engin_flottant_id</label>
         <select class='select2 form-control' id='rc_engin_flottant_id' formControlName='rc_engin_flottant_id' [attr.value]="formGroup.value.rcEnginFlottant_id">
@@ -13,7 +13,7 @@
         </select>
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='in_checklist_id' i18n>in_checklist_id</label>
         <select class='select2 form-control' id='in_checklist_id' formControlName='in_checklist_id' [attr.value]="formGroup.value.inChecklist_id">
@@ -26,20 +26,20 @@
         </select>
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='periodicite_jours' i18n>periodicite_jours</label>
         <input class='form-control' type='number' id='periodicite_jours' formControlName='periodicite_jours' i18n-placeholder placeholder='periodicite_jours' />
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='prochaine_date' i18n>prochaine_date</label>
         <input class='form-control' type='date' id='prochaine_date' formControlName='prochaine_date' i18n-placeholder placeholder='prochaine_date' />
       </div>
     </div>
 
-    <div class='col-12 text-right'>
+    <div class='col-12 text-right mt-3'>
         <button class="btn btn-primary" type="submit" [disabled]="isLoading" i18n>
           @if (isLoading) {
             Chargement...

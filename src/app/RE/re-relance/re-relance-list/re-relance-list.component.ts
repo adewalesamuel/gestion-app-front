@@ -40,7 +40,7 @@ export class RERelanceListComponent {
 		'heure': {},
 		'mode': {},
 		'statut': {},
-		
+
   }
   tableActions = ['edit', 'delete'];
 
@@ -76,12 +76,12 @@ export class RERelanceListComponent {
 
   handleReadClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/re-relances/${data?.id}`]);
+    this.router.navigate([`/re/re-relances/${data?.id}`]);
   }
 
   handleEditClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/re-relances/${data?.id}/edit`]);
+    this.router.navigate([`/re/re-relances/${data?.id}/edit`]);
   }
 
   handleDeleteClick = async (e: Event, rERelance: RERelanceEntity ) => {

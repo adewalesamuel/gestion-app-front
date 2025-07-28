@@ -3,7 +3,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { CommonModule } from '@angular/common';
 import { RCCertificatService } from '../services/rc-certificat.service';
 import { RCCertificatEntity } from '../rc-certificat.entity';
-import { RCEnginFlottantEntity } from '../../../RC/rc-engin-flottant/rc-engin-flottant.entity';
+import { RCEnginFlottantEntity } from '../../rc-engin-flottant/rc-engin-flottant.entity';
 import { CONSTS } from '../../../constants';
 
 

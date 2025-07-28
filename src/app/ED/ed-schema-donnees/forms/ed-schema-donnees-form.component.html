@@ -1,24 +1,24 @@
-<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class="">
+<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class='col-12 col-md-7'>
   <div class=row>
-    <div class='col-12'>
+    <div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='nom' i18n>nom</label>
         <input class='form-control' type='text' id='nom' formControlName='nom' i18n-placeholder placeholder='nom' />
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='version' i18n>version</label>
         <input class='form-control' type='text' id='version' formControlName='version' i18n-placeholder placeholder='version' />
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='schema_json' i18n>schema_json</label>
         <input class='form-control' type='text' id='schema_json' formControlName='schema_json' i18n-placeholder placeholder='schema_json' />
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='statut' i18n>statut</label>
         <select class='form-select form-control' id='statut' formControlName='statut' [attr.value]="formGroup.value.statut">
@@ -30,7 +30,7 @@
       </div>
     </div>
 
-    <div class='col-12 text-right'>
+    <div class='col-12 text-right mt-3'>
         <button class="btn btn-primary" type="submit" [disabled]="isLoading" i18n>
           @if (isLoading) {
             Chargement...

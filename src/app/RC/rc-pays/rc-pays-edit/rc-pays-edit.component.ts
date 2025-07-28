@@ -24,7 +24,7 @@ export class RCPaysEditComponent {
 
   id = signal<number>(1);
   rCPays = signal<RCPaysEntity|null>(null)
-  
+
   isLoading = signal<boolean>(true);
 
   constructor(
@@ -32,7 +32,7 @@ export class RCPaysEditComponent {
     protected route: ActivatedRoute,
     protected errorHandler: ErrorHandlerService,
     protected rCPaysService: RCPaysService,
-    
+
   ) {
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
 
@@ -52,7 +52,7 @@ export class RCPaysEditComponent {
       this.rCPays.set(rCPaysData);
       this.rCPaysForm.fill(rCPaysData);
 
-      
+
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {

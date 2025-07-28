@@ -1,11 +1,11 @@
 <div class="">
   <div class="title">
-    <h3 i18n>Edit GUCommentaire</h3>
+    <h5 i18n>Edit GUCommentaire</h5>
   </div>
-  <app-error-messages 
+  <app-error-messages
   [errorMessages]="errorHandler.errorMessages()"
   ></app-error-messages>
-  <app-gu-commentaire-form 
+  <app-gu-commentaire-form
   [isLoading]="isLoading()"
   [handleSubmit]="handleFormSubmit"
   [users]="users()"

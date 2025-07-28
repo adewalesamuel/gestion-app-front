@@ -39,7 +39,7 @@ export class GUStatutDemandeListComponent {
 		'couleur_hex': {},
 		'ordre': {},
 		'notifiable': {},
-		
+
   }
   tableActions = ['edit', 'delete'];
 
@@ -75,12 +75,12 @@ export class GUStatutDemandeListComponent {
 
   handleReadClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/gu-statut-demandes/${data?.id}`]);
+    this.router.navigate([`/gu/gu-statut-demandes/${data?.id}`]);
   }
 
   handleEditClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/gu-statut-demandes/${data?.id}/edit`]);
+    this.router.navigate([`/gu/gu-statut-demandes/${data?.id}/edit`]);
   }
 
   handleDeleteClick = async (e: Event, gUStatutDemande: GUStatutDemandeEntity ) => {

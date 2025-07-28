@@ -40,7 +40,7 @@ export class REHistoriqueRelanceListComponent {
 		'heure': {},
 		'mode': {},
 		'contenu': {},
-		
+
   }
   tableActions = ['edit', 'delete'];
 
@@ -76,12 +76,12 @@ export class REHistoriqueRelanceListComponent {
 
   handleReadClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/re-historique-relances/${data?.id}`]);
+    this.router.navigate([`/re/re-historique-relances/${data?.id}`]);
   }
 
   handleEditClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/re-historique-relances/${data?.id}/edit`]);
+    this.router.navigate([`/re/re-historique-relances/${data?.id}/edit`]);
   }
 
   handleDeleteClick = async (e: Event, rEHistoriqueRelance: REHistoriqueRelanceEntity ) => {

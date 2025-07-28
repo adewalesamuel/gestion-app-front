@@ -65,7 +65,7 @@ export class INResultatItemCreateComponent {
 
     try {
       await this.iNResultatItemForm.create();
-      this.router.navigate([`/in-resultat-items`]);
+      this.router.navigate([`/in/in-resultat-items`]);
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {

@@ -40,7 +40,7 @@ export class EDAbonnementListComponent {
 		'token': {},
 		'date_expiration': {},
 		'limite_requetes_jour': {},
-		
+
   }
   tableActions = ['edit', 'delete'];
 
@@ -76,12 +76,12 @@ export class EDAbonnementListComponent {
 
   handleReadClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/ed-abonnements/${data?.id}`]);
+    this.router.navigate([`/ed/ed-abonnements/${data?.id}`]);
   }
 
   handleEditClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/ed-abonnements/${data?.id}/edit`]);
+    this.router.navigate([`/ed/ed-abonnements/${data?.id}/edit`]);
   }
 
   handleDeleteClick = async (e: Event, eDAbonnement: EDAbonnementEntity ) => {

@@ -3,9 +3,9 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { CommonModule } from '@angular/common';
 import { RCEnginFlottantService } from '../services/rc-engin-flottant.service';
 import { RCEnginFlottantEntity } from '../rc-engin-flottant.entity';
-import { RCTypeEnginEntity } from '../../../RC/rc-type-engin/rc-type-engin.entity';
-import { RCPaysEntity } from '../../../RC/rc-pays/rc-pays.entity';
-import { RCActeurEntity } from '../../../RC/rc-acteur/rc-acteur.entity';
+import { RCPaysEntity } from '../../rc-pays/rc-pays.entity';
+import { RCActeurEntity } from '../../rc-acteur/rc-acteur.entity';
+import { RCTypeEnginEntity } from '../../rc-type-engin/rc-type-engin.entity';
 
 
 @Component({

@@ -1,6 +1,6 @@
-<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class="">
+<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class='col-12 col-md-7'>
   <div class=row>
-    <div class='col-12'>
+    <div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='rc_pays_id' i18n>rc_pays_id</label>
         <select class='select2 form-control' id='rc_pays_id' formControlName='rc_pays_id' [attr.value]="formGroup.value.rcPays_id">
@@ -13,32 +13,32 @@
         </select>
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='nom' i18n>nom</label>
         <input class='form-control' type='text' id='nom' formControlName='nom' i18n-placeholder placeholder='nom' />
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='code' i18n>code</label>
         <input class='form-control' type='text' id='code' formControlName='code' i18n-placeholder placeholder='code' />
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='capacite_accueil' i18n>capacite_accueil</label>
         <input class='form-control' type='number' id='capacite_accueil' formControlName='capacite_accueil' i18n-placeholder placeholder='capacite_accueil' />
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='profondeur_max' i18n>profondeur_max</label>
         <input class='form-control' type='number' id='profondeur_max' formControlName='profondeur_max' i18n-placeholder placeholder='profondeur_max' />
       </div>
     </div>
 
-    <div class='col-12 text-right'>
+    <div class='col-12 text-right mt-3'>
         <button class="btn btn-primary" type="submit" [disabled]="isLoading" i18n>
           @if (isLoading) {
             Chargement...

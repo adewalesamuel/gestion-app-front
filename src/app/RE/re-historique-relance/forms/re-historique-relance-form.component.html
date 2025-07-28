@@ -1,6 +1,6 @@
-<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class="">
+<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class='col-12 col-md-7'>
   <div class=row>
-    <div class='col-12'>
+    <div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='re_relance_id' i18n>re_relance_id</label>
         <select class='select2 form-control' id='re_relance_id' formControlName='re_relance_id' [attr.value]="formGroup.value.reRelance_id">
@@ -13,7 +13,7 @@
         </select>
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='user_id' i18n>user_id</label>
         <select class='select2 form-control' id='user_id' formControlName='user_id' [attr.value]="formGroup.value.user_id">
@@ -26,19 +26,19 @@
         </select>
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='date' i18n>date</label>
         <input class='form-control' type='date' id='date' formControlName='date' i18n-placeholder placeholder='date' />
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='heure' i18n>heure</label>
         <input class='form-control' type='text' id='heure' formControlName='heure' i18n-placeholder placeholder='heure' />
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='mode' i18n>mode</label>
         <select class='form-select form-control' id='mode' formControlName='mode' [attr.value]="formGroup.value.mode">
@@ -49,14 +49,14 @@
         </select>
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='contenu' i18n>contenu</label>
         <input class='form-control' type='text' id='contenu' formControlName='contenu' i18n-placeholder placeholder='contenu' />
       </div>
     </div>
 
-    <div class='col-12 text-right'>
+    <div class='col-12 text-right mt-3'>
         <button class="btn btn-primary" type="submit" [disabled]="isLoading" i18n>
           @if (isLoading) {
             Chargement...

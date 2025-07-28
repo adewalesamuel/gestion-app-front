@@ -22,7 +22,7 @@ export class GUTypeDemandeCreateComponent {
 
   @ViewChild(GUTypeDemandeFormComponent) gUTypeDemandeForm!: GUTypeDemandeFormComponent;
 
-  
+
   isLoading = signal<boolean>(true);
 
   constructor(
@@ -30,7 +30,7 @@ export class GUTypeDemandeCreateComponent {
     protected route: ActivatedRoute,
     protected errorHandler: ErrorHandlerService,
     protected gUTypeDemandeService: GUTypeDemandeService,
-    
+
   ) {
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.init();
@@ -40,7 +40,7 @@ export class GUTypeDemandeCreateComponent {
     this.isLoading.set(true);
 
     try {
-      
+
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {
@@ -57,7 +57,7 @@ export class GUTypeDemandeCreateComponent {
 
     try {
       await this.gUTypeDemandeForm.create();
-      this.router.navigate([`/gu-type-demandes`]);
+      this.router.navigate([`/gu/gu-type-demandes`]);
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {

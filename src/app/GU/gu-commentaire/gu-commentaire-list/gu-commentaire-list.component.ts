@@ -39,7 +39,7 @@ export class GUCommentaireListComponent {
 		'heure': {},
 		'user_id': {},
 		'gu_demande_id': {},
-		
+
   }
   tableActions = ['edit', 'delete'];
 
@@ -75,12 +75,12 @@ export class GUCommentaireListComponent {
 
   handleReadClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/gu-commentaires/${data?.id}`]);
+    this.router.navigate([`/gu/gu-commentaires/${data?.id}`]);
   }
 
   handleEditClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/gu-commentaires/${data?.id}/edit`]);
+    this.router.navigate([`/gu/gu-commentaires/${data?.id}/edit`]);
   }
 
   handleDeleteClick = async (e: Event, gUCommentaire: GUCommentaireEntity ) => {

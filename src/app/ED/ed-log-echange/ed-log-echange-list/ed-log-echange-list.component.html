@@ -1,9 +1,11 @@
 <div class="">
   <div class="title">
-    <h3 i18n>List EDLogEchange</h3>
+    <h5 i18n>List EDLogEchange</h5>
   </div>
-  <a routerLink="/ed-log-echanges/create" i18n>+ Add eDLogEchanges</a>
-  <app-error-messages 
+  <div class="d-flex align-items-center justify-content-end mb-3">
+    <a routerLink="/ed/ed-log-echanges/create" class='btn btn-primary btn-sm' i18n>+ Add eDLogEchanges</a>
+  </div>
+  <app-error-messages
   [errorMessages]="errorHandler.errorMessages()"
   ></app-error-messages>
   <app-loader [isLoading]="isLoading()"></app-loader>

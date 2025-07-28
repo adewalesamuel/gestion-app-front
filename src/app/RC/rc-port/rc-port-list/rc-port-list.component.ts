@@ -39,7 +39,7 @@ export class RCPortListComponent {
 		'code': {},
 		'capacite_accueil': {},
 		'profondeur_max': {},
-		
+
   }
   tableActions = ['edit', 'delete'];
 
@@ -75,12 +75,12 @@ export class RCPortListComponent {
 
   handleReadClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/rc-ports/${data?.id}`]);
+    this.router.navigate([`/rc/rc-ports/${data?.id}`]);
   }
 
   handleEditClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/rc-ports/${data?.id}/edit`]);
+    this.router.navigate([`/rc/rc-ports/${data?.id}/edit`]);
   }
 
   handleDeleteClick = async (e: Event, rCPort: RCPortEntity ) => {

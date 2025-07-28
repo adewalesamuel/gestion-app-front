@@ -38,7 +38,7 @@ export class INChecklistListComponent {
 		'nom': {},
 		'version': {},
 		'items': {},
-		
+
   }
   tableActions = ['edit', 'delete'];
 
@@ -74,12 +74,12 @@ export class INChecklistListComponent {
 
   handleReadClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/in-checklists/${data?.id}`]);
+    this.router.navigate([`/in/in-checklists/${data?.id}`]);
   }
 
   handleEditClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/in-checklists/${data?.id}/edit`]);
+    this.router.navigate([`/in/in-checklists/${data?.id}/edit`]);
   }
 
   handleDeleteClick = async (e: Event, iNChecklist: INChecklistEntity ) => {

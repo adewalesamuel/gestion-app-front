@@ -39,7 +39,7 @@ export class RCEquipementListComponent {
 		'type': {},
 		'numero_serie': {},
 		'date_installation': {},
-		
+
   }
   tableActions = ['edit', 'delete'];
 
@@ -75,12 +75,12 @@ export class RCEquipementListComponent {
 
   handleReadClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/rc-equipements/${data?.id}`]);
+    this.router.navigate([`/rc/rc-equipements/${data?.id}`]);
   }
 
   handleEditClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/rc-equipements/${data?.id}/edit`]);
+    this.router.navigate([`/rc/rc-equipements/${data?.id}/edit`]);
   }
 
   handleDeleteClick = async (e: Event, rCEquipement: RCEquipementEntity ) => {

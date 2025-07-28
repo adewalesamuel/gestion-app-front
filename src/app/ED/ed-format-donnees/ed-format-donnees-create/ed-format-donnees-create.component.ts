@@ -22,7 +22,7 @@ export class EDFormatDonneesCreateComponent {
 
   @ViewChild(EDFormatDonneesFormComponent) eDFormatDonneesForm!: EDFormatDonneesFormComponent;
 
-  
+
   isLoading = signal<boolean>(true);
 
   constructor(
@@ -30,7 +30,7 @@ export class EDFormatDonneesCreateComponent {
     protected route: ActivatedRoute,
     protected errorHandler: ErrorHandlerService,
     protected eDFormatDonneesService: EDFormatDonneesService,
-    
+
   ) {
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.init();
@@ -40,7 +40,7 @@ export class EDFormatDonneesCreateComponent {
     this.isLoading.set(true);
 
     try {
-      
+
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {
@@ -57,7 +57,7 @@ export class EDFormatDonneesCreateComponent {
 
     try {
       await this.eDFormatDonneesForm.create();
-      this.router.navigate([`/ed-format-donneess`]);
+      this.router.navigate([`/ed/ed-format-donneess`]);
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {

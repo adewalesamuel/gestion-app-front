@@ -39,7 +39,7 @@ export class RCHistoriqueProprieteListComponent {
 		'date_debut': {},
 		'date_fin': {},
 		'type_transaction': {},
-		
+
   }
   tableActions = ['edit', 'delete'];
 
@@ -75,12 +75,12 @@ export class RCHistoriqueProprieteListComponent {
 
   handleReadClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/rc-historique-proprietes/${data?.id}`]);
+    this.router.navigate([`/rc/rc-historique-proprietes/${data?.id}`]);
   }
 
   handleEditClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/rc-historique-proprietes/${data?.id}/edit`]);
+    this.router.navigate([`/rc/rc-historique-proprietes/${data?.id}/edit`]);
   }
 
   handleDeleteClick = async (e: Event, rCHistoriquePropriete: RCHistoriqueProprieteEntity ) => {

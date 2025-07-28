@@ -40,7 +40,7 @@ export class RCCertificatListComponent {
 		'date_emission': {},
 		'date_expiration': {},
 		'organisme_emetteur': {},
-		
+
   }
   tableActions = ['edit', 'delete'];
 
@@ -76,12 +76,12 @@ export class RCCertificatListComponent {
 
   handleReadClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/rc-certificats/${data?.id}`]);
+    this.router.navigate([`/rc/rc-certificats/${data?.id}`]);
   }
 
   handleEditClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/rc-certificats/${data?.id}/edit`]);
+    this.router.navigate([`/rc/rc-certificats/${data?.id}/edit`]);
   }
 
   handleDeleteClick = async (e: Event, rCCertificat: RCCertificatEntity ) => {

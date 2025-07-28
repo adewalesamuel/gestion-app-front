@@ -39,7 +39,7 @@ export class INTypeControleListComponent {
 		'norme_reference': {},
 		'frequence_mois': {},
 		'gravite_min': {},
-		
+
   }
   tableActions = ['edit', 'delete'];
 
@@ -75,12 +75,12 @@ export class INTypeControleListComponent {
 
   handleReadClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/in-type-controles/${data?.id}`]);
+    this.router.navigate([`/in/in-type-controles/${data?.id}`]);
   }
 
   handleEditClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/in-type-controles/${data?.id}/edit`]);
+    this.router.navigate([`/in/in-type-controles/${data?.id}/edit`]);
   }
 
   handleDeleteClick = async (e: Event, iNTypeControle: INTypeControleEntity ) => {

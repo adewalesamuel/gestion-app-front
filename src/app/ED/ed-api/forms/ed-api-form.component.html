@@ -1,24 +1,24 @@
-<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class="">
+<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class='col-12 col-md-7'>
   <div class=row>
-    <div class='col-12'>
+    <div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='nom' i18n>nom</label>
         <input class='form-control' type='text' id='nom' formControlName='nom' i18n-placeholder placeholder='nom' />
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='description' i18n>description</label>
         <input class='form-control' type='text' id='description' formControlName='description' i18n-placeholder placeholder='description' />
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='url_base' i18n>url_base</label>
         <input class='form-control' type='text' id='url_base' formControlName='url_base' i18n-placeholder placeholder='url_base' />
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='statut' i18n>statut</label>
         <select class='form-select form-control' id='statut' formControlName='statut' [attr.value]="formGroup.value.statut">
@@ -29,14 +29,14 @@
         </select>
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='documentation_url' i18n>documentation_url</label>
         <input class='form-control' type='text' id='documentation_url' formControlName='documentation_url' i18n-placeholder placeholder='documentation_url' />
       </div>
     </div>
 
-    <div class='col-12 text-right'>
+    <div class='col-12 text-right mt-3'>
         <button class="btn btn-primary" type="submit" [disabled]="isLoading" i18n>
           @if (isLoading) {
             Chargement...

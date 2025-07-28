@@ -3,8 +3,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { RCEquipementFormComponent } from '../forms/rc-equipement-form.component';
 import { RCEquipementService } from '../services/rc-equipement.service';
 import { RCEquipementEntity } from '../rc-equipement.entity';
-import { RCEnginFlottantService } from '../../../RC/rc-engin-flottant/services/rc-engin-flottant.service';
-import { RCEnginFlottantEntity } from '../../../RC/rc-engin-flottant/rc-engin-flottant.entity';
+import { RCEnginFlottantService } from '../../rc-engin-flottant/services/rc-engin-flottant.service';
+import { RCEnginFlottantEntity } from '../../rc-engin-flottant/rc-engin-flottant.entity';
 
 import { Response } from '../../../types';
 import { ErrorHandlerService } from '../../../services/error-handler/error-handler.service';

@@ -39,7 +39,7 @@ export class REModePaiementListComponent {
 		'frais_pourcentage': {},
 		'delai_jours': {},
 		'actif': {},
-		
+
   }
   tableActions = ['edit', 'delete'];
 
@@ -75,12 +75,12 @@ export class REModePaiementListComponent {
 
   handleReadClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/re-mode-paiements/${data?.id}`]);
+    this.router.navigate([`/re/re-mode-paiements/${data?.id}`]);
   }
 
   handleEditClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/re-mode-paiements/${data?.id}/edit`]);
+    this.router.navigate([`/re/re-mode-paiements/${data?.id}/edit`]);
   }
 
   handleDeleteClick = async (e: Event, rEModePaiement: REModePaiementEntity ) => {

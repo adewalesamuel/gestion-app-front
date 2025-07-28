@@ -42,7 +42,7 @@ export class EDLogEchangeListComponent {
 		'endpoint': {},
 		'statut_reponse': {},
 		'temps_reponse_ms': {},
-		
+
   }
   tableActions = ['edit', 'delete'];
 
@@ -78,12 +78,12 @@ export class EDLogEchangeListComponent {
 
   handleReadClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/ed-log-echanges/${data?.id}`]);
+    this.router.navigate([`/ed/ed-log-echanges/${data?.id}`]);
   }
 
   handleEditClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/ed-log-echanges/${data?.id}/edit`]);
+    this.router.navigate([`/ed/ed-log-echanges/${data?.id}/edit`]);
   }
 
   handleDeleteClick = async (e: Event, eDLogEchange: EDLogEchangeEntity ) => {

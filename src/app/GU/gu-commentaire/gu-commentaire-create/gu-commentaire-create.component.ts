@@ -73,7 +73,7 @@ export class GUCommentaireCreateComponent {
 
     try {
       await this.gUCommentaireForm.create();
-      this.router.navigate([`/gu-commentaires`]);
+      this.router.navigate([`/gu/gu-commentaires`]);
     } catch (error) {
       this.errorHandler.setError(error);
     } finally {

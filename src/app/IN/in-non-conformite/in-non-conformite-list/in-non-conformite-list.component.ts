@@ -42,7 +42,7 @@ export class INNonConformiteListComponent {
 		'heure': {},
 		'date_resolution': {},
 		'statut': {},
-		
+
   }
   tableActions = ['edit', 'delete'];
 
@@ -78,12 +78,12 @@ export class INNonConformiteListComponent {
 
   handleReadClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/in-non-conformites/${data?.id}`]);
+    this.router.navigate([`/in/in-non-conformites/${data?.id}`]);
   }
 
   handleEditClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/in-non-conformites/${data?.id}/edit`]);
+    this.router.navigate([`/in/in-non-conformites/${data?.id}/edit`]);
   }
 
   handleDeleteClick = async (e: Event, iNNonConformite: INNonConformiteEntity ) => {

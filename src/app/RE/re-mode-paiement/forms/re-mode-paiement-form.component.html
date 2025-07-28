@@ -1,37 +1,37 @@
-<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class="">
+<form [formGroup]="formGroup" (submit)="handleSubmit($event)" class='col-12 col-md-7'>
   <div class=row>
-    <div class='col-12'>
+    <div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='code' i18n>code</label>
         <input class='form-control' type='text' id='code' formControlName='code' i18n-placeholder placeholder='code' />
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='libelle' i18n>libelle</label>
         <input class='form-control' type='text' id='libelle' formControlName='libelle' i18n-placeholder placeholder='libelle' />
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='frais_pourcentage' i18n>frais_pourcentage</label>
         <input class='form-control' type='number' id='frais_pourcentage' formControlName='frais_pourcentage' i18n-placeholder placeholder='frais_pourcentage' />
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='delai_jours' i18n>delai_jours</label>
         <input class='form-control' type='number' id='delai_jours' formControlName='delai_jours' i18n-placeholder placeholder='delai_jours' />
       </div>
     </div>
-		<div class='col-12'>
+		<div class='col-12 col-md-6'>
       <div class='form-group'>
         <label for='actif' i18n>actif</label>
-        <input class='form-control' type='checkbox' id='actif' formControlName='actif' i18n-placeholder placeholder='actif' />
+        <input class='form-check-input d-block' type='checkbox' id='actif' formControlName='actif' i18n-placeholder placeholder='actif' />
       </div>
     </div>
-		
-    <div class='col-12 text-right'>
+
+    <div class='col-12 text-right mt-3'>
         <button class="btn btn-primary" type="submit" [disabled]="isLoading" i18n>
           @if (isLoading) {
             Chargement...

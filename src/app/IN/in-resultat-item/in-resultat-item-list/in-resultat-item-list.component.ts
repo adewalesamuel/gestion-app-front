@@ -39,7 +39,7 @@ export class INResultatItemListComponent {
 		'observations': {},
 		'checklist_item_code': {},
 		'photo_url': {},
-		
+
   }
   tableActions = ['edit', 'delete'];
 
@@ -75,12 +75,12 @@ export class INResultatItemListComponent {
 
   handleReadClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/in-resultat-items/${data?.id}`]);
+    this.router.navigate([`/in/in-resultat-items/${data?.id}`]);
   }
 
   handleEditClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/in-resultat-items/${data?.id}/edit`]);
+    this.router.navigate([`/in/in-resultat-items/${data?.id}/edit`]);
   }
 
   handleDeleteClick = async (e: Event, iNResultatItem: INResultatItemEntity ) => {

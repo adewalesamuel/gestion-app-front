@@ -5,10 +5,12 @@ import { AuthService } from '../services/auth.service';
 import { Utils } from '../../../utils';
 import { ErrorHandlerService } from '../../../services/error-handler/error-handler.service';
 import { ErrorMessagesComponent } from "../../../ui/error-messages/error-messages.component";
+import { AuthLayoutComponent } from '../../../ui/layouts/auth-layout/auth-layout.component';
 
 @Component({
   selector: 'app-login',
   imports: [
+    AuthLayoutComponent,
     LoginFormComponent,
     ErrorMessagesComponent,
   ],

@@ -1,9 +1,11 @@
 <div class="">
   <div class="title">
-    <h3 i18n>List INPlanification</h3>
+    <h5 i18n>List INPlanification</h5>
   </div>
-  <a routerLink="/in-planifications/create" i18n>+ Add iNPlanifications</a>
-  <app-error-messages 
+  <div class="d-flex align-items-center justify-content-end mb-3">
+    <a routerLink="/in/in-planifications/create" class='btn btn-primary btn-sm' i18n>+ Add iNPlanifications</a>
+  </div>
+  <app-error-messages
   [errorMessages]="errorHandler.errorMessages()"
   ></app-error-messages>
   <app-loader [isLoading]="isLoading()"></app-loader>

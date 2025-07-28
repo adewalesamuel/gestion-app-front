@@ -39,7 +39,7 @@ export class GUTypeDemandeListComponent {
 		'delai_traitement_jours': {},
 		'cout': {},
 		'validite_mois': {},
-		
+
   }
   tableActions = ['edit', 'delete'];
 
@@ -75,12 +75,12 @@ export class GUTypeDemandeListComponent {
 
   handleReadClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/gu-type-demandes/${data?.id}`]);
+    this.router.navigate([`/gu/gu-type-demandes/${data?.id}`]);
   }
 
   handleEditClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/gu-type-demandes/${data?.id}/edit`]);
+    this.router.navigate([`/gu/gu-type-demandes/${data?.id}/edit`]);
   }
 
   handleDeleteClick = async (e: Event, gUTypeDemande: GUTypeDemandeEntity ) => {

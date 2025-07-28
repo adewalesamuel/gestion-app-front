@@ -41,7 +41,7 @@ export class AuditLogListComponent {
 		'ancienne_valeur': {},
 		'nouvelle_valeur': {},
 		'ip_address': {},
-		
+
   }
   tableActions = ['edit', 'delete'];
 
@@ -77,12 +77,12 @@ export class AuditLogListComponent {
 
   handleReadClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/audit-logs/${data?.id}`]);
+    this.router.navigate([`/settings/audit-logs/${data?.id}`]);
   }
 
   handleEditClick = (e: Event, data: any) => {
     e.preventDefault();
-    this.router.navigate([`/audit-logs/${data?.id}/edit`]);
+    this.router.navigate([`/settings/audit-logs/${data?.id}/edit`]);
   }
 
   handleDeleteClick = async (e: Event, auditLog: AuditLogEntity ) => {
